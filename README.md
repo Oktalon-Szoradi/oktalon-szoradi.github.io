@@ -1,2 +1,2 @@
-# oktalon-szoradi.github.io
-This is my very first GitHub repository! Go check out: https://oktalon-szoradi.github.io/
+# Medientechnik Projects
+Here I will upload the projects I've been working on at school.
