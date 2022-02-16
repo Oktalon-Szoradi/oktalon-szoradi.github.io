@@ -16,10 +16,12 @@ cssSwitch.addEventListener("click", () => {
     if (css.getAttribute("href") === "./style/light.css") {
         css.setAttribute("href", "./style/dark.css")
         cssSwitch.innerHTML = "&#9728;";
+        cssSwitch.setAttribute("title", "Light Mode");
     }
     else if (css.getAttribute("href") === "./style/dark.css") {
         css.setAttribute("href", "./style/light.css")
         cssSwitch.innerHTML = "&#9789;";
+        cssSwitch.setAttribute("title", "Dark Mode");
     }
 });
 
