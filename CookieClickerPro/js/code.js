@@ -8,6 +8,9 @@ let score = 0;
 let highscore = 0;
 let time = 0;
 
+let css = document.getElementById("theme");
+css.setAttribute("href", "./style/dark.css")
+
 function Stopwatch(){
     if (time == 19){
         elementTime.innerHTML = `Ready?`;
