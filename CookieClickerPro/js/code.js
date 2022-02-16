@@ -14,17 +14,23 @@ css.setAttribute("href", "./style/dark.css")
 function Stopwatch(){
     if (time == 19){
         elementTime.innerHTML = `Ready?`;
-        document.getElementById("bar").style.backgroundColor = "darkred";
+        if (css.getAttribute("href") === "./style/dark.css") {
+            document.getElementById("bar").style.backgroundColor = "darkred";
+        }
         time--;
     }
     else if (time == 18){
         elementTime.innerHTML = `Set?`;
-        document.getElementById("bar").style.backgroundColor = "darkgoldenrod";
+        if (css.getAttribute("href") === "./style/dark.css") {
+            document.getElementById("bar").style.backgroundColor = "darkgoldenrod";
+        }
         time--;
     }
     else if (time == 17){
         elementTime.innerHTML = `Go!!`;
-        document.getElementById("bar").style.backgroundColor = "green";
+        if (css.getAttribute("href") === "./style/dark.css") {
+            document.getElementById("bar").style.backgroundColor = "green";
+        }
         document.getElementById("cookie").disabled = false;
         time--;
     }
@@ -36,7 +42,9 @@ function Stopwatch(){
         else{
             elementTime.innerHTML = `Time Remaining: ${time} seconds`;
         }
-        document.getElementById("bar").style.backgroundColor = "#333333";
+        if (css.getAttribute("href") === "./style/dark.css") {
+            document.getElementById("bar").style.backgroundColor = "#333333";
+        }
         if (time <= 5){
             elementTime.style.color = "red";
         }
@@ -48,7 +56,9 @@ function NewGame(){
     score = 0;
     elementScore.innerHTML = `Score: ${score}`;
     time = 19;
-    elementTime.style.color = "white";
+    if (css.getAttribute("href") === "./style/dark.css") {
+        elementTime.style.color = "white";
+    }
     var i = setInterval(Stopwatch, 1000);
     setTimeout(function(){
         elementTime.innerHTML = "Time Up!!"
