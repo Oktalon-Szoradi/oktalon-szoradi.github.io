@@ -17,6 +17,9 @@ function Stopwatch(){
         if (css.getAttribute("href") === "./style/dark.css") {
             document.getElementById("bar").style.backgroundColor = "darkred";
         }
+        else {
+            document.getElementById("bar").style.backgroundColor = "red";
+        }
         time--;
     }
     else if (time == 18){
@@ -24,12 +27,18 @@ function Stopwatch(){
         if (css.getAttribute("href") === "./style/dark.css") {
             document.getElementById("bar").style.backgroundColor = "darkgoldenrod";
         }
+        else {
+            document.getElementById("bar").style.backgroundColor = "yellow";
+        }
         time--;
     }
     else if (time == 17){
         elementTime.innerHTML = `Go!!`;
         if (css.getAttribute("href") === "./style/dark.css") {
             document.getElementById("bar").style.backgroundColor = "green";
+        }
+        else {
+            document.getElementById("bar").style.backgroundColor = "lime";
         }
         document.getElementById("cookie").disabled = false;
         time--;
@@ -45,6 +54,9 @@ function Stopwatch(){
         if (css.getAttribute("href") === "./style/dark.css") {
             document.getElementById("bar").style.backgroundColor = "#333333";
         }
+        else {
+            document.getElementById("bar").style.backgroundColor = "#CCCCCC";
+        }
         if (time <= 5){
             elementTime.style.color = "red";
         }
@@ -58,6 +70,9 @@ function NewGame(){
     time = 19;
     if (css.getAttribute("href") === "./style/dark.css") {
         elementTime.style.color = "white";
+    }
+    else {
+        elementTime.style.color = "black";
     }
     var i = setInterval(Stopwatch, 1000);
     setTimeout(function(){
