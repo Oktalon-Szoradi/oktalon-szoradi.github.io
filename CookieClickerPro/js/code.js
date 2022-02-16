@@ -8,20 +8,52 @@ let score = 0;
 let highscore = 0;
 let time = 0;
 
+let css = document.getElementById("theme");
+css.setAttribute("href", "./style/dark.css")
+
+let cssSwitch = document.getElementById("lightdark");
+cssSwitch.addEventListener("click", () => {
+    if (css.getAttribute("href") === "./style/light.css") {
+        css.setAttribute("href", "./style/dark.css")
+        cssSwitch.innerHTML = "&#9728;";
+        cssSwitch.setAttribute("title", "Light Mode");
+    }
+    else if (css.getAttribute("href") === "./style/dark.css") {
+        css.setAttribute("href", "./style/light.css")
+        cssSwitch.innerHTML = "&#9789;";
+        cssSwitch.setAttribute("title", "Dark Mode");
+    }
+});
+
 function Stopwatch(){
     if (time == 19){
         elementTime.innerHTML = `Ready?`;
-        document.getElementById("bar").style.backgroundColor = "darkred";
+        if (css.getAttribute("href") === "./style/dark.css") {
+            document.getElementById("bar").style.backgroundColor = "darkred";
+        }
+        else {
+            document.getElementById("bar").style.backgroundColor = "red";
+        }
         time--;
     }
     else if (time == 18){
         elementTime.innerHTML = `Set?`;
-        document.getElementById("bar").style.backgroundColor = "darkgoldenrod";
+        if (css.getAttribute("href") === "./style/dark.css") {
+            document.getElementById("bar").style.backgroundColor = "darkgoldenrod";
+        }
+        else {
+            document.getElementById("bar").style.backgroundColor = "yellow";
+        }
         time--;
     }
     else if (time == 17){
         elementTime.innerHTML = `Go!!`;
-        document.getElementById("bar").style.backgroundColor = "green";
+        if (css.getAttribute("href") === "./style/dark.css") {
+            document.getElementById("bar").style.backgroundColor = "green";
+        }
+        else {
+            document.getElementById("bar").style.backgroundColor = "lime";
+        }
         document.getElementById("cookie").disabled = false;
         time--;
     }
@@ -33,7 +65,12 @@ function Stopwatch(){
         else{
             elementTime.innerHTML = `Time Remaining: ${time} seconds`;
         }
-        document.getElementById("bar").style.backgroundColor = "#333333";
+        if (css.getAttribute("href") === "./style/dark.css") {
+            document.getElementById("bar").style.backgroundColor = "#333333";
+        }
+        else {
+            document.getElementById("bar").style.backgroundColor = "#CCCCCC";
+        }
         if (time <= 5){
             elementTime.style.color = "red";
         }
@@ -45,7 +82,12 @@ function NewGame(){
     score = 0;
     elementScore.innerHTML = `Score: ${score}`;
     time = 19;
-    elementTime.style.color = "white";
+    if (css.getAttribute("href") === "./style/dark.css") {
+        elementTime.style.color = "white";
+    }
+    else {
+        elementTime.style.color = "black";
+    }
     var i = setInterval(Stopwatch, 1000);
     setTimeout(function(){
         elementTime.innerHTML = "Time Up!!"
