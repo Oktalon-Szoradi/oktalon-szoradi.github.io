@@ -185,16 +185,22 @@ body{
     transition-timing-function: ease-in-out;
     background: none;
     border: none;
+    opacity: 1;
+    animation: pulse 0.5s infinite;
 }
 
 #cookie:disabled{
     cursor: not-allowed;
+    transform: none;
+    animation: none;
+    opacity: 0.5;
 }
 
 #cookie:disabled:hover, #cookie:disabled:active{
     cursor: not-allowed;
     transform: none;
     animation: none;
+    opacity: 0.5;
 }
 
 #cookieImg{
@@ -204,14 +210,16 @@ body{
 
 #cookie:hover{
     cursor: pointer;
-    transform: scale(1.1);
-    animation: pulse 0.5s infinite;
+    transform: scale(1.2);
+    animation: flash-pulse 0.333333333s infinite;
+    opacity: 1;
 }
 
 #cookie:active{
     cursor: pointer;
     transform: scale(0.8);
     animation: none;
+    opacity: 0.333333333;
 }
 
 /*
@@ -233,4 +241,16 @@ body{
 	100% {
 		transform: scale(0.95);
 	}
+}
+
+@keyframes flash-pulse {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+    }
 }
