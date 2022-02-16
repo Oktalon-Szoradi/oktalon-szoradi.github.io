@@ -11,6 +11,18 @@ let time = 0;
 let css = document.getElementById("theme");
 css.setAttribute("href", "./style/dark.css")
 
+let cssSwitch = document.getElementById("lightdark");
+cssSwitch.addEventListener("click", () => {
+    if (css.getAttribute("href") === "./style/light.css") {
+        css.setAttribute("href", "./style/dark.css")
+        cssSwitch.innerHTML = "&#9728;";
+    }
+    else if (css.getAttribute("href") === "./style/dark.css") {
+        css.setAttribute("href", "./style/light.css")
+        cssSwitch.innerHTML = "&#9789;";
+    }
+});
+
 function Stopwatch(){
     if (time == 19){
         elementTime.innerHTML = `Ready?`;
