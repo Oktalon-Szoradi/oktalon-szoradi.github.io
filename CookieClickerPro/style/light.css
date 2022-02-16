@@ -112,7 +112,7 @@ body{
 
 #help{
     float: right;
-    margin: 10px 20px 10px 10px;
+    margin: 10px 10px 10px 10px;
     padding-left: 1%;
     padding-right: 1%;
     height: 48px;
@@ -136,6 +136,36 @@ body{
 
 #help:active{
     background-color: #002164;
+    box-shadow: 0px 0px 0px #00000088;
+    transition-duration: 0.05s;
+}
+
+#lightdark{
+    float: right;
+    margin: 10px 20px 10px 10px;
+    padding-left: 1%;
+    padding-right: 1%;
+    height: 48px;
+    width: auto;
+    color: white;
+    background-color: #333333;
+    transition-duration: 0.5s;
+    font-weight: 100;
+    font-size: 24pt;
+    line-height: 0;
+    border-width: medium;
+    border-radius: 10px;
+    box-shadow: 2.5px 2.5px 2.5px #00000099;
+}
+
+#lightdark:hover{
+    background-color: #555555;
+    box-shadow: 5px 5px 5px #00000088;
+    cursor: pointer;
+}
+
+#lightdark:active{
+    background-color: #000000;
     box-shadow: 0px 0px 0px #00000088;
     transition-duration: 0.05s;
 }
