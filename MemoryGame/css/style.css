@@ -1,54 +1,54 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 #navbar {
-    width: 100%;
-    padding: 10px;
-    background-color: yellow;
+  width: 100%;
+  padding: 10px;
+  background-color: yellow;
 }
 
 .button {
-    margin-right: 10px;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 10px;
+  margin-right: 10px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
 }
 
 .button:hover {
-    background-color: white;
+  background-color: white;
 }
 
 .button:active {
-    background-color: lightgray;
+  background-color: lightgray;
 }
 
 #wrapper {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.box {
-    width: 100%;
-    /* border: 1px solid black; */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+.container {
+  width: 100%;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.mem {
-    width: 100px;
-    height: 100px;
-    margin: 5px;
-    background-color: blue;
-    color: white;
-    display: flex;
-    justify-content: center;
+.card {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  background-color: blue;
+  color: white;
+  display: flex;
+  justify-content: center;
 }

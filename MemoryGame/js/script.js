@@ -1,4 +1,4 @@
-function makeBoxes(size){
+function makeCards(size){
     let numbers = [];
     for (let i = 1; i <= size*size/2; i++){
         numbers.push(i);
@@ -6,17 +6,17 @@ function makeBoxes(size){
     }
     
     for (let i = 0; i < size; i++){
-        let box = document.createElement("div");
-        box.className = "box";
+        let container = document.createElement("div");
+        container.className = "container";
         for(let j = 0; j < size; j++){
-            let mem = document.createElement("div");
-            mem.className = "mem";
+            let card = document.createElement("div");
+            card.className = "card";
             let m = Math.floor(Math.random() * numbers.length);
-            mem.innerHTML = numbers[m];
+            card.innerHTML = numbers[m];
             numbers.splice(m, 1);
-            box.appendChild(mem);
+            container.appendChild(card);
         }
-        wrapper.appendChild(box);
+        wrapper.appendChild(container);
     }
 
 
@@ -24,26 +24,16 @@ function makeBoxes(size){
 
 document.getElementById("lvl1").addEventListener("click", () => {
     document.getElementById("wrapper").innerHTML = "";
-    makeBoxes(2);
+    makeCards(2);
 });
 
 document.getElementById("lvl2").addEventListener("click", () => {
     document.getElementById("wrapper").innerHTML = "";
-    makeBoxes(4);
+    makeCards(4);
 });
 
 document.getElementById("lvl3").addEventListener("click", () => {
     document.getElementById("wrapper").innerHTML = "";
-    makeBoxes(6);
+    makeCards(6);
 });
-
-
-// let memBoxes = document.getElementsByClassName("mem");
-
-// for (let i = 0; i < memBoxes.length; i++){
-//     memBoxes[i].addEventListener("click", () => {
-//         window.alert("Hey!");
-//     });
-//     console.log("m")
-// };
 
