@@ -146,12 +146,13 @@ body{
     padding-left: 1%;
     padding-right: 1%;
     height: 48px;
-    width: auto;
+    width: 70px;
     color: white;
     background-color: #333333;
     transition-duration: 0.5s;
     font-weight: 100;
     font-size: 24pt;
+    text-align: center;
     line-height: 0;
     border-width: medium;
     border-radius: 10px;
