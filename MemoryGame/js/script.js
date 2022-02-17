@@ -15,6 +15,7 @@ function makeCards(size){
             card.innerHTML = numbers[m];
             numbers.splice(m, 1);
             container.appendChild(card);
+            card.addEventListener("click", turnCard);
         }
         wrapper.appendChild(container);
     }
@@ -37,3 +38,6 @@ document.getElementById("lvl3").addEventListener("click", () => {
     makeCards(6);
 });
 
+function turnCard() {
+    window.alert("hey")
+};
