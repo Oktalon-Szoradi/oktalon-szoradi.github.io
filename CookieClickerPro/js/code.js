@@ -17,11 +17,15 @@ cssSwitch.addEventListener("click", () => {
         css.setAttribute("href", "./style/dark.css")
         cssSwitch.innerHTML = "&#9728;";
         cssSwitch.setAttribute("title", "Light Mode");
+        document.getElementById("bar").style.backgroundColor = "#333333";
+        elementTime.style.color = "white";
     }
     else if (css.getAttribute("href") === "./style/dark.css") {
         css.setAttribute("href", "./style/light.css")
         cssSwitch.innerHTML = "&#9789;";
         cssSwitch.setAttribute("title", "Dark Mode");
+        document.getElementById("bar").style.backgroundColor = "#CCCCCC";
+        elementTime.style.color = "black";
     }
 });
 
