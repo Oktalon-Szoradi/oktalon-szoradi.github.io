@@ -4,28 +4,29 @@ let cardsHidden = [];
 let cardsOpened = [];
 let cardsMatched = [];
 let cardContents = [];
+let gameWon = false;
 
 // Button Implementations:
 document.getElementById("lvl1").addEventListener("click", () => {
-    InitializeGameField(2);
+    InitializeGame(2);
     
 });
 
 document.getElementById("lvl2").addEventListener("click", () => {
-    InitializeGameField(4);
+    InitializeGame(4);
     
 });
 
 document.getElementById("lvl3").addEventListener("click", () => {
-    InitializeGameField(6);
+    InitializeGame(6);
     
 });
 
 // Methods
-function InitializeGameField(cardsAmount) {
+function InitializeGame(cardsAmount) {
+    gameWon = false;
     gameField.innerHTML = "";
     InitializeCards(cardsAmount);
-    cardsHidden = Array.from(document.getElementsByClassName("card"));
 }
 
 
@@ -44,8 +45,8 @@ function InitializeCards(cardsAmount) {
         // Add the containers with cards in them to the game field
         gameField.appendChild(container);
     }
-    // There's a problem here:
     GenerateRandomCardContents(cardsAmount);
+    cardsHidden = Array.from(document.getElementsByClassName("card"));
     DisperseRandomObjects();
 }
 
@@ -79,22 +80,21 @@ function Shuffle(array) {
 }
 
 
-// There might be a problem here
 function DisperseRandomObjects() {
     if (cardsHidden.length != cardContents.length) {
         console.log("The amount of cards on the game field does not mach up with the amount of random objects that are to be dispersed to the cards.")
         console.log(`cardsHidden: ${cardsHidden}`);
         console.log(`cardContents: ${cardContents}`);
+        return;
     }
-    for (let i = 0; i < cardsHidden.length.length; i++) {
+    for (let i = 0; i < cardsHidden.length; i++) {
         cardsHidden[i].innerHTML = cardContents[i];
-        cardContents.splice(i, 1);
     }
 }
 
 function TurnCard() {
-    if (cardsOpened >= 2)
-    return;
+    if (cardsOpened.length >= 2)
+        return;
     
     if (cardsOpened.length == 1 && cardsOpened[0] == this) {
         cardsOpened = [];
@@ -104,13 +104,50 @@ function TurnCard() {
     
     cardsOpened.push(this);
     this.style.background = "#7777FF";
-    console.log(cardsOpened)
 
-    // Finish writing this
+    if (cardsOpened.length == 2)
+        CompareCards();
+    
+    setTimeout(() => {
+        if (cardsHidden.length == cardsMatched.length && !gameWon) {
+            cardsMatched = [];
+            gameWon = true;
+            window.alert("Congratulations!\nYou have won the game.\n\nClick on one of the level buttons to start another game.")
+        }
+    }, 1500);
 }
 
-// To Do
+function CompareCards() {
+    if (cardsOpened[0].innerHTML == cardsOpened[1].innerHTML) {
+        cardsHidden.forEach(element => {
+            if (element == cardsOpened[0] || element == cardsOpened[1]) {
+                
+                setTimeout(() => {
+                    element.style.background = "green";
+                }, 250);
 
-//    Done - Add an event listener, listening for "click", to each card
-// Problem - Add random objects to the content (innerHTML) of each card
-//         - Implement comparison checks:
+                element.removeEventListener("click", TurnCard);
+
+            }
+        });
+        cardsMatched.push(cardsOpened[0]);
+        cardsMatched.push(cardsOpened[1]);
+        cardsOpened = [];
+    }
+    else {
+        cardsHidden.forEach(element => {
+            if (element == cardsOpened[0] || element == cardsOpened[1]) {
+
+                setTimeout(() => {
+                    element.style.background = "red";
+                }, 250);
+
+                setTimeout(() => {
+                    element.style.background = "blue";
+                }, 750);
+
+            }
+        });
+        cardsOpened = [];
+    }
+}
