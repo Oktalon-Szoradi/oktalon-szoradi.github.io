@@ -26,7 +26,7 @@
   background-color: lightgray;
 }
 
-#wrapper {
+#gameField {
   width: 90%;
   margin: auto;
   display: flex;
