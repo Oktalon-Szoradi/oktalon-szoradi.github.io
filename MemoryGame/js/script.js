@@ -109,9 +109,11 @@ function TurnCard() {
     if (cardsOpened.length == 2)
         CompareCards();
     
+    // To show message before the alert
+    if (cardsHidden.length == cardsMatched.length && !gameWon)
+            message.innerHTML = "You win!";    
     setTimeout(() => {
         if (cardsHidden.length == cardsMatched.length && !gameWon) {
-            message.innerHTML = "You win!";
             cardsMatched = [];
             gameWon = true;
             window.alert("Congratulations!\nYou have won the game.\n\nClick on one of the level buttons to start another game.")
