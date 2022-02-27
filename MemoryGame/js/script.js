@@ -1,5 +1,6 @@
 // Variables
 let gameField = document.querySelector("#gameField");
+let message = document.querySelector("#navbar2");
 let cardsHidden = [];
 let cardsOpened = [];
 let cardsMatched = [];
@@ -9,17 +10,17 @@ let gameWon = false;
 // Button Implementations:
 document.getElementById("lvl1").addEventListener("click", () => {
     InitializeGame(2);
-    
+    message.innerHTML = "Level 1";
 });
 
 document.getElementById("lvl2").addEventListener("click", () => {
     InitializeGame(4);
-    
+    message.innerHTML = "Level 2";
 });
 
 document.getElementById("lvl3").addEventListener("click", () => {
     InitializeGame(6);
-    
+    message.innerHTML = "Level 3";
 });
 
 // Methods
@@ -110,6 +111,7 @@ function TurnCard() {
     
     setTimeout(() => {
         if (cardsHidden.length == cardsMatched.length && !gameWon) {
+            message.innerHTML = "You win!";
             cardsMatched = [];
             gameWon = true;
             window.alert("Congratulations!\nYou have won the game.\n\nClick on one of the level buttons to start another game.")
