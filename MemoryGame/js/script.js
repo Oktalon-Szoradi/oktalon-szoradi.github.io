@@ -143,7 +143,7 @@ function TurnCard() {
         "Congratulations!\nYou have won the game.\n\nClick on one of the level buttons to start another game."
       );
     }
-  }, 2000);
+  }, 1000);
 }
 
 function CompareCards() {
