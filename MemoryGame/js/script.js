@@ -24,12 +24,20 @@ document.getElementById("lvl3").addEventListener("click", () => {
 });
 
 // Methods
+function ResetVariables() {
+    cardsHidden = [];
+    cardsOpened = [];
+    cardsMatched = [];
+    cardContents = [];
+    gameWon = false;
+}
+
 function InitializeGame(cardsAmount) {
+    ResetVariables();
     gameWon = false;
     gameField.innerHTML = "";
     InitializeCards(cardsAmount);
 }
-
 
 function InitializeCards(cardsAmount) {
     // Make the container that contains the cards
@@ -40,10 +48,13 @@ function InitializeCards(cardsAmount) {
         for(let j = 0; j < cardsAmount; j++){
             let card = document.createElement("div");
             card.className = "card";
-            card.classList.toggle("card-flip-animation");
-            let cardContent = document.createElement("div");
-            cardContent.className = "card-back";
-            card.appendChild(cardContent);
+            // card.classList.toggle("card-flip-animation");
+            let cardContentBack = document.createElement("div");
+            cardContentBack.className = "card-back";
+            let cardContentFront = document.createElement("div");
+            cardContentFront.className = "card-front";
+            card.appendChild(cardContentBack);
+            card.appendChild(cardContentFront);
             container.appendChild(card);
             card.addEventListener("click", TurnCard);
         }
@@ -104,14 +115,14 @@ function TurnCard() {
     if (cardsOpened.length == 1 && cardsOpened[0] == this) {
         cardsOpened = [];
         this.style.background = "blue";
-        this.firstChild.className = "card-back";
+        // this.firstChild.className = "card-back";
         this.classList.toggle("card-flip-animation");
         return;
     }
     
     cardsOpened.push(this);
     this.style.background = "#7777FF";
-    this.firstChild.className = "card-front";
+    // this.firstChild.className = "card-front";
     this.classList.toggle("card-flip-animation");
 
     if (cardsOpened.length == 2)
@@ -156,7 +167,7 @@ function CompareCards() {
                 
                 setTimeout(() => {
                     element.style.background = "blue";
-                    element.firstChild.className = "card-back";
+                    // element.firstChild.className = "card-back";
                     element.classList.toggle("card-flip-animation");
                 }, 750);
 

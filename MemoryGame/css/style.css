@@ -74,6 +74,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  perspective: 1000px;
 }
 
 .card {
@@ -86,31 +87,28 @@
   justify-content: center;
   text-align: center;
   transition-duration: 0.5s;
+  transform-style: preserve-3d;
 }
+
+.card-back, .card-front {
+  width: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
 
 /* hidden */
 .card-back {
-  width: 100%;
-  position: absolute;
-  display: none;
-}
-
-/* content/flipped/revealed */
-.card-front {
-  width: 100%;
-  position: absolute;
-}
-
-.card-flip-animation {
+  /* display: none; */
+  font-size: xxx-large;
   transform: rotateY(180deg);
 }
 
-.glass{
-	/* background styles */
-	position: relative;
-	display: inline-block;
-	padding: 15px 25px;
-	background-color: green; /*for compatibility with older browsers*/
-	background-image: linear-gradient(green,lightgreen);
+/* content/flipped/revealed */
+/* .card-front {
+} */
 
+.card-flip-animation {
+  transform: rotateY(180deg);
 }
