@@ -89,14 +89,14 @@
 
 /* hidden */
 .card-back {
-  width: 90%;
+  width: 100%;
   position: absolute;
   display: none;
 }
 
 /* content/flipped/revealed */
 .card-front {
-  width: 90%;
+  width: 100%;
   position: absolute;
 }
 

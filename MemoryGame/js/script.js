@@ -97,12 +97,13 @@ function DisperseRandomObjects() {
 }
 
 function TurnCard() {
-    if (cardsOpened.length >= 2)
-        return;
+    // if (cardsOpened.length >= 2)
+    //     return;
     
     if (cardsOpened.length == 1 && cardsOpened[0] == this) {
         cardsOpened = [];
         this.style.background = "blue";
+        element.firstChild.className = "card-back";
         return;
     }
     
