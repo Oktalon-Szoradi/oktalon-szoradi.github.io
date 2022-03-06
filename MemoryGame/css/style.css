@@ -87,6 +87,19 @@
   text-align: center;
 }
 
+/* hidden */
+.card-back {
+  width: 90%;
+  position: absolute;
+  display: none;
+}
+
+/* content/flipped/revealed */
+.card-front {
+  width: 90%;
+  position: absolute;
+}
+
 .glass{
 	/* background styles */
 	position: relative;
