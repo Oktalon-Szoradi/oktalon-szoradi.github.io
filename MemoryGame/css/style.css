@@ -10,15 +10,18 @@
   padding-right: 50px;
   padding-bottom: 20px;
   background-image: url("../img/BG_nav-bt.svg");
-	float: left;
+  float: left;
 }
 
 #navbar2 {
   height: 67px;
   padding-top: 18px;
   background-image: url("../img/BG_nav.svg");
+  overflow: hidden;
+}
+
+#message {
   font-weight: 900;
-	overflow: hidden;
 }
 
 .button {
@@ -29,23 +32,26 @@
   border-width: 0;
 
   position: relative;
-	display: inline-block;
+  display: inline-block;
 
   color: white;
   font-weight: bolder;
   font-size: large;
   background: linear-gradient(rgb(0, 0, 255), rgb(173, 216, 230));
-  box-shadow: 0px 0px 2.5px black;
+  box-shadow: 0px 0px 2.5px black;  
 }
 
-.button:after{
-	content: '';
-	position: absolute;
-	top: 2px;
-	left: 2px;
-	width: calc(100% - 4px);
-	height: 50%;
-	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+.button:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: 50%;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.2)
+  );
   border-radius: 3.5px;
 }
 
@@ -90,13 +96,13 @@
   transform-style: preserve-3d;
 }
 
-.card-back, .card-front {
+.card-back,
+.card-front {
   width: 100%;
   position: absolute;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-
 
 /* hidden */
 .card-back {
@@ -109,6 +115,51 @@
 /* .card-front {
 } */
 
-.card-flip-animation {
+.flip-animation {
   transform: rotateY(180deg);
+}
+
+.intro-slide-up {
+  animation: slide-up 1s;
+}
+
+.intro-slide-left {
+  animation: slide-left 1s;
+}
+
+.intro-flip {
+  animation: rotateIntoView 1s;
+}
+
+@keyframes slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes slide-left {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+@keyframes rotateIntoView {
+    0% {
+      opacity: 0;
+      transform: rotateX(90deg);
+    }
+    100% {
+      opacity: 1;
+      transform: rotateX(0deg);
+    }
 }
