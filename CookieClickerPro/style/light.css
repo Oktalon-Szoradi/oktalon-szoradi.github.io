@@ -16,6 +16,32 @@ body{
     box-shadow: 0 0 16px #00000055;
 }
 
+#back{
+    position: fixed;
+    bottom: -5px;
+    left: -5px;
+    padding: 10px;
+    color: black;
+    font-size: 14pt;
+    text-decoration: none;
+    background-color: cyan;
+    border-radius: 10px;
+    border: 2.5px solid darkcyan;
+    box-shadow: 0 0 16px hsl(180, 100%, 33%);
+    transition-duration: 0.5s;
+}
+
+#back:hover {
+    background-color: #AAFFFF;
+    box-shadow: 2px -2px 16px hsl(180, 100%, 50%);
+}
+
+#back:active {
+    background-color: hsl(180, 100%, 33%);
+    box-shadow: 0 0 0 #000000;
+    transition-duration: 0.05s;
+}
+
 #button{
     margin-left: 5%;
     height: 48px;
