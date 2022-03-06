@@ -40,6 +40,9 @@ function InitializeCards(cardsAmount) {
         for(let j = 0; j < cardsAmount; j++){
             let card = document.createElement("div");
             card.className = "card";
+            let cardContent = document.createElement("div");
+            cardContent.className = "card-back";
+            card.appendChild(cardContent);
             container.appendChild(card);
             card.addEventListener("click", TurnCard);
         }
@@ -89,7 +92,7 @@ function DisperseRandomObjects() {
         return;
     }
     for (let i = 0; i < cardsHidden.length; i++) {
-        cardsHidden[i].innerHTML = cardContents[i];
+        cardsHidden[i].firstChild.innerHTML = cardContents[i];
     }
 }
 
@@ -105,6 +108,7 @@ function TurnCard() {
     
     cardsOpened.push(this);
     this.style.background = "#7777FF";
+    this.firstChild.className = "card-front";
 
     if (cardsOpened.length == 2)
         CompareCards();
@@ -122,7 +126,7 @@ function TurnCard() {
 }
 
 function CompareCards() {
-    if (cardsOpened[0].innerHTML == cardsOpened[1].innerHTML) {
+    if (cardsOpened[0].firstChild.innerHTML == cardsOpened[1].firstChild.innerHTML) {
         cardsHidden.forEach(element => {
             if (element == cardsOpened[0] || element == cardsOpened[1]) {
                 
@@ -148,6 +152,7 @@ function CompareCards() {
 
                 setTimeout(() => {
                     element.style.background = "blue";
+                    element.firstChild.className = "card-back";
                 }, 750);
 
             }
