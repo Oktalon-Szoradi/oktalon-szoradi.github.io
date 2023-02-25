@@ -1,5 +1,6 @@
-# Medientechnik Projects
-Here I will upload the projects I've been working on at school.
+# Hello, World!
+This is my first GitHub repository. Also my very first GitHub Pages site.
 
-So far, this repository has a very simple index.html linking to my 2 projects:
+The website links to some stuff made by me, so I guess this is my homepage!  
+Check it out here:
 https://oktalon-szoradi.github.io/
