@@ -1,13 +1,38 @@
+@keyframes appear {
+  0% {
+    transform: translateY(16px) rotateX(-10deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(16px) rotateX(-10deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.appear-animation {
+  animation: appear 1s ease-in-out;
+}
+
 .box-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  perspective: 512px;
   margin-top: -24px;
   padding: 24px;
   text-align: center;
 }
 
 .box {
+  transform-style: preserve-3d;
   margin: 24px;
   border-radius: 4px;
   box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 1), 0 0 0 2px hsla(0, 0%, 0%, 0.5),
@@ -30,22 +55,19 @@
 }
 
 .box code {
-  padding: 4px 8px;
-  color: hsl(200, 100%, 20%);
-  white-space: nowrap;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 0.5), 0 0 0 2px hsla(0, 0%, 0%, 0.1);
   background-image: radial-gradient(ellipse,
       transparent,
       transparent,
       hsla(0, 0%, 0%, .1));
-  box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 0.5), 0 0 0 2px hsla(0, 0%, 0%, 0.1);
-  border-radius: 4px;
+  padding: 4px 8px;
+  white-space: nowrap;
+  color: hsl(200, 100%, 20%);
 }
 
 .credit-box {
   margin: 24px;
-  padding-top: 16px;
-  padding-left: 24px;
-  padding-right: 24px;
   border-radius: 4px;
   box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 1), 0 0 0 2px hsla(0, 0%, 0%, 0.5),
     0 0 8px black;
@@ -62,6 +84,9 @@
       hsla(0, 0%, 100%, 0.55),
       hsla(0, 0%, 100%, 0.6) 49%,
       hsla(0, 0%, 100%, 0.5) 51%);
+  padding-top: 16px;
+  padding-right: 24px;
+  padding-left: 24px;
   width: 80%;
   backdrop-filter: blur(4px);
 }
@@ -78,10 +103,10 @@
 
 .button {
   display: inline-block;
+  margin: 8px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  margin: 8px;
   padding: 8px 32px 8px 32px;
   text-decoration: none;
   letter-spacing: 0.1em;
