@@ -1,3 +1,22 @@
+@-webkit-keyframes appear {
+  0% {
+    transform: translateY(16px) rotateX(-10deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(16px) rotateX(-10deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
 @keyframes appear {
   0% {
     transform: translateY(16px) rotateX(-10deg);
@@ -19,6 +38,7 @@
 
 .appear-animation {
   animation: appear 1s ease-in-out;
+  -webkit-animation: appear 1s ease-in-out;
 }
 
 .box-grid {
@@ -52,6 +72,7 @@
       hsla(0, 0%, 100%, 0.5) 51%);
   width: 40%;
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .box code {
@@ -84,11 +105,10 @@
       hsla(0, 0%, 100%, 0.55),
       hsla(0, 0%, 100%, 0.6) 49%,
       hsla(0, 0%, 100%, 0.5) 51%);
-  padding-top: 16px;
-  padding-right: 24px;
-  padding-left: 24px;
+  padding: 16px;
   width: 80%;
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .my-thumb {
@@ -111,6 +131,9 @@
   text-decoration: none;
   letter-spacing: 0.1em;
   font-weight: 700;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -277,4 +300,5 @@
   padding: 8px;
   text-align: center;
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
