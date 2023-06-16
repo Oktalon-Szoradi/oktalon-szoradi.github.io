@@ -117,6 +117,11 @@
   width: 100%;
 }
 
+.my-thumb-noshad {
+  border-radius: 4px;
+  width: 100%;
+}
+
 .my-icothumb {
   height: 128px;
 }
