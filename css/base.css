@@ -30,7 +30,7 @@ body {
   transition-duration: 50ms;
   cursor: pointer;
   height: 100%;
-  content: url(../img/logo_light.png);
+  content: url(/img/logo_light.png);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -38,7 +38,7 @@ body {
 }
 
 .logo:hover {
-  content: url(../img/logo_dark.png);
+  content: url(/img/logo_dark.png);
 }
 
 .logo:active {

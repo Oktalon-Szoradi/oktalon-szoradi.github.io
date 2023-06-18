@@ -2,7 +2,7 @@
 // Preloading images
 /* eslint-disable-next-line no-undef */
 const img = new Image()
-img.src = '../img/logo_dark.png'
+img.src = '/img/logo_dark.png'
 
 // ----------------------------------------------------------------
 // Remove "JavaScript is not enabled." banner

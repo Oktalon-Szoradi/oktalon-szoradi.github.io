@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: config;
-  src: url(../fonts/cr.ttf);
+  src: url(/fonts/cr.ttf);
 }
 
 body {
