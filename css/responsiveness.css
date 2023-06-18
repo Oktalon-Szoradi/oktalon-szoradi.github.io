@@ -28,7 +28,7 @@
   .navbar-menu-button {
     display: inline-block;
     transition-duration: 50ms;
-    background-image: url('../img/Icon-Hamburger.svg');
+    background-image: url('/img/Icon-Hamburger.svg');
     cursor: pointer;
     padding-right: 1em;
     padding-left: 1em;
@@ -41,7 +41,7 @@
   }
 
   .navbar-menu-button:hover {
-    background-image: url('../img/Icon-Hamburger-Hover.svg'),
+    background-image: url('/img/Icon-Hamburger-Hover.svg'),
       radial-gradient(ellipse at bottom,
         hsla(0, 0%, 100%, 0.1),
         transparent,
@@ -49,7 +49,7 @@
   }
 
   .navbar-menu-button.active {
-    background-image: url('../img/Icon-Hamburger-Active.svg'),
+    background-image: url('/img/Icon-Hamburger-Active.svg'),
       linear-gradient(to right, hsla(0, 0%, 0%, 0.33), transparent 25%),
       linear-gradient(to bottom, hsla(0, 0%, 0%, 0.33), transparent 50%),
       linear-gradient(to left, hsla(0, 0%, 0%, 0.33), transparent 25%),
@@ -72,8 +72,8 @@
 
   .navbar-menu {
     grid-row: 1;
-    box-shadow: 0 1px 0 hsla(0, 0%, 100%, 0.55), 0 2px 0 hsla(0, 0%, 0%, 0.8),
-      0 4px 4px hsla(0, 0%, 0%, 0.8);
+    box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.25), 0 1px 0 hsla(0, 0%, 0%, 1),
+      0 4px 8px hsla(0, 0%, 0%, 0.75);
     background-image: linear-gradient(to bottom,
         hsla(0, 0%, 0%, 0.75),
         hsla(0, 0%, 0%, 0.8)),
@@ -134,6 +134,28 @@
     grid-row: 2;
   }
 
+  .pic-control-grid {
+    display: inline;
+  }
+
+  .pic-control-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .button-nav-tall {
+    display: none;
+  }
+
+  .button-nav-small {
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px 0 8px;
+    padding: 8px 16px 8px 16px;
+  }
+
   .box-grid {
     margin: 0;
     padding: 0;
@@ -142,6 +164,10 @@
   .box {
     width: 100%;
   }
+}
+
+.nav-hidden {
+  display: none;
 }
 
 .hidden {
