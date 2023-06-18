@@ -134,6 +134,28 @@
     grid-row: 2;
   }
 
+  .pic-control-grid {
+    display: inline;
+  }
+
+  .pic-control-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .button-nav-tall {
+    display: none;
+  }
+
+  .button-nav-small {
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px 0 8px;
+    padding: 8px 16px 8px 16px;
+  }
+
   .box-grid {
     margin: 0;
     padding: 0;
