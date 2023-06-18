@@ -6,13 +6,13 @@ img.src = '/img/logo_dark.png'
 
 // ----------------------------------------------------------------
 // Remove "JavaScript is not enabled." banner
-const noJsBanner = document.querySelector('.banner-error')
+const noJsBanner = document.querySelector('.banner-red')
 noJsBanner.remove()
 
 // ----------------------------------------------------------------
 // Hide boxes
 const hiddenTags = document.querySelectorAll('.box')
-hiddenTags.forEach((tag) => {
+hiddenTags.forEach(tag => {
   tag.classList.add('hidden')
 })
 
