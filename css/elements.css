@@ -309,7 +309,9 @@
 }
 
 .banner-error {
-  margin-top: 24px;
+  position: sticky;
+  top: calc(64px + 24px);
+  z-index: 3;
   border-radius: 4px;
   box-shadow: 0 0 0 1px hsla(0, 100%, 90%, 1),
     0 0 0 2px hsla(0, 100%, 10%, 0.5), 0 0 8px black;
