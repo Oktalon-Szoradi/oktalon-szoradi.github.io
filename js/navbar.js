@@ -7,7 +7,7 @@ const navbarMenuUnderlay = document.querySelector('.navbar-menu-underlay')
 const toggleNavbarMenu = () => {
   navbar.classList.toggle('navbar-menu-isopen')
   navbarMenuButton.classList.toggle('active')
-  navbarMenuHolder.classList.toggle('hidden')
+  navbarMenuHolder.classList.toggle('nav-hidden')
   // navbarMenu.classList.toggle('hidden')
   // navbarMenuUnderlay.classList.toggle('hidden')
 }
