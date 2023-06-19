@@ -1,3 +1,5 @@
+/* eslint-env browser */
+
 const pictures = [
   'Becken',
   'BeckenLinks',
@@ -39,16 +41,22 @@ const picNumber = document.querySelector('#pic-no')
 
 let picIndex = 0
 
+const images = pictures.map(picture => {
+  const image = new Image()
+  image.src = `/img/water/Szor-${picture}.jpg`
+  return image
+})
+
 const prevPic = () => {
   picIndex = (picIndex - 1 + pictures.length) % pictures.length
-  pic.src = `/img/water/Szor-${pictures[picIndex]}.jpg`
+  pic.src = images[picIndex].src
   picName.innerText = pictures[picIndex]
   picNumber.innerText = `${picIndex + 1}/${pictures.length}`
 }
 
 const nextPic = () => {
   picIndex = (picIndex + 1) % pictures.length
-  pic.src = `/img/water/Szor-${pictures[picIndex]}.jpg`
+  pic.src = images[picIndex].src
   picName.innerText = pictures[picIndex]
   picNumber.innerText = `${picIndex + 1}/${pictures.length}`
 }

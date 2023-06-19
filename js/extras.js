@@ -1,8 +1,22 @@
+/* eslint-env browser */
+
 // ----------------------------------------------------------------
 // Preloading images
-/* eslint-disable-next-line no-undef */
-const img = new Image()
-img.src = '/img/logo_dark.png'
+const imagePathsToPreload = [
+  '/img/logo_dark.png',
+  '/img/Icon-ArrowLeft.svg',
+  '/img/Icon-ArrowLeft-Hover.svg',
+  '/img/Icon-ArrowLeft-Active.svg',
+  '/img/Icon-ArrowRight.svg',
+  '/img/Icon-ArrowRight-Hover.svg',
+  '/img/Icon-ArrowRight-Active.svg'
+]
+// eslint-disable-next-line no-unused-vars
+const uselessImages = imagePathsToPreload.map(img => {
+  const image = new Image()
+  image.src = img
+  return image
+})
 
 // ----------------------------------------------------------------
 // Remove "JavaScript is not enabled." banner

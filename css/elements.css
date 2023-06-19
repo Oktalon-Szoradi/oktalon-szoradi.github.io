@@ -270,6 +270,30 @@
   display: none;
 }
 
+.pic-prev {
+  content: url(/img/Icon-ArrowLeft.svg);
+}
+
+.pic-prev:hover {
+  content: url(/img/Icon-ArrowLeft-Hover.svg);
+}
+
+.pic-prev:active {
+  content: url(/img/Icon-ArrowLeft-Active.svg);
+}
+
+.pic-next {
+  content: url(/img/Icon-ArrowRight.svg);
+}
+
+.pic-next:hover {
+  content: url(/img/Icon-ArrowRight-Hover.svg);
+}
+
+.pic-next:active {
+  content: url(/img/Icon-ArrowRight-Active.svg);
+}
+
 .button-green {
   box-shadow: 0 2px 0 hsla(120, 75%, 16%, 1), 0 2px 4px black,
     inset 0 2px 4px white, inset 0 -2px 4px hsla(0, 0%, 0%, 0.5);
