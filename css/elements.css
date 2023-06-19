@@ -103,7 +103,7 @@
 
 .box-full {
   transform-style: preserve-3d;
-  margin: 24px 0 24px 0;
+  margin: 16px 0 24px 0;
   border-radius: 4px;
   box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 1), 0 0 0 2px hsla(0, 0%, 0%, 0.5),
     0 0 8px black;
@@ -152,26 +152,34 @@
   -webkit-backdrop-filter: blur(4px);
 }
 
-.my-thumb {
+.thumb {
   border-radius: 4px;
   box-shadow: 0 1px 4px black;
   width: 100%;
 }
 
-.my-thumb-noshad {
+.thumb-noshad {
   border-radius: 4px;
   width: 100%;
 }
 
-.my-icothumb {
+.icothumb {
   height: 144px;
 }
 
-.my-pic {
+.pic-view {
   width: 100%;
   height: calc(100vh - 366px);
   -o-object-fit: scale-down;
   object-fit: scale-down;
+}
+
+.vid-view {
+  /* width: 100%;
+  height: calc(100vh - 265px);
+  -o-object-fit: scale-down;
+  object-fit: scale-down; */
+  height: 720px;
 }
 
 .button {
