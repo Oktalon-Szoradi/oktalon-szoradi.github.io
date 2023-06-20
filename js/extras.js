@@ -4,6 +4,9 @@
 // Preloading images
 const imagePathsToPreload = [
   '/img/logo_dark.png',
+  '/img/Icon-Hamburger.svg',
+  '/img/Icon-Hamburger-Hover.svg',
+  '/img/Icon-Hamburger-Active.svg',
   '/img/Icon-ArrowLeft.svg',
   '/img/Icon-ArrowLeft-Hover.svg',
   '/img/Icon-ArrowLeft-Active.svg',
