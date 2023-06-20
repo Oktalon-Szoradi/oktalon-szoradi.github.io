@@ -46,7 +46,7 @@ const photosAsImages = photoNames.map(picture => {
   const image = new Image()
   image.src = `/img/water/Szor-${picture}.jpg`
   image.addEventListener('load', () => {
-    photoNumber.innerText = `${++loadedCount}/${photoNames.length}`
+    photoNumber.innerText = `${loadedCount += 1}/${photoNames.length}`
     if (loadedCount === photoNames.length) {
       photoName.innerText = 'All photos loaded successfully'
       setTimeout(() => {
