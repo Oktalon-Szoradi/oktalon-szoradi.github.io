@@ -1,8 +1,8 @@
 /* eslint-env browser */
 
 // ----------------------------------------------------------------
-// Preloading images
-const imagePathsToPreload = [
+// Preloading graphics
+const graphicsPathsToPreload = [
   '/img/logo_dark.png',
   '/img/Icon-Hamburger.svg',
   '/img/Icon-Hamburger-Hover.svg',
@@ -15,7 +15,7 @@ const imagePathsToPreload = [
   '/img/Icon-ArrowRight-Active.svg'
 ]
 // eslint-disable-next-line no-unused-vars
-const uselessImages = imagePathsToPreload.map(img => {
+const graphicsAsImages = graphicsPathsToPreload.map(img => {
   const image = new Image()
   image.src = img
   return image

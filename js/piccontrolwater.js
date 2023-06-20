@@ -1,6 +1,6 @@
 /* eslint-env browser */
 
-const pictures = [
+const photoNames = [
   'Becken',
   'BeckenLinks',
   'BeckenRechts',
@@ -33,49 +33,60 @@ const pictures = [
   'WasserNebel'
 ]
 
-const pic = document.querySelector('#pic')
-const picPrevButtons = document.querySelectorAll('.pic-prev')
-const picNextButtons = document.querySelectorAll('.pic-next')
-const picName = document.querySelector('#pic-name')
-const picNumber = document.querySelector('#pic-no')
+const photo = document.querySelector('#pic')
+const photoPrevButtons = document.querySelectorAll('.pic-prev')
+const photoNextButtons = document.querySelectorAll('.pic-next')
+const photoName = document.querySelector('#pic-name')
+const photoNumber = document.querySelector('#pic-no')
 
-let picIndex = 0
+let loadedCount = 0
+let photoIndex = 0
 
-const images = pictures.map(picture => {
+const photosAsImages = photoNames.map(picture => {
   const image = new Image()
   image.src = `/img/water/Szor-${picture}.jpg`
+  image.addEventListener('load', () => {
+    photoNumber.innerText = `${loadedCount += 1}/${photoNames.length}`
+    if (loadedCount === photoNames.length) {
+      photoName.innerText = 'All photos loaded successfully'
+      setTimeout(() => {
+        photoName.innerText = photoNames[photoIndex]
+        photoNumber.innerText = `${photoIndex + 1}/${photoNames.length}`
+      }, 1000)
+    }
+  })
   return image
 })
 
-const prevPic = () => {
-  picIndex = (picIndex - 1 + pictures.length) % pictures.length
-  pic.src = images[picIndex].src
-  picName.innerText = pictures[picIndex]
-  picNumber.innerText = `${picIndex + 1}/${pictures.length}`
+const prevPhoto = () => {
+  photoIndex = (photoIndex - 1 + photoNames.length) % photoNames.length
+  photo.src = photosAsImages[photoIndex].src
+  photoName.innerText = photoNames[photoIndex]
+  photoNumber.innerText = `${photoIndex + 1}/${photoNames.length}`
 }
 
-const nextPic = () => {
-  picIndex = (picIndex + 1) % pictures.length
-  pic.src = images[picIndex].src
-  picName.innerText = pictures[picIndex]
-  picNumber.innerText = `${picIndex + 1}/${pictures.length}`
+const nextPhoto = () => {
+  photoIndex = (photoIndex + 1) % photoNames.length
+  photo.src = photosAsImages[photoIndex].src
+  photoName.innerText = photoNames[photoIndex]
+  photoNumber.innerText = `${photoIndex + 1}/${photoNames.length}`
 }
 
-picPrevButtons.forEach(button => {
-  button.addEventListener('click', prevPic)
+photoPrevButtons.forEach(button => {
+  button.addEventListener('click', prevPhoto)
 })
 
-picNextButtons.forEach(button => {
-  button.addEventListener('click', nextPic)
+photoNextButtons.forEach(button => {
+  button.addEventListener('click', nextPhoto)
 })
 
 document.addEventListener('keydown', event => {
   switch (event.key) {
     case 'ArrowLeft':
-      prevPic()
+      prevPhoto()
       break
     case 'ArrowRight':
-      nextPic()
+      nextPhoto()
       break
     default:
       break
