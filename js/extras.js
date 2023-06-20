@@ -23,7 +23,7 @@ const uselessImages = imagePathsToPreload.map(img => {
 
 // ----------------------------------------------------------------
 // Remove "JavaScript is not enabled." banner
-const noJsBanner = document.querySelector('.banner-red')
+const noJsBanner = document.querySelector('#banner-no-js')
 noJsBanner.remove()
 
 // ----------------------------------------------------------------

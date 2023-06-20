@@ -130,7 +130,6 @@
 
 .box-vid {
   transform-style: preserve-3d;
-  margin: 24px;
   border-radius: 4px;
   box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 1), 0 0 0 2px hsla(0, 0%, 0%, 0.5),
     0 0 8px black;
@@ -201,6 +200,16 @@
 .vid-view {
   width: 100%;
   /* height: 720px; */
+}
+
+td {
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.difference {
+  color: hsl(0, 100%, 50%);
 }
 
 .button {
