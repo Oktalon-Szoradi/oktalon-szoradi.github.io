@@ -43,13 +43,24 @@
       </div>
       <div class="navbar-menu-underlay"></div>
     </div>
-    <div id="popup">
+    <div class="text-center">
+      <button id="button-trigger" class="button button-normal button-default">Trigger</button>
+    </div>
+    <div id="popup" class="d-none">
       <div class="p-3 box">
-        <h3 class="mt-3">Hi there</h3>
-        <p>
+        <p class="text-center">
           Pop up
         </p>
-        <button class="button button-normal">OK</button>
+        <div class="p-3">
+          <h3 class="mt-3">
+            Hi there<br />
+            Content<br />
+            Maybe change via JavaScript<br />
+          </h3>
+          <div class="text-end">
+            <button id="button-ok" class="button button-normal button-default">OK</button>
+          </div>
+        </div>
       </div>
     </div>
     <div id="content">

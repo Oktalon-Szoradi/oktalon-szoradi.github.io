@@ -43,3 +43,17 @@ for (let i = 0; i < boxes.length; i++) {
     boxes[i].classList.add('appear-animation')
   }, i * 100)
 }
+
+// ----------------------------------------------------------------
+// Pop Up
+const popUp = document.querySelector('#popup')
+const buttonOk = document.querySelector('#button-ok')
+const buttonTrigger = document.querySelector('#button-trigger')
+
+buttonOk.addEventListener('click', () => {
+  popUp.classList.add('d-none')
+})
+
+buttonTrigger.addEventListener('click', () => {
+  popUp.classList.remove('d-none')
+})
