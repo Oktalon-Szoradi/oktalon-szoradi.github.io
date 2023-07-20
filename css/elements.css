@@ -341,7 +341,7 @@ td {
   transform: translateY(2px);
 }
 
-.button-default {
+.button-normal {
   box-shadow: 0 2px 0 hsla(0, 0%, 25%, 1), 0 2px 4px black,
     inset 0 2px 4px white, inset 0 -2px 4px hsla(0, 0%, 0%, 0.5);
   background-image: radial-gradient(ellipse 150% 75% at 50% 15%,
@@ -356,7 +356,7 @@ td {
   color: black;
 }
 
-.button-default:hover {
+.button-normal:hover {
   box-shadow: 0 2px 0 hsla(200, 100%, 40%, 1), 0 2px 8px hsl(200, 100%, 50%),
     inset 0 2px 4px white, inset 0 -2px 4px rgba(0, 0, 0, 0.25);
   background-image: radial-gradient(ellipse 150% 75% at 50% 15%,
@@ -370,7 +370,7 @@ td {
   text-shadow: 0 1px 4px white;
 }
 
-.button-default:active {
+.button-normal:active {
   box-shadow: inset 0 4px 8px hsla(0, 0%, 0%, 0.75),
     inset 0 0 2px hsla(0, 0%, 0%, 0.75);
   background-image: radial-gradient(ellipse 150% 75% at 50% 15%,
@@ -384,7 +384,7 @@ td {
   color: hsla(0, 0%, 0%, 0.67);
 }
 
-.button-default-disabled {
+.button-normal-disabled {
   box-shadow: 0 2px 0 hsla(0, 0%, 25%, 0.5),
     inset 0 2px 4px hsla(0, 0%, 100%, 0.1),
     inset 0 -2px 4px hsla(0, 0%, 0%, 0.1);
@@ -401,7 +401,7 @@ td {
   color: hsla(0, 0%, 0%, 0.5);
 }
 
-.button-default-disabled:active {
+.button-normal-disabled:active {
   transform: none;
 }
 
@@ -421,11 +421,11 @@ td {
   content: url(/img/Icon-ArrowLeft.svg);
 }
 
-.pic-prev:not(.button-default-disabled):hover {
+.pic-prev:not(.button-normal-disabled):hover {
   content: url(/img/Icon-ArrowLeft-Hover.svg);
 }
 
-.pic-prev:not(.button-default-disabled):active {
+.pic-prev:not(.button-normal-disabled):active {
   content: url(/img/Icon-ArrowLeft-Active.svg);
 }
 
@@ -433,16 +433,16 @@ td {
   content: url(/img/Icon-ArrowRight.svg);
 }
 
-.pic-next:not(.button-default-disabled):hover {
+.pic-next:not(.button-normal-disabled):hover {
   content: url(/img/Icon-ArrowRight-Hover.svg);
 }
 
-.pic-next:not(.button-default-disabled):active {
+.pic-next:not(.button-normal-disabled):active {
   content: url(/img/Icon-ArrowRight-Active.svg);
 }
 
-.pic-prev.button-default-disabled,
-.pic-next.button-default-disabled {
+.pic-prev.button-normal-disabled,
+.pic-next.button-normal-disabled {
   opacity: 0.5;
 }
 
