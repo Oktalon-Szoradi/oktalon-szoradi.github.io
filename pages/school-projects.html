@@ -43,23 +43,16 @@
       </div>
       <div class="navbar-menu-underlay"></div>
     </div>
-    <div class="text-center">
-      <button id="button-trigger" class="button button-normal button-default">Trigger</button>
-    </div>
-    <div id="popup" class="d-none">
-      <div class="p-3 box">
-        <p class="text-center">
-          Pop up
-        </p>
-        <div class="p-3">
-          <h3 class="mt-3">
-            Hi there<br />
-            Content<br />
-            Maybe change via JavaScript<br />
-          </h3>
-          <div class="text-end">
-            <button id="button-ok" class="button button-normal button-default">OK</button>
+    <div id="popup-bg" class="d-none">
+      <div id="popup-box" class="p-3 appear-animation">
+        <p id="popup-title" class="text-center"></p>
+        <div class="indent">
+          <div id="popup-body" class="p-3">
+            <h3 id="popup-content-header-top" class="mt-3"></h3>
+            <h5 id="popup-content-body" class="mt-3"></h5>
+            <h4 id="popup-content-header-bottom" class="mt-3"></h4>
           </div>
+          <div id="popup-actions" class="p-3"></div>
         </div>
       </div>
     </div>
@@ -146,7 +139,8 @@
               and it seems she's turning planets into donuts.
             </p>
             <a class="button button-blue-disabled">View Renders</a>
-            <a class="button button-normal" href="/other/BlenderProject.zip">Download Project</a>
+            <!-- <a class="button button-normal" href="/other/BlenderProject.zip">Download Project</a> -->
+            <a id="trigger-button-blender" class="button button-normal">Download Project</a>
           </div>
           <div class="p-3 box">
             <img class="thumb" src="/img/Thumbnail_Video-AnsweringToyLogo.png" />
