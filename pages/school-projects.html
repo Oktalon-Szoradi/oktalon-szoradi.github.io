@@ -28,7 +28,7 @@
       <a class="p-2 logo" href="/index.html"></a>
       <a class="navbar-item active" href="/pages/school-projects.html">School Projects</a>
       <a class="navbar-item" href="/pages/personal-projects.html">Personal Projects</a>
-      <a class="navbar-item" href="/pages/socials.html">Socials</a>
+      <a class="navbar-item" href="/pages/accounts.html">Accounts</a>
       <a class="navbar-item" href="/pages/contact.html">Contact</a>
       <div class="navbar-menu-button-holder">
         <div class="navbar-menu-button"></div>
@@ -38,10 +38,23 @@
       <div class="navbar-menu">
         <a class="navbar-menu-item active" href="/pages/school-projects.html">School Projects</a>
         <a class="navbar-menu-item" href="/pages/personal-projects.html">Personal Projects</a>
-        <a class="navbar-menu-item" href="/pages/socials.html">Socials</a>
+        <a class="navbar-menu-item" href="/pages/accounts.html">Accounts</a>
         <a class="navbar-menu-item" href="/pages/contact.html">Contact</a>
       </div>
       <div class="navbar-menu-underlay"></div>
+    </div>
+    <div id="popup-bg" class="d-none">
+      <div id="popup-box" class="p-3 appear-animation">
+        <p id="popup-title" class="text-center"></p>
+        <div class="indent">
+          <div id="popup-body" class="p-3">
+            <h3 id="popup-content-header-top" class="mt-3"></h3>
+            <h5 id="popup-content-body" class="mt-3"></h5>
+            <h4 id="popup-content-header-bottom" class="mt-3"></h4>
+          </div>
+          <div id="popup-actions" class="p-3"></div>
+        </div>
+      </div>
     </div>
     <div id="content">
       <div class="container-lg">
@@ -112,7 +125,7 @@
               Most of them turned out pretty good.<br />
               The camera I used (borrowed from school) was a <b>Nikon D300S</b>.
             </p>
-            <a class="button button-default" href="gallery/water.html">View</a>
+            <a class="button button-normal" href="gallery/water.html">View</a>
           </div>
           <div class="p-3 box">
             <img class="thumb" src="/img/Thumbnail_Blender-1080p.png" />
@@ -126,7 +139,8 @@
               and it seems she's turning planets into donuts.
             </p>
             <a class="button button-blue-disabled">View Renders</a>
-            <a class="button button-default" href="/other/BlenderProject.zip">Download Project</a>
+            <!-- <a class="button button-normal" href="/other/BlenderProject.zip">Download Project</a> -->
+            <a id="trigger-button-blender" class="button button-normal">Download Project</a>
           </div>
           <div class="p-3 box">
             <img class="thumb" src="/img/Thumbnail_Video-AnsweringToyLogo.png" />
@@ -139,7 +153,7 @@
               It had to have at least 10 shots, and some having motion.
               My initial video was long and boring, but I managed to make it a lot better.
             </p>
-            <a class="button button-default" href="/pages/video/answeringtoy.html">View</a>
+            <a class="button button-normal" href="/pages/video/answeringtoy.html">View</a>
           </div>
           <div class="p-3 box">
             <img class="thumb" src="/img/Thumbnail_Soundtrap-1080p.png" />
@@ -153,7 +167,7 @@
               then we had to make some songs using <a href="https://www.soundtrap.com/">Soundtrap</a>.<br />
               I made 3 in total, I think they're okay.
             </p>
-            <a class="button button-default-disabled">View</a>
+            <a class="button button-normal-disabled">View</a>
           </div>
           <div class="p-3 box">
             <img class="thumb" src="/img/Thumbnail_Synchro-1080p.png" />
@@ -168,7 +182,7 @@
               I personally am not really satisfied with the script, but it's fine.
               It's kinda random, like shitposts, hence the name "Hey Vsauce, Random here"
             </p>
-            <a class="button button-default" href="/pages/video/synchronization.html">View</a>
+            <a class="button button-normal" href="/pages/video/synchronization.html">View</a>
           </div>
         </div>
       </div>

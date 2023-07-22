@@ -73,8 +73,8 @@ const nextPhoto = () => {
 
 const activateButton = button => {
   button.disabled = false
-  button.classList.remove('button-default-disabled')
-  button.classList.add('button-default')
+  button.classList.remove('button-normal-disabled')
+  button.classList.add('button-normal')
 }
 
 const initializeControls = () => {
