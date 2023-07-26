@@ -97,7 +97,7 @@ const initializeControls = () => {
     photo.classList.add('pic-view-grow-animation')
     setTimeout(() => {
       progressBarHolder.classList.add('hidden')
-      photo.style.height = 'calc(100vh - 366px)'
+      photo.style.height = 'calc(100vh - 400px)'
     }, 499)
   }, 1000)
 
