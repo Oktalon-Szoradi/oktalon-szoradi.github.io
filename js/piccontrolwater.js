@@ -73,8 +73,8 @@ const nextPhoto = () => {
 
 const activateButton = button => {
   button.disabled = false
-  button.classList.remove('button-default-disabled')
-  button.classList.add('button-default')
+  button.classList.remove('button-normal-disabled')
+  button.classList.add('button-normal')
 }
 
 const initializeControls = () => {
@@ -97,7 +97,7 @@ const initializeControls = () => {
     photo.classList.add('pic-view-grow-animation')
     setTimeout(() => {
       progressBarHolder.classList.add('hidden')
-      photo.style.height = 'calc(100vh - 366px)'
+      photo.style.height = 'calc(100vh - 400px)'
     }, 499)
   }, 1000)
 
