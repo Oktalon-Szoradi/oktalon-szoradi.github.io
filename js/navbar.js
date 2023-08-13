@@ -1,3 +1,4 @@
+const locbar = document.querySelector('.locbar')
 const navbar = document.querySelector('.navbar')
 const navbarMenuHolder = document.querySelector('.navbar-menu-holder')
 // const navbarMenu = document.querySelector('.navbar-menu')
@@ -8,6 +9,7 @@ const toggleNavbarMenu = () => {
   navbar.classList.toggle('navbar-menu-isopen')
   navbarMenuButton.classList.toggle('active')
   navbarMenuHolder.classList.toggle('nav-hidden')
+  locbar.classList.toggle('nav-hidden')
   // navbarMenu.classList.toggle('hidden')
   // navbarMenuUnderlay.classList.toggle('hidden')
 }

@@ -154,13 +154,13 @@
 
 @-webkit-keyframes pic-view-grow {
   to {
-    height: calc(100vh - 366px);
+    height: calc(100vh - 400px);
   }
 }
 
 @keyframes pic-view-grow {
   to {
-    height: calc(100vh - 366px);
+    height: calc(100vh - 400px);
   }
 }
 
@@ -369,7 +369,7 @@
 
 .pic-view {
   width: 100%;
-  height: calc(100vh - 432px);
+  height: calc(100vh - 476px);
   -o-object-fit: scale-down;
   object-fit: scale-down;
 }
