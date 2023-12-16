@@ -115,7 +115,7 @@ document.addEventListener('keydown', event => {
 
 const frameGrid = document.querySelector('.frame-grid')
 
-const photosAsImages = photoNames.map((picture, index) => {
+photoNames.map((picture, index) => {
   const photoFrame = document.createElement('div')
   photoFrame.classList.add('glossy-frame')
 
