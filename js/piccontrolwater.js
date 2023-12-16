@@ -73,9 +73,9 @@ const setData = () => {
   picFullscreenImage.attributes.src.value = `/img/water/Szor-${photoNames[curPicIndex]}.jpg`
 }
 
-const viewFullScreen = thing => {
+const viewFullScreen = function () {
   toggleFullScreen()
-  curPicIndex = Number(thing.target.attributes['data-index'].value)
+  curPicIndex = Number(this.attributes['data-index'].value)
   setData()
 }
 
@@ -142,5 +142,3 @@ const photosAsImages = photoNames.map((picture, index) => {
 
   return image
 })
-
-console.log(photosAsImages)
