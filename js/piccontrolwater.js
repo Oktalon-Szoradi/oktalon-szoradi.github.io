@@ -33,94 +33,112 @@ const photoNames = [
   'WasserNebel'
 ]
 
-const photo = document.querySelector('#pic')
-const photoPrevButtons = document.querySelectorAll('.pic-prev')
-const photoNextButtons = document.querySelectorAll('.pic-next')
-const photoName = document.querySelector('#pic-name')
-const photoNumber = document.querySelector('#pic-no')
-const progressBarHolder = document.querySelector('.progress-bar-holder')
-const progressBarJuice = document.querySelector('.progress-bar-juice')
+const glossyFramePlaceholder = document.querySelector(
+  '#glossy-frame-placeholder'
+)
 
-let loadedCount = 0
-let photoIndex = 0
+glossyFramePlaceholder.classList.add('hidden')
 
-const photosAsImages = photoNames.map(picture => {
-  const image = new Image()
-  image.src = `/img/water/Szor-${picture}.jpg`
-  image.addEventListener('load', () => {
-    photoNumber.innerText = `${(loadedCount += 1)}/${photoNames.length}`
-    progressBarJuice.style.width = `${(loadedCount / photoNames.length) * 100}%`
-    if (loadedCount === photoNames.length) {
-      initializeControls()
-    }
-  })
-  return image
-})
+const replaceGermanChars = string => {
+  return string.replace(/ae/gi, 'ä').replace(/oe/gi, 'ö').replace(/ue/gi, 'ü')
+}
+
+const breakIntoWords = string => {
+  const words = replaceGermanChars(string).split(/(?=[A-Z])/)
+  return words.join(' ')
+}
+
+/* -------------------------------------------------------------------------------------------- */
+/* - Fullscreen - */
+/* -------------------------------------------------------------------------------------------- */
+
+const picFullscreen = document.querySelector('#pic-fullscreen')
+const picFullscreenImage = document.querySelector('#pic-fullscreen-img')
+const picFullscreenTitle = document.querySelector('.pic-fullscreen-title')
+const picFullscreenIndex = document.querySelector('.pic-fullscreen-index')
+const picFullscreenPrev = document.querySelector('.pic-fullscreen-prev')
+const picFullscreenNext = document.querySelector('.pic-fullscreen-next')
+const picFullscreenClose = document.querySelector('.pic-fullscreen-close')
+let curPicIndex = 0
+
+const toggleFullScreen = () => {
+  picFullscreen.classList.toggle('d-none')
+}
+
+picFullscreenClose.addEventListener('click', toggleFullScreen)
+
+const setData = () => {
+  picFullscreenTitle.innerText = breakIntoWords(photoNames[curPicIndex])
+  picFullscreenIndex.innerText = `${curPicIndex + 1}/${photoNames.length}`
+  picFullscreenImage.attributes.src.value = `/img/water/Szor-${photoNames[curPicIndex]}.jpg`
+}
+
+const viewFullScreen = function () {
+  toggleFullScreen()
+  curPicIndex = Number(this.attributes['data-index'].value)
+  setData()
+}
 
 const prevPhoto = () => {
-  photoIndex = (photoIndex - 1 + photoNames.length) % photoNames.length
-  photo.src = photosAsImages[photoIndex].src
-  photoName.innerText = photoNames[photoIndex]
-  photoNumber.innerText = `${photoIndex + 1}/${photoNames.length}`
+  curPicIndex = curPicIndex === 0 ? photoNames.length - 1 : curPicIndex - 1
+  setData()
 }
 
 const nextPhoto = () => {
-  photoIndex = (photoIndex + 1) % photoNames.length
-  photo.src = photosAsImages[photoIndex].src
-  photoName.innerText = photoNames[photoIndex]
-  photoNumber.innerText = `${photoIndex + 1}/${photoNames.length}`
+  curPicIndex = curPicIndex === photoNames.length - 1 ? 0 : curPicIndex + 1
+  setData()
 }
 
-const activateButton = button => {
-  button.disabled = false
-  button.classList.remove('button-normal-disabled')
-  button.classList.add('button-normal')
-}
+picFullscreenPrev.addEventListener('click', prevPhoto)
 
-const initializeControls = () => {
-  setTimeout(() => {
-    progressBarJuice.classList.remove('progress-bar-juice')
-    progressBarJuice.classList.add('progress-bar-done')
-    photoName.innerText = 'All photos loaded successfully'
-  }, 250)
-  setTimeout(() => {
-    photoName.innerText = photoNames[photoIndex]
-    photoNumber.innerText = `${photoIndex + 1}/${photoNames.length}`
-    // for (let i = 32; i >= 0; i -= 1) {
-    //   setTimeout(() => {
-    //     progressBarHolder.style.margin = `${i}px 0 ${i}px 0`
-    //     progressBarHolder.style.height = `${i}px`
-    //     progressBarJuice.style.height = `${i}px`
-    //   }, 25 * (32 - i))
-    // }
-    progressBarHolder.classList.add('shrink-animation')
-    photo.classList.add('pic-view-grow-animation')
-    setTimeout(() => {
-      progressBarHolder.classList.add('hidden')
-      photo.style.height = 'calc(100vh - 400px)'
-    }, 499)
-  }, 1000)
+picFullscreenNext.addEventListener('click', nextPhoto)
 
-  photoPrevButtons.forEach(button => {
-    button.addEventListener('click', prevPhoto)
-    activateButton(button)
-  })
+document.addEventListener('keydown', event => {
+  switch (event.key) {
+    case 'ArrowLeft':
+      prevPhoto()
+      break
+    case 'ArrowRight':
+      nextPhoto()
+      break
+    case 'Escape':
+      toggleFullScreen()
+      break
+    default:
+      break
+  }
+})
 
-  photoNextButtons.forEach(button => {
-    button.addEventListener('click', nextPhoto)
-    activateButton(button)
-  })
+/* -------------------------------------------------------------------------------------------- */
+/* - Thumbnail Generation - */
+/* -------------------------------------------------------------------------------------------- */
 
-  document.addEventListener('keydown', event => {
-    switch (event.key) {
-      case 'ArrowLeft':
-        prevPhoto()
-        break
-      case 'ArrowRight':
-        nextPhoto()
-        break
-      default:
-        break
-    }
-  })
-}
+const frameGrid = document.querySelector('.frame-grid')
+
+photoNames.map((picture, index) => {
+  const photoFrame = document.createElement('div')
+  photoFrame.classList.add('glossy-frame')
+
+  const image = document.createElement('div')
+  image.classList.add('pic')
+  image.style.backgroundImage = `url(/img/water/Szor-${picture}.jpg)`
+
+  const label = document.createElement('span')
+  label.classList.add('pic-label')
+  label.innerText = breakIntoWords(picture)
+
+  const number = document.createElement('span')
+  number.classList.add('pic-index')
+  number.innerText = `${index + 1}/${photoNames.length}`
+
+  photoFrame.setAttribute('data-index', index)
+
+  photoFrame.appendChild(image)
+  photoFrame.appendChild(label)
+  photoFrame.appendChild(number)
+  frameGrid.appendChild(photoFrame)
+
+  photoFrame.addEventListener('click', viewFullScreen)
+
+  return image
+})

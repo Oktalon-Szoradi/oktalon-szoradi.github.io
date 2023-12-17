@@ -388,6 +388,9 @@ td {
   color: hsl(0, 100%, 50%);
 }
 
+/* -------------------------------------------------------------------------------------------- */
+/* - Buttons - */
+/* -------------------------------------------------------------------------------------------- */
 .button {
   display: inline-block;
   margin: 8px;
@@ -490,27 +493,27 @@ td {
 }
 
 .pic-prev {
-  content: url(/img/Icon-ArrowLeft.svg);
+  background-image: url(/img/Icon-ArrowLeft.svg);
 }
 
 .pic-prev:not(.button-normal-disabled):hover {
-  content: url(/img/Icon-ArrowLeft-Hover.svg);
+  background-image: url(/img/Icon-ArrowLeft-Hover.svg);
 }
 
 .pic-prev:not(.button-normal-disabled):active {
-  content: url(/img/Icon-ArrowLeft-Active.svg);
+  background-image: url(/img/Icon-ArrowLeft-Active.svg);
 }
 
 .pic-next {
-  content: url(/img/Icon-ArrowRight.svg);
+  background-image: url(/img/Icon-ArrowRight.svg);
 }
 
 .pic-next:not(.button-normal-disabled):hover {
-  content: url(/img/Icon-ArrowRight-Hover.svg);
+  background-image: url(/img/Icon-ArrowRight-Hover.svg);
 }
 
 .pic-next:not(.button-normal-disabled):active {
-  content: url(/img/Icon-ArrowRight-Active.svg);
+  background-image: url(/img/Icon-ArrowRight-Active.svg);
 }
 
 .pic-prev.button-normal-disabled,
@@ -625,9 +628,13 @@ td {
   transform: none;
 }
 
+/* -------------------------------------------------------------------------------------------- */
+/* - Banners - */
+/* -------------------------------------------------------------------------------------------- */
 .banner-red {
+  position: -webkit-sticky;
   position: sticky;
-  top: calc(64px + 24px);
+  top: calc(64px + 1px + 32px + 24px);
   z-index: 3;
   border-radius: 4px;
   box-shadow: 0 0 0 1px hsla(0, 100%, 90%, 1), 0 0 0 2px hsla(0, 100%, 10%, 0.5),
@@ -729,6 +736,9 @@ td {
   -webkit-backdrop-filter: blur(4px);
 }
 
+/* -------------------------------------------------------------------------------------------- */
+/* - Progress Bar - */
+/* -------------------------------------------------------------------------------------------- */
 .progress-bar-holder {
   margin: 16px 0 16px 0;
   border-radius: 8px;
@@ -811,4 +821,290 @@ td {
   background-size: 200% 100%;
   width: 100%;
   height: 100%;
+}
+
+/* -------------------------------------------------------------------------------------------- */
+/* - New PicControl Elements */
+/* -------------------------------------------------------------------------------------------- */
+:root {
+  --image-size: 128px;
+  --frame-size: calc(var(--image-size) / 16);
+}
+
+.flex-wrap-center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.frame-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: calc((var(--image-size) + var(--frame-size) * 6) * 10);
+}
+
+.glossy-frame {
+  margin: calc(var(--frame-size) * 2);
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 100%),
+    0 0 0 2px hsla(0, 0%, 0%, 50%),
+    0 0 8px black;
+  background: radial-gradient(ellipse 100% 33% at bottom,
+      hsla(0, 0%, 0%, 0.15),
+      transparent),
+    radial-gradient(ellipse at bottom left,
+      transparent 75%,
+      hsla(0, 0%, 100%, 0.75)),
+    radial-gradient(ellipse at bottom right,
+      transparent 75%,
+      hsla(0, 0%, 100%, 0.75)),
+    linear-gradient(to bottom,
+      hsla(0, 0%, 100%, 0.55),
+      hsla(0, 0%, 100%, 0.6) 49%,
+      hsla(0, 0%, 100%, 0.5) 51%);
+  padding: var(--frame-size);
+  width: calc(var(--image-size) + var(--frame-size) * 2);
+  content: "";
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.glossy-frame::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  background: radial-gradient(ellipse 180% 150% at 90% 125%,
+      transparent 66%,
+      hsla(0, 0%, 100%, 33%) 67%,
+      hsla(0, 0%, 100%, 15%) 75%);
+  width: 100%;
+  height: 75%;
+  content: "";
+}
+
+.glossy-frame:hover {
+  box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 100%),
+    0 0 0 2px hsla(0, 0%, 0%, 50%),
+    0 0 16px hsl(200, 100%, 50%),
+    0 0 16px hsl(200, 100%, 50%);
+  background: radial-gradient(ellipse 100% 33% at bottom,
+      hsla(200, 100%, 25%, 0.15),
+      transparent),
+    radial-gradient(ellipse at bottom left,
+      transparent 75%,
+      hsla(200, 100%, 90%, 0.75)),
+    radial-gradient(ellipse at bottom right,
+      transparent 75%,
+      hsla(200, 100%, 90%, 0.75)),
+    linear-gradient(to bottom,
+      hsla(200, 100%, 75%, 0.55),
+      hsla(200, 100%, 75%, 0.6) 49%,
+      hsla(200, 100%, 75%, 0.5) 51%);
+  cursor: pointer;
+}
+
+.glossy-frame:active {
+  box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 75%),
+    0 0 0 2px hsla(0, 0%, 0%, 40%),
+    0 0 8px hsl(200, 100%, 25%),
+    0 0 8px hsl(200, 100%, 25%);
+  background: radial-gradient(ellipse 100% 33% at bottom,
+      hsla(200, 100%, 75%, 0.15),
+      transparent),
+    radial-gradient(ellipse at bottom left,
+      transparent 75%,
+      hsla(200, 50%, 50%, 0.75)),
+    radial-gradient(ellipse at bottom right,
+      transparent 75%,
+      hsla(200, 50%, 50%, 0.75)),
+    linear-gradient(to bottom,
+      hsla(200, 75%, 25%, 0.55),
+      hsla(200, 75%, 25%, 0.6) 49%,
+      hsla(200, 75%, 25%, 0.5) 51%);
+}
+
+.glossy-frame:active::after {
+  -webkit-filter: brightness(0.75);
+  filter: brightness(0.75);
+}
+
+.glossy-frame>.pic {
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 75%),
+    0 0 0 2px hsla(0, 0%, 100%, 100%);
+  background-position: center;
+  background-size: calc(var(--image-size) * (1 + 1/3 * 2));
+  width: var(--image-size);
+  height: var(--image-size);
+}
+
+.glossy-frame:active>.pic {
+  box-shadow: 0 0 8px inset hsla(0, 0%, 0%, 66.67%),
+    0 0 0 1px hsla(0, 0%, 0%, 66.67%),
+    0 0 0 2px hsla(0, 0%, 100%, 50%);
+}
+
+.glossy-frame>.pic-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0 8px 0;
+  width: 100%;
+  height: calc(1.2em * 3);
+  line-height: 1.2em;
+  word-break: break-word;
+}
+
+.glossy-frame>.pic-index {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  color: #0007;
+  font-size: 0.8em;
+}
+
+#pic-fullscreen {
+  display: grid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+  background-color: hsla(0, 0%, 0%, 0.5);
+  width: 100vw;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+#pic-fullscreen-img {
+  margin: auto;
+  max-width: 100%;
+  max-height: 100vh;
+}
+
+.pic-fullscreen-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to right,
+      hsla(0, 0%, 0%, 0.25),
+      transparent 50%);
+  padding: 1em;
+  width: 50%;
+  text-shadow: 0.5px 0.5px 4px black;
+  color: white;
+}
+
+.pic-fullscreen-title {
+  margin-bottom: 0;
+  font-size: 2em;
+}
+
+.pic-fullscreen-index {
+  margin-bottom: 0.25em;
+}
+
+.pic-fullscreen-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+}
+
+.pic-fullscreen-prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  opacity: 0.25;
+  background-position: 25% 50%;
+  background-repeat: no-repeat;
+  background-size: 3em 3em;
+  cursor: pointer;
+  width: 20%;
+  height: 100%;
+}
+
+.pic-fullscreen-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  opacity: 0.25;
+  background-position: 75% 50%;
+  background-repeat: no-repeat;
+  background-size: 3em 3em;
+  cursor: pointer;
+  width: 20%;
+  height: 100%;
+}
+
+.pic-fullscreen-prev:hover,
+.pic-fullscreen-next:hover {
+  opacity: 0.9;
+}
+
+.pic-fullscreen-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  margin: 1em;
+  border: 2px solid #431422;
+  border-radius: 8px;
+  box-shadow: 0 0 0 2px inset hsla(0, 0%, 100%, 0.4);
+  background: linear-gradient(to bottom,
+      #e9a99c,
+      #de9284 49.5%,
+      #b8432c 50.5%,
+      #d58576);
+  cursor: pointer;
+  padding: 0.1em 1em 0 1em;
+  color: white;
+  font-weight: 900;
+}
+
+.pic-fullscreen-close>span {
+  position: relative;
+  text-shadow: 0 0 2px #535666,
+    0 0 2px #535666,
+    0 0 2px #535666,
+    0 0 2px #535666,
+    0 0 2px #535666;
+  font-size: 2em;
+}
+
+.pic-fullscreen-close:hover {
+  box-shadow: 0 0 8px red,
+    0 0 0 2px inset hsla(0, 0%, 100%, 0.4);
+  background: linear-gradient(to bottom,
+      #fcc8bf,
+      #faa495 49.5%,
+      #d22302 50.5%,
+      #e8a056 95%,
+      hsl(50, 100%, 50%));
+}
+
+.pic-fullscreen-close:active {
+  background: linear-gradient(to right,
+      hsla(0, 0%, 0%, 0.25),
+      transparent 25%,
+      transparent 75%,
+      hsla(0, 0%, 0%, 0.25)),
+    linear-gradient(to bottom,
+      #cfa38b,
+      #c3876e 49.5%,
+      #891900 50.5%,
+      #891900 60%,
+      #c4954c 95%,
+      hsl(50, 100%, 40%));
 }
