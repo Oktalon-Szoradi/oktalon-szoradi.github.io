@@ -22,7 +22,7 @@ const graphicsAsImages = graphicsPathsToPreload.map(img => {
 })
 
 // ----------------------------------------------------------------
-// Remove "JavaScript could not be loaded." banner
+// Remove "JavaScript is not loaded." banner
 const noJsBanner = document.querySelector('#banner-no-js')
 noJsBanner.remove()
 
