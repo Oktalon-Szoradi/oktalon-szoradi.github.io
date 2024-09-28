@@ -8,7 +8,14 @@ https://oktalon-szoradi.github.io/
 
 ---
 
-#### ToDo:
+I now consider this website and this repository **outdated**.  
+The `dev` branch is especially outdated. I'm only keeping it for now due to some stuff I've written in the `README.md`.
+
+---
+
+I've commented out some stuff here. For up-to-date info on my current plans, see https://oktalon-szoradi.github.io/
+
+<!-- #### ToDo:
 
 ##### Content Additions:
 
@@ -45,4 +52,4 @@ There's so much content under School Projects, and only Tetra Legends Ultimate u
 Just thought I'd mention that.
 
 Fun Fact:    
-The message for this commit (the one for me updating this `README.md`) is generated using GitHub Copilot!
+The message for this commit (the one for me updating this `README.md`) is generated using GitHub Copilot! -->
