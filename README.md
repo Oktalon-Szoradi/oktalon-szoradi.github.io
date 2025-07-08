@@ -1,6 +1,6 @@
 # Production / Live Page
 
-This repo is what gets hosted by GitHub pages!
+This repo is what gets hosted/deployed by GitHub pages!
 
 What follows are notes for me.
 
