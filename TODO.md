@@ -12,6 +12,9 @@ This is a personal To-Do-List for my website.
     - [ ] Alignment of component NavigationButtons
     - [ ] Alignment of component CopyToClipboard
     - [ ] Brave desktop: Sometimes not the entire view gets updated??
+  - [ ] Webkit (Safari)
+    - [ ] Download [PNG|JPG] button icon's underline collides with arrow point;
+          Find an actual icon
 - School Projects
   - [ ] Content from HTL 5CHITM (2023/2024)
     - [ ] Blender (3D) Project
