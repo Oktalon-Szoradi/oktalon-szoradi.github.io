@@ -1,0 +1,24 @@
+{
+  "extends": ["stylelint-config-concentric-order", "stylelint-config-standard"],
+  "overrides": [
+    {
+      "extends": ["stylelint-config-standard-scss"],
+      "files": ["*.scss", "**/*.scss"]
+    },
+    {
+      "extends": ["stylelint-config-standard-scss", "stylelint-config-standard-vue/scss"],
+      "files": ["*.vue", "**/*.vue"]
+    }
+  ],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-high-performance-animation",
+    "stylelint-media-use-custom-media"
+  ],
+  "rules": {
+    "comment-empty-line-before": null,
+    "scss/double-slash-comment-empty-line-before": null,
+    "csstools/media-use-custom-media": "known",
+    "plugin/no-low-performance-animation-properties": true
+  }
+}

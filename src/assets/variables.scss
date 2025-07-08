@@ -1,0 +1,60 @@
+$reflection-soft: linear-gradient(
+  to bottom,
+  hsl(0deg 0% 100% / 2.5%),
+  hsl(0deg 0% 100% / 5%) 49%,
+  transparent 51%
+);
+$reflection-weak: linear-gradient(
+  to bottom,
+  hsl(0deg 0% 100% / 2.5%),
+  hsl(0deg 0% 100% / 5%) 50%,
+  transparent 50%
+);
+$reflection-minor: linear-gradient(
+  to bottom,
+  hsl(0deg 0% 100% / 5%),
+  hsl(0deg 0% 100% / 10%) 50%,
+  transparent 50%
+);
+$reflection-moderate: linear-gradient(
+  to bottom,
+  hsl(0deg 0% 100% / 10%),
+  hsl(0deg 0% 100% / 20%) 50%,
+  transparent 50%
+);
+$reflection-major: linear-gradient(
+  to bottom,
+  hsl(0deg 0% 100% / 17.5%),
+  hsl(0deg 0% 100% / 25%) 50%,
+  transparent 50%
+);
+$reflection-strong: linear-gradient(
+  to bottom,
+  hsl(0deg 0% 100% / 25%),
+  hsl(0deg 0% 100% / 50%) 50%,
+  transparent 50%
+);
+$textshadow-dimensions-nav: 0 1px;
+$stripes: repeating-linear-gradient(
+  -45deg,
+  transparent,
+  transparent 2px,
+  hsl(0deg 0% 100% / 5%) 2px,
+  hsl(0deg 0% 100% / 5%) 4px
+);
+
+// -----------------------------------------------------------------------------
+
+$red: 0;
+$orange: 30;
+$yellow: 60;
+$green: 110;
+$blue: 230;
+$purple: 270;
+$outer-shadow: 0 2px 4px hsl(0deg 0% 0% / 50%);
+
+// -----------------------------------------------------------------------------
+
+$transdur-mouseenter: 100ms;
+$transdur-mouseleave: 1000ms;
+$transdur-press: 50ms;

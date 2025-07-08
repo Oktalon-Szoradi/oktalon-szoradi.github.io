@@ -1,0 +1,31 @@
+Copyright (c) 2025 Oktalon Szórádi
+
+---
+
+The purpose of this directory is to contain the file(s) for my logo and this
+copyright notice file. I do not want others using my logo [without my
+permission], so it is not under any license.
+
+As of 2025-03-03, there is one file: `TalonLogo.png`. I've decided to use an
+image sprite instead of 3 separate files. Learn more about image sprites here:
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
+https://www.w3schools.com/css/css_image_sprites.asp
+
+---
+
+"The Talon Logo" currently[1] refers to the file named "TalonLogo.png" which is
+located in the same directory as this copyright notice file named "COPYRIGHT".
+
+The Talon Logo is protected under Urheberrecht (Austrian copyright law) and 
+remains the intellectual property of Oktalon Szórádi.
+
+Unauthorized use, distribution, modification, adaptation, or reproduction of the
+logo or its variants in any form or medium is strictly prohibited without
+explicit written permission from the copyright holder.
+
+[1] I reserve the right to make changes to my logo and update the file(s),
+file name(s), and file extension(s).
+
+For licensing or usage inquiries, please contact:
+  Oktalon SZÓRÁDI
+  talonszoradi@gmail.com

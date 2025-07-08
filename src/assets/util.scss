@@ -1,0 +1,32 @@
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-item {
+  flex: 1;
+}
+
+.inline-icon {
+  margin-bottom: -0.5em;
+  width: 2em;
+}
+
+.no-top-margin {
+  margin-top: 0 !important;
+}
+
+.no-bottom-margin {
+  margin-bottom: 0 !important;
+}
