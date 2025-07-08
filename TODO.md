@@ -11,6 +11,7 @@ This is a personal To-Do-List for my website.
                          looks weird. Maybe same issue as above?
     - [ ] Alignment of component NavigationButtons
     - [ ] Alignment of component CopyToClipboard
+    - [ ] Brave desktop: Sometimes not the entire view gets updated??
 - School Projects
   - [ ] Content from HTL 5CHITM (2023/2024)
     - [ ] Blender (3D) Project
