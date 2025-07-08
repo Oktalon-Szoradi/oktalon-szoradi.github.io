@@ -4,6 +4,13 @@ This is a personal To-Do-List for my website.
 
 ---
 
+- Bug Fixes
+  - [ ] Blink (Chromium)
+    - [ ] My logo looks jagged/weird. Antialiasing issue?
+    - [ ] `/#/projects`: Oxygen icon applications-education-university.svg
+                         looks weird. Maybe same issue as above?
+    - [ ] Alignment of component NavigationButtons
+    - [ ] Alignment of component CopyToClipboard
 - School Projects
   - [ ] Content from HTL 5CHITM (2023/2024)
     - [ ] Blender (3D) Project
@@ -18,3 +25,6 @@ This is a personal To-Do-List for my website.
     - [ ] Skeuomorphic/Glossy concepts
     - [ ] HQ (vector) recreations of stuff
   - [ ] Other repos I have? Like `eu-linux-locale` perhaps
+- Other
+  - [ ] Reformat my gear specs, especially when I get my Framework laptop
+  - [ ] [Maybe] Explaining my music tastes
