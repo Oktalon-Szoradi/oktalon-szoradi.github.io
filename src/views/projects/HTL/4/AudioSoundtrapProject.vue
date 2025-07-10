@@ -96,7 +96,7 @@ import GlassCard from '@/components/GlassCard.vue'
         </div>
       </div>
       <div class="audio-section">
-        <h2>"Battle"</h2>
+        <h2>"Battle!"</h2>
         <p class="no-top-margin">Made on <code>2023-05-12</code>.</p>
         <p>
           The 2nd song I made just in time on that day. Again, drums and bass I
