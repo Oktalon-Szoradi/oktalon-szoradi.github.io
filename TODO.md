@@ -5,12 +5,13 @@ This is a personal To-Do-List for my website.
 ---
 
 - Bug Fixes
+  - **Bold = Fix "done", in testing phase**
   - [ ] Blink (Chromium)
     - [ ] My logo looks jagged/weird. Antialiasing issue?
     - [ ] `/#/projects`: Oxygen icon applications-education-university.svg
                          looks weird. Maybe same issue as above?
-    - [ ] Alignment of component NavigationButtons
-    - [ ] Alignment of component CopyToClipboard
+    - [ ] **Alignment of component NavigationButtons**
+    - [ ] **Alignment of component CopyToClipboard**
     - [ ] Brave desktop: Sometimes not the entire view gets updated??
   - [ ] Webkit (Safari)
     - [ ] Download [PNG|JPG] button icon's underline collides with arrow point;
