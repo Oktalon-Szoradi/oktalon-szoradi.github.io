@@ -35,3 +35,31 @@ This is a personal To-Do-List for my website.
 - Other
   - [ ] Reformat my gear specs, especially when I get my Framework laptop
   - [ ] [Maybe] Explaining my music tastes
+
+---
+
+Testing environments:
+
+- Windows
+  - Firefox
+  - LibreWolf
+  - Ungoogled Chromium
+  - Google Chrome
+  - Microsoft Edge
+  - Brave
+- Linux
+  - Firefox
+  - LibreWolf
+  - Ungoogled Chromium
+  - Google Chrome
+  - Elementary OS' WebKit browser
+- Android
+  - Firefox
+  - Firefox Klar
+  - Waterfox
+  - Startpage
+  - Brave
+  - Google Chrome
+  - Samsung Internet
+- macOS/iOS
+  - Safari
