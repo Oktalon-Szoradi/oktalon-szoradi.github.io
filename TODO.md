@@ -30,8 +30,11 @@ This is a personal To-Do-List for my website.
     - [ ] Skeuomorphic/Glossy concepts
     - [ ] HQ (vector) recreations of stuff
   - [ ] Other repos I have? Like `eu-linux-locale` perhaps
-  - [ ] Stuff I link to on YouTube
-        (use instead of Discord|MEGA|MediaFire|GoogleDrive)
+  - [ ] **Stuff I link to on YouTube**
+        **(use instead of Discord|MEGA|MediaFire|GoogleDrive)**
+    - [ ] Uploaded! Now replace links across sites
+    - [ ] Consider uploading other big files to also Mega|MediaFire|GoogleDrive
+  - [ ] [Maybe] Make page about Tetris Stardust / Feevo
 - Other
   - [ ] Reformat my gear specs, especially when I get my Framework laptop
   - [ ] [Maybe] Explaining my music tastes
