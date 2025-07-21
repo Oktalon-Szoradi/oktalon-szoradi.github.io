@@ -1,0 +1,19 @@
+Sound 1 (MP3; titled "Sfx_StageClear") in Tetris Kentei.
+
+SWF (ShockWave Flash) file of Tetris Kentei:
+http://tetrisonline.pl/toj_flash/Kentei.swf
+
+Wanna extract it yourself? Check out JPEXS Free Flash Decompiler:
+https://github.com/jindrapetrik/jpexs-decompiler
+
+---
+
+Referenced:
+
+- In the description of my
+  "Stage Clear - Tetris Kentei OST"
+  YouTube video
+  https://www.youtube.com/watch?v=dz0hzIENC5k
+
+This file was hosted on Discord, as well as
+- Google Drive

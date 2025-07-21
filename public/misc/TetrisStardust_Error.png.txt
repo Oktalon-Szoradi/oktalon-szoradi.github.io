@@ -1,0 +1,32 @@
+Screenshot I made showing an error message that appears when Tetris Stardust
+tries to load in Internet Explorer Mode of Microsoft Edge with Microsoft
+Silverlight installed
+
+CC BY-NC-SA 4.0
+
+==========
+Transcript:
+---
+エラー
+
+アプリケーションで通信障害が発生しました
+
+しばらく経ってから再度アクセスしてください
+==========
+
+http://tetrisonline.pl/toj_flash/stardust.html
+
+---
+
+Referenced:
+
+- In the description of my
+  "Main BGM - Tetris Stardust OST Extended"
+  YouTube video
+  https://www.youtube.com/watch?v=jMtAy8nqCtM
+- In the description of my
+  "Title (Unused) - Tetris Stardust OST Extended"
+  YouTube video
+  https://www.youtube.com/watch?v=700rhRjAGt8
+
+This file was only ever hosted on Discord.

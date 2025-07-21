@@ -1,0 +1,22 @@
+This was found in the SWF (ShockWave Flash) file for
+Tetris Kentei
+http://tetrisonline.pl/toj_flash/Kentei.html
+http://tetrisonline.pl/toj_flash/Kentei.swf
+
+Wanna extract it yourself? Check out JPEXS Free Flash Decompiler:
+https://github.com/jindrapetrik/jpexs-decompiler
+
+---
+
+Referenced:
+
+- In the description of my
+  "Tetris Party (WiiWare) - InGame Tutorial"
+  YouTube video
+  https://www.youtube.com/watch?v=cPXeDj7-yPw
+- In the description of my
+  "Tetris Party Deluxe (Wii) - InGame Tutorial"
+  YouTube video
+  https://www.youtube.com/watch?v=gpgzUYF56uQ
+
+This file was only ever hosted on Discord.

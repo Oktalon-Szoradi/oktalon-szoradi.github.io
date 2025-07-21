@@ -1,0 +1,18 @@
+A replay of a game I played in TETR.IO.
+This one is of the rainbow/pride flag 🏳‍🌈. So, a line of every piece except I
+(there's no cyan / light blue).
+
+Drag and drop the ttr file into TETR.IO to view it.
+
+CC BY-NC-SA 4.0
+
+---
+
+Referenced:
+
+- In the description of my
+  "TETR.IO - Design - Rainbow (5x Speed)"
+  YouTube video
+  https://www.youtube.com/watch?v=5NVSnqN3ugA
+
+This file was only ever hosted on Discord.

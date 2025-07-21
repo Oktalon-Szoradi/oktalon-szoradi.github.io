@@ -1,0 +1,19 @@
+Sound 46 (MP3; titled "snd_bgm1") in Tetris Marathon Walk.
+
+SWF (ShockWave Flash) file of Tetris Marathon Walk:
+http://tetrisonline.pl/toj_flash/Marathon.swf
+
+Wanna extract it yourself? Check out JPEXS Free Flash Decompiler:
+https://github.com/jindrapetrik/jpexs-decompiler
+
+---
+
+Referenced:
+
+- In the description of my
+  "Unused BGM - Tetris Marathon Walk OST"
+  YouTube video
+  https://www.youtube.com/watch?v=zFWZhnq6HrA
+
+This file was hosted on Discord, as well as
+- Google Drive

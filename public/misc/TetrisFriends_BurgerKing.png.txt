@@ -1,0 +1,26 @@
+Screenshot from running alone the file
+
+/data/games/BB/marathonBBWebsite.swf
+
+I'm not sure what BB is supposed to stand for. Shouldn't it be BK?
+Seems like Burger King and Tetris Online Inc. were going to have or had some
+agreement for sponsorship/advertisement in Tetris Friends.
+I personally don't remember seeing it, though.
+Nevertheless, the files for it still exist.
+
+You can get this file from Notris Foes:
+https://notrisfoes.com/data/games/BB/marathonBBWebsite.swf
+
+Wanna inspect it yourself? Check out JPEXS Free Flash Decompiler:
+https://github.com/jindrapetrik/jpexs-decompiler
+
+---
+
+Referenced:
+
+- In the description of my
+  "Burger King - Tetris Friends OST Extended"
+  YouTube video
+  https://www.youtube.com/watch?v=2iZv96kahCk
+
+This file was only ever hosted on Discord.

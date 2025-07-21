@@ -1,0 +1,29 @@
+This is a sound pack I made for NullpoMino
+(https://github.com/nullpomino/nullpomino)
+
+Backup the `se` directory if you want. Then replace it with the one in this ZIP.
+
+I believe I sourced the sounds from these sources:
+
+- https://www.reddit.com/r/moddedandroidapps/comments/jd122r/tetris_for_fire_tv_from_amazon_app_store/
+- https://www.mediafire.com/file/o1yoid6usmaw3eb/Tetris+(com.toa.tetris).apk/file
+- https://archive.org/details/ouya_com.toa.tetrisFusionOuya_2.0.1r
+
+I made this some time before at least 2020-12-26
+
+---
+
+Referenced:
+
+- In the description of my
+  "Mini T-Spin Doubles"
+  YouTube video
+  https://www.youtube.com/watch?v=FasIdnOzbAw
+- In the description of my
+  "Mini T-Spin Doubles (old)"
+  YouTube video
+  as requested by @Vincento-san
+  > 10:34 Can have a sound modification from this game? 
+  https://www.youtube.com/watch?v=Kub2YTxFQ_M&lc=UgyuMNOWxA_Pqm1dsJl4AaABAg
+
+This file was only ever hosted on Discord.
