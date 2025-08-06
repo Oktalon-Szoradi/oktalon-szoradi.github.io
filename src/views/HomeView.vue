@@ -142,8 +142,40 @@ onMounted(() => {
     </GlassCard>
 
     <GlassCard title="My Gear">
-      I got a PC. Intel Core i7-7700. 32 GiB DDR4 RAM. Bunch of SSDs. AMD Radeon
-      RX 5700.
+      I daily drive:
+      <div class="flex-center">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>PC</th>
+              <th>Framework Laptop 13</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CPU</td>
+              <td>Intel Core i7-7700</td>
+              <td>AMD Ryzen AI 5 340</td>
+            </tr>
+            <tr>
+              <td>RAM</td>
+              <td>32 GiB DDR4</td>
+              <td>32 GiB DDR5</td>
+            </tr>
+            <tr>
+              <td>GPU</td>
+              <td>AMD Radeon RX 5700</td>
+              <td>(integrated)</td>
+            </tr>
+            <tr>
+              <td>Storage</td>
+              <td>I have like 3 SSDs and a 750 GB HDD</td>
+              <td>1 TB NVMe M.2 SSD</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </GlassCard>
 
     <GlassCard clear class="text-center">
@@ -215,5 +247,9 @@ onMounted(() => {
   div {
     margin-bottom: -4px;
   }
+}
+
+td {
+  padding: 0.25em 0.5em;
 }
 </style>
