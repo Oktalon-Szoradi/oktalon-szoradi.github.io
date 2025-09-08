@@ -34,7 +34,9 @@ This is a personal To-Do-List for my website.
   - [ ] Other repos I have? Like `eu-linux-locale` perhaps
   - [ ] **Stuff I link to on YouTube**
         **(use instead of Discord|MEGA|MediaFire|GoogleDrive)**
-    - [ ] Uploaded! Now replace links across sites
+    - [x] Uploaded! Now replace links across sites
+          YouTube Playlist descriptions weren't edited, else formatting would
+          break, as line breaks are no longer accepted
     - [ ] Consider uploading other big files to also Mega|MediaFire|GoogleDrive
   - [ ] [Maybe] Make page about Tetris Stardust / Feevo
 - Other
