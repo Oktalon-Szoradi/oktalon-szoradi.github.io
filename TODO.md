@@ -57,7 +57,7 @@ Testing environments:
   - LibreWolf
   - Ungoogled Chromium
   - Google Chrome
-  - Elementary OS' WebKit browser
+  - GNOME Web
 - Android
   - Firefox
   - Firefox Klar
