@@ -117,7 +117,9 @@ onMounted(() => {
           </li>
           <li>Skeuomorphism, "Frutiger Aero"</li>
           <li>
-            MIDI-driven animation, like ANIMUSIC and
+            <AbbreviationMobile title="Musical Instrument Digital Interface"
+              >MIDI</AbbreviationMobile
+            >-driven animation, like ANIMUSIC and
             <a
               href="https://www.youtube.com/@LasersLightsandMusic"
               target="_blank"
