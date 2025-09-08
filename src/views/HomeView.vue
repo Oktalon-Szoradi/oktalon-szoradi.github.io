@@ -127,7 +127,10 @@ onMounted(() => {
               Lasers, Lights, and Music
             </a>
           </li>
-          <li>Falling block puzzles, like Tetris (I'm pretty good at it)</li>
+          <li>
+            Modern falling block puzzles, like modern Tetris (I'm pretty good at
+            it)
+          </li>
         </ul>
       </GlassCard>
     </div>
