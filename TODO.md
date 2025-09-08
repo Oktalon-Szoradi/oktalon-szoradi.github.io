@@ -16,6 +16,8 @@ This is a personal To-Do-List for my website.
   - [ ] Webkit (Safari)
     - [ ] Download [PNG|JPG] button icon's underline collides with arrow point;
           Find an actual icon
+  - [ ] On pages with side navigation, able to be shown on mobile in landscape,
+        but too big to fit vertical space!
 - School Projects
   - [ ] Content from HTL 5CHITM (2023/2024)
     - [ ] Blender (3D) Project
@@ -36,7 +38,7 @@ This is a personal To-Do-List for my website.
     - [ ] Consider uploading other big files to also Mega|MediaFire|GoogleDrive
   - [ ] [Maybe] Make page about Tetris Stardust / Feevo
 - Other
-  - [ ] Reformat my gear specs, especially when I get my Framework laptop
+  - [x] Reformat my gear specs, especially when I get my Framework laptop
   - [ ] [Maybe] Explaining my music tastes
 
 ---
