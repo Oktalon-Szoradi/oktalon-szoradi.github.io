@@ -149,34 +149,45 @@ onMounted(() => {
     <GlassCard title="My Gear">
       I daily drive:
       <div class="flex-center">
-        <table>
+        <table class="spec-table">
           <thead>
             <tr>
               <th></th>
               <th>PC</th>
               <th>Framework Laptop 13</th>
             </tr>
+            <tr class="divider-row">
+              <td colspan="100%"><hr /></td>
+            </tr>
           </thead>
           <tbody>
             <tr>
-              <td>CPU</td>
+              <td class="spec-header-col">CPU:</td>
               <td>Intel Core i7-7700</td>
               <td>AMD Ryzen AI 5 340</td>
             </tr>
             <tr>
-              <td>RAM</td>
+              <td class="spec-header-col">RAM:</td>
               <td>32 GiB DDR4</td>
               <td>32 GiB DDR5</td>
             </tr>
             <tr>
-              <td>GPU</td>
+              <td class="spec-header-col">GPU:</td>
               <td>AMD Radeon RX 5700</td>
               <td>(integrated)</td>
             </tr>
             <tr>
-              <td>Storage</td>
-              <td>I have like 3 SSDs and a 750 GB HDD</td>
+              <td class="spec-header-col">Storage:</td>
+              <td>I have like 3 SSDs<br />and a 750 GB HDD</td>
               <td>1 TB NVMe M.2 SSD</td>
+            </tr>
+            <tr>
+              <td class="spec-header-col">OS:</td>
+              <td>
+                Windows 10 IoT Enterprise LTSC 2021,<br />
+                Debian 13 (stable)
+              </td>
+              <td>Debian sid (unstable)</td>
             </tr>
           </tbody>
         </table>
@@ -256,5 +267,33 @@ onMounted(() => {
 
 td {
   padding: 0.25em 0.5em;
+}
+
+.divider-row {
+  hr {
+    margin: 0 0 0.333em;
+  }
+}
+
+.spec-table {
+  thead th {
+    padding-right: 3em;
+    letter-spacing: 0.1em;
+    color: rgb(153 232 193);
+    font-weight: 900;
+  }
+
+  tbody {
+    td {
+      vertical-align: top;
+    }
+
+    .spec-header-col {
+      text-align: end;
+      letter-spacing: 0.1em;
+      color: rgb(123 173 226);
+      font-weight: 900;
+    }
+  }
 }
 </style>
