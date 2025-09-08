@@ -1,0 +1,23 @@
+Feevo was a puzzle game by Tetris Online Inc. that was available on Facebook
+until it shut down on 2012-08-31.
+
+Feevo's Facebook page: https://www.facebook.com/feevo/
+
+According to https://en.wikipedia.org/wiki/Tetris_Online,_Inc.
+Feevo was released in 2010 on Facebook,
+Feevo HD was released in 2011 on iOS, and
+Feevo Blaze was released in 2011 on Facebook
+
+YouTube playlist of videos showcasing Feevo:
+https://www.youtube.com/playlist?list=PLGSK7fT8IzxxuseOxW0tC5dHSIVxpV_ej
+
+A game that seems like it may have been the precursor to Feevo is
+"Tetris Connect", which was going to be on Tetris Friends.
+
+Data is stored in this location:
+
+/data/games/TetrisConnect
+
+at least in the tetrisfriends.tetrisdev.com archive I got some time in the past.
+I don't remember where I downloaded it from and I no longer have the original
+archive file, just the extracted contents.

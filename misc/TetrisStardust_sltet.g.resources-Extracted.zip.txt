@@ -1,0 +1,24 @@
+Resources extracted from Tetris Stardust, a Microsoft Silverlight game.
+
+sltet.xap/sltet.dll/Resources/sltet.g.resources
+
+http://tetrisonline.pl/toj_flash/app/sltet.xap
+
+You can open the XAP like a ZIP using something like 7-Zip.
+The resources are inside sltet.dll
+You can look through it using https://www.jetbrains.com/decompiler/
+
+---
+
+Referenced:
+
+- In the description of my
+  "Main BGM - Tetris Stardust OST Extended"
+  YouTube video
+  https://www.youtube.com/watch?v=jMtAy8nqCtM
+- In the description of my
+  "Title (Unused) - Tetris Stardust OST Extended"
+  YouTube video
+  https://www.youtube.com/watch?v=700rhRjAGt8
+
+This file was only ever hosted on Discord.

@@ -1,0 +1,19 @@
+From the Tetris Battle Fusion APK. Archived here:
+
+https://archive.org/details/ouya_com.toa.tetrisFusionOuya_2.0.1r
+
+Inside the APK, the file is here:
+
+/assets/bgm/bgm_title.mp3
+
+---
+
+Referenced:
+
+- In the description of my
+  "StartUp Sound - Tetris Battle Fusion OST"
+  YouTube video
+  https://www.youtube.com/watch?v=FQZE6bdmB24
+
+This file was hosted on Discord, as well as
+- Google Drive

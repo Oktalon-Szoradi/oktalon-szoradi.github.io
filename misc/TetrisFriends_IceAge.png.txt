@@ -1,0 +1,29 @@
+Screenshot from running alone the file
+
+/data/games/IceAge/IceAgeWebsite.swf
+
+This game is playable via an archive of the Addicting Games site on the WayBack
+Machine, if you still have Adobe Flash Player and a browser still supports that
+plug-in (such as Pale Moon and Basilisk):
+https://web.archive.org/web/20090608051105/https://www.addictinggames.com/iceage3acorn.html
+Video:
+https://www.youtube.com/watch?v=WHy_VClRGGM
+
+You can get this file from Notris Foes:
+https://notrisfoes.com/data/games/IceAge/IceAgeWebsite.swf
+
+Wanna inspect it yourself? Check out JPEXS Free Flash Decompiler:
+https://github.com/jindrapetrik/jpexs-decompiler
+
+---
+
+Was referenced:
+
+- In the description of my
+  "Ice Age - Tetris Friends OST Extended"
+  YouTube video
+  https://www.youtube.com/watch?v=62nERF5Z9kI
+  Removed from the description as of 2025-07-21 as it's not needed; I linked a
+  gameplay video anyway
+
+This file was only ever hosted on Discord.

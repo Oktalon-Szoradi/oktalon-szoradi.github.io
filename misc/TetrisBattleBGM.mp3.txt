@@ -1,0 +1,25 @@
+From the Tetris Battle files. At some point in the past I downloaded an archive
+of it all, and I actually still have the original RAR file. I don't remember
+where I got it from, though. If you want me to send it to you, contact me.
+
+Its file name is: Tetris Battle.rar
+Its file size is: 15353929 bytes (14.6 MiB)
+Its SHA-256 checksum is: 351e86349d946e8cd60fbaecc553e9f4091a52f82c064a82d5a48a70f74c945e
+
+Inside the archive, this file is in:
+
+/songs/BattleMp.mp3
+
+---
+
+Referenced:
+
+- In my reply to a comment from @JoshRiolu
+  > Lol I've been looking for this, any way I can find a DL to the source mp3?
+  on my "Battle - Tetris Battle OST Extended" YouTube video
+  https://www.youtube.com/watch?v=KLK0VH25oME&lc=Ugz2sBoSaPTwI_VAqeJ4AaABAg.9_bW3itqJPD9_jroTuU109
+
+This file was hosted on Discord, as well as
+- Google Drive
+- MEGA
+- MediaFire

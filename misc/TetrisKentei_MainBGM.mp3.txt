@@ -1,0 +1,19 @@
+Sound 12 (MP3; titled "snd_bgm") in Tetris Kentei.
+
+SWF (ShockWave Flash) file of Tetris Kentei:
+http://tetrisonline.pl/toj_flash/Kentei.swf
+
+Wanna extract it yourself? Check out JPEXS Free Flash Decompiler:
+https://github.com/jindrapetrik/jpexs-decompiler
+
+---
+
+Referenced:
+
+- In the description of my
+  "Main BGM - Tetris Kentei OST"
+  YouTube video
+  https://www.youtube.com/watch?v=zySI9JbOWqs
+
+This file was hosted on Discord, as well as
+- Google Drive

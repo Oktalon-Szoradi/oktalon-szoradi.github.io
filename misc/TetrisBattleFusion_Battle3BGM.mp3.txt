@@ -1,0 +1,21 @@
+From the Tetris Battle Fusion APK. Archived here:
+
+https://archive.org/details/ouya_com.toa.tetrisFusionOuya_2.0.1r
+
+Inside the APK, the file is here:
+
+/assets/bgm/bgm_battle3.mp3
+
+---
+
+Referenced:
+
+- In my reply to a comment from @TestArea2025
+  > 我愛你 where did you find this? This is bringing me back to freshmen here in college
+  on my "Battle 3 - Tetris Battle Fusion OST Extended" YouTube video
+  https://www.youtube.com/watch?v=9uiMfKzQ3FE&lc=Ugye2CFBEhpS388WzKR4AaABAg.9Ls_cmpqiKw9LvL-oXqI_T
+
+This file was hosted on Discord, as well as
+- Google Drive
+- MEGA
+- MediaFire

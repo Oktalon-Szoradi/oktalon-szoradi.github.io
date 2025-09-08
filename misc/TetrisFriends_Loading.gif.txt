@@ -1,0 +1,20 @@
+This was found in one of the SWF (ShockWave Flash) files used for
+Tetris Friends
+
+For example, sprite 5 in:
+/data/games/Marathon/OWGameMarathon.swf
+
+You can get this file from Notris Foes:
+https://notrisfoes.com/data/games/Marathon/OWGameMarathon.swf
+
+Wanna extract it yourself? Check out JPEXS Free Flash Decompiler:
+https://github.com/jindrapetrik/jpexs-decompiler
+
+---
+
+Referenced:
+
+- In the description of my "Tetris Friends OST Extended" YouTube playlist
+  https://www.youtube.com/playlist?list=PLGSK7fT8IzxxKap3bms5j6QfSiCpWhxXi
+
+This file was only ever hosted on Discord.

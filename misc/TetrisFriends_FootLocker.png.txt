@@ -1,0 +1,28 @@
+Screenshot from running alone the file
+
+/data/games/FL/marathonFLWebsite.swf
+
+FL = Foot Locker
+Seems like Foot Locker and Tetris Online Inc. were going to have or had some
+agreement for sponsorship/advertisement in Tetris Friends.
+I personally don't remember seeing it, though.
+Nevertheless, the files for it still exist.
+
+Gameplay footage:
+https://www.youtube.com/watch?v=GQw8lKKUkDc
+by @Qlairemoscribbi
+
+You can get this file from Notris Foes:
+https://notrisfoes.com/data/games/FL/marathonFLWebsite.swf
+
+Wanna inspect it yourself? Check out JPEXS Free Flash Decompiler:
+https://github.com/jindrapetrik/jpexs-decompiler
+
+---
+
+Referenced:
+
+- In the description of my "Tetris Friends OST Extended" YouTube playlist
+  https://www.youtube.com/playlist?list=PLGSK7fT8IzxxKap3bms5j6QfSiCpWhxXi
+
+This file was only ever hosted on Discord.
