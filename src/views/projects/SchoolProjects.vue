@@ -509,7 +509,7 @@ watch(
   font-size: 0.75rem;
 }
 
-@media (width <= vars.$breakpoint-md) {
+@media (width <= vars.$breakpoint-lg) {
   .flex {
     flex-direction: column;
 

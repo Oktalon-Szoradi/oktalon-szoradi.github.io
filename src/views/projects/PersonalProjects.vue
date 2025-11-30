@@ -212,7 +212,7 @@ td {
   margin-top: 2em;
 }
 
-@media (width <= vars.$breakpoint-md) {
+@media (width <= vars.$breakpoint-lg) {
   .flex {
     gap: 0;
   }

@@ -53,7 +53,7 @@
   }
 }
 
-@media (width <= vars.$breakpoint-md) {
+@media (width <= vars.$breakpoint-lg) {
   .flex-many {
     > * {
       display: block;
