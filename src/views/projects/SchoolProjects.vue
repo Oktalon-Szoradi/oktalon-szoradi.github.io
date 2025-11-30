@@ -324,6 +324,9 @@ watch(
         -->
       </GlassCard>
       <GlassCard id="HCW" title="Hochschule Campus Wien" class="main-card">
+        <p class="text-justify">
+          Coming soon!
+        </p>
         <h2 id="HCW-Y1" class="no-top-margin">Year 1</h2>
         <p class="no-top-margin">
           <b>2025/2026</b>
