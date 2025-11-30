@@ -32,7 +32,7 @@ defineProps({
   font-weight: lighter;
   /* font-style: italic; */
 
-  @media (width <= 576px) {
+  @media (width <= vars.$breakpoint-sm) {
     text-align: center;
   }
 }
@@ -148,7 +148,7 @@ defineProps({
     }
   }
 
-  @media (width <= 576px) {
+  @media (width <= vars.$breakpoint-sm) {
     margin: 2em 1em 0;
   }
 }

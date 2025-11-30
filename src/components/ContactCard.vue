@@ -90,7 +90,7 @@ defineProps<{
   hyphenate-character: '';
 }
 
-@media (width <= 576px) {
+@media (width <= vars.$breakpoint-sm) {
   .flex {
     flex-direction: column;
     text-align: center;

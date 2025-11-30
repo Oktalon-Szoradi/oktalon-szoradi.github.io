@@ -1,3 +1,5 @@
+@use '@/assets/variables.scss' as vars;
+
 .flex {
   gap: 1em;
 }
@@ -51,7 +53,7 @@
   }
 }
 
-@media (width <= 768px) {
+@media (width <= vars.$breakpoint-md) {
   .flex-many {
     > * {
       display: block;

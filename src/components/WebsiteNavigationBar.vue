@@ -410,7 +410,7 @@ nav {
     }
   } */
 
-  @media (width <= 992px) {
+  @media (width <= vars.$breakpoint-lg) {
     .touch-hidden {
       display: none;
     }

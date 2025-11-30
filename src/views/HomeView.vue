@@ -209,6 +209,8 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+@use '@/assets/variables.scss' as vars;
+
 .emoji {
   /* text-shadow: none; */
   text-shadow: 0 2px 2px hsl(0deg 0% 0% / 15%);
@@ -235,7 +237,7 @@ onMounted(() => {
     /* width: 100%; */
   }
 
-  @media (width <= 576px) {
+  @media (width <= vars.$breakpoint-sm) {
     flex-direction: column;
     align-items: center;
     margin: 2em 1em 0;

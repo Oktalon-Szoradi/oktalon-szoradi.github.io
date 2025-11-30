@@ -678,6 +678,8 @@ watch(
 </template>
 
 <style lang="scss" scoped>
+@use '@/assets/variables.scss' as vars;
+
 .color-code-98a1e5 {
   color: #98a1e5;
   font-size: 1rem;
@@ -842,7 +844,7 @@ hr {
   }
 }
 
-@media (width <= 768px) {
+@media (width <= vars.$breakpoint-md) {
   .flex {
     gap: 0;
   }

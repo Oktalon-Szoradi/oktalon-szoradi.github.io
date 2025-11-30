@@ -325,6 +325,8 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
 </template>
 
 <style lang="scss" scoped>
+@use '@/assets/variables.scss' as vars;
+
 .card {
   text-align: justify;
 }
@@ -352,16 +354,16 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
   > * {
     flex: 1;
 
-    @media (width <= 576px) {
+    @media (width <= vars.$breakpoint-sm) {
       margin: 0 1em;
     }
   }
 
-  @media (width <= 768px) {
+  @media (width <= vars.$breakpoint-md) {
     gap: 0;
   }
 
-  @media (width <= 576px) {
+  @media (width <= vars.$breakpoint-sm) {
     flex-direction: column;
     gap: 2em;
     margin-top: 2em;
@@ -378,7 +380,7 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
     flex-grow: 1;
     margin: 0;
 
-    @media (width <= 576px) {
+    @media (width <= vars.$breakpoint-sm) {
       margin: 0 1em;
     }
   }

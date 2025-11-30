@@ -352,7 +352,7 @@ document.addEventListener('keydown', (event) => {
         font-size: 2em;
       }
 
-      @media (width <= 576px) {
+      @media (width <= vars.$breakpoint-sm) {
         right: 1em;
       }
     }
@@ -430,7 +430,7 @@ document.addEventListener('keydown', (event) => {
   }
 }
 
-@media (width <= 576px) {
+@media (width <= vars.$breakpoint-sm) {
   [per-row='6'],
   [per-row='7'] {
     --image-size: 9em;

@@ -269,7 +269,7 @@ button {
 }
 /* stylelint-enable no-descending-specificity */
 
-@media (width <= 576px) {
+@media (width <= vars.$breakpoint-sm) {
   .root {
     margin-left: 1em;
   }

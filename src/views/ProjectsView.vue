@@ -24,6 +24,8 @@ import CommandLink from '@/components/CommandLink.vue'
 </template>
 
 <style scoped lang="scss">
+@use '@/assets/variables.scss' as vars;
+
 .command-link-area {
   display: flex;
   flex-direction: column;
@@ -32,7 +34,7 @@ import CommandLink from '@/components/CommandLink.vue'
     margin: 2em 0 0;
   }
 
-  @media (width <= 576px) {
+  @media (width <= vars.$breakpoint-sm) {
     > * {
       margin: 2em 1em 0;
     }

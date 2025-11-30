@@ -20,6 +20,7 @@ import LoadingCircle from '@/components/LoadingCircle.vue'
 
 <style lang="scss">
 @use '@/assets/util';
+@use '@/assets/variables.scss' as vars;
 
 @keyframes fade-in {
   0% {
@@ -47,7 +48,7 @@ import LoadingCircle from '@/components/LoadingCircle.vue'
   user-select: none;
   filter: blur(0.333vw);
 
-  @media (width <= 992px) {
+  @media (width <= vars.$breakpoint-lg) {
     display: none;
   }
 }
@@ -139,23 +140,23 @@ main {
   width: 100%;
   max-width: 1320px;
 
-  @media (width >= 576px) {
+  @media (width >= vars.$breakpoint-sm) {
     max-width: 540px;
   }
 
-  @media (width >= 768px) {
+  @media (width >= vars.$breakpoint-md) {
     max-width: 720px;
   }
 
-  @media (width >= 992px) {
+  @media (width >= vars.$breakpoint-lg) {
     max-width: 960px;
   }
 
-  @media (width >= 1200px) {
+  @media (width >= vars.$breakpoint-xl) {
     max-width: 1140px;
   }
 
-  @media (width >= 1400px) {
+  @media (width >= vars.$breakpoint-xxl) {
     max-width: 1320px;
   }
 }
@@ -173,7 +174,7 @@ main {
   font-size: 1.5em;
   font-weight: lighter;
 
-  @media (width <= 1400px) {
+  @media (width <= vars.$breakpoint-xxl) {
     margin: 0 0 0.75em;
   }
 }

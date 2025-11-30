@@ -107,6 +107,7 @@ watch(
 
 <style scoped lang="scss">
 @use '@/assets/layout_side-by-side.scss';
+@use '@/assets/variables.scss' as vars;
 
 .top-margin {
   margin-top: 2em;
@@ -211,7 +212,7 @@ td {
   margin-top: 2em;
 }
 
-@media (width <= 768px) {
+@media (width <= vars.$breakpoint-md) {
   .flex {
     gap: 0;
   }
