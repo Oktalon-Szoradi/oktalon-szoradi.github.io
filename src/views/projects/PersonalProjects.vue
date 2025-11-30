@@ -106,22 +106,10 @@ watch(
 </template>
 
 <style scoped lang="scss">
+@use '@/assets/layout_side-by-side.scss';
+
 .top-margin {
   margin-top: 2em;
-}
-
-.flex {
-  gap: 1em;
-}
-
-.flex-many {
-  flex-wrap: wrap;
-  gap: 1em;
-  justify-content: center;
-
-  > * {
-    width: calc(50% - 2.5em);
-  }
 }
 
 .area-with-side-nav {
@@ -136,12 +124,6 @@ watch(
   main {
     width: 100%;
   }
-}
-
-.sticky {
-  position: sticky;
-  top: calc(64px + 24px);
-  align-self: start;
 }
 
 h1 {
@@ -227,49 +209,11 @@ td {
 
 .separator {
   margin-top: 2em;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    hsl(0deg 0% 100% / 50%),
-    hsl(0deg 0% 100% / 50%),
-    transparent
-  );
-  width: 1px;
-  white-space: nowrap;
-
-  &::before,
-  &::after {
-    display: inline-block;
-    position: relative;
-    top: 0;
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      hsl(0deg 0% 0% / 25%),
-      hsl(0deg 0% 0% / 25%),
-      transparent
-    );
-    width: 1px;
-    height: 100%;
-    content: '';
-  }
-
-  &::before {
-    left: -1px;
-  }
 }
 
 @media (width <= 768px) {
   .flex {
     gap: 0;
-  }
-
-  .flex-many {
-    > * {
-      display: block;
-      margin: 0;
-      width: auto;
-    }
   }
 
   .area-with-side-nav {
@@ -280,14 +224,6 @@ td {
       flex-basis: auto;
       width: 100%;
     }
-  }
-
-  .sticky {
-    position: static;
-  }
-
-  .separator {
-    display: none;
   }
 }
 </style>

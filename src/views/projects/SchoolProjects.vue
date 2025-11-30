@@ -366,12 +366,11 @@ watch(
 </template>
 
 <style scoped lang="scss">
+@use '@/assets/layout_side-by-side.scss';
 @use '@/assets/variables.scss' as vars;
 @use '@/assets/mixins.scss' as mixins;
 
 .flex {
-  gap: 1em;
-
   aside {
     flex-basis: 33.333em;
 
@@ -383,22 +382,6 @@ watch(
   main {
     width: 100%;
   }
-}
-
-.flex-many {
-  flex-wrap: wrap;
-  gap: 1em;
-  justify-content: center;
-
-  > * {
-    width: calc(50% - 2.5em);
-  }
-}
-
-.sticky {
-  position: sticky;
-  top: calc(64px + 24px);
-  align-self: start;
 }
 
 .navigation {
@@ -526,39 +509,6 @@ watch(
   font-size: 0.75rem;
 }
 
-.separator {
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    hsl(0deg 0% 100% / 50%),
-    hsl(0deg 0% 100% / 50%),
-    transparent
-  );
-  width: 1px;
-  white-space: nowrap;
-
-  &::before,
-  &::after {
-    display: inline-block;
-    position: relative;
-    top: 0;
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      hsl(0deg 0% 0% / 25%),
-      hsl(0deg 0% 0% / 25%),
-      transparent
-    );
-    width: 1px;
-    height: 100%;
-    content: '';
-  }
-
-  &::before {
-    left: -1px;
-  }
-}
-
 @media (width <= 768px) {
   .flex {
     flex-direction: column;
@@ -574,25 +524,9 @@ watch(
     }
   }
 
-  .flex-many {
-    > * {
-      display: block;
-      margin: 0;
-      width: auto;
-    }
-  }
-
-  .sticky {
-    position: static;
-  }
-
   .main-aside {
     display: block;
     padding: 0 1em;
-  }
-
-  .separator {
-    display: none;
   }
 
   .main-card {
