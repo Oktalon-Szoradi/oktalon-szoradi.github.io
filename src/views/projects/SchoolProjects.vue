@@ -97,13 +97,15 @@ watch(
                 4th Grade (Cumulative: 12)
               </a>
             </li>
-              <li>
-                <a :href="`/#${$route.path}?scrollTo=HTL-5`">
-                  5th Grade (Cumulative: 13)
-                </a>
-              </li>
+            <li>
+              <a :href="`/#${$route.path}?scrollTo=HTL-5`">
+                5th Grade (Cumulative: 13)
+              </a>
+            </li>
           </ul>
-          <a :href="`/#${$route.path}?scrollTo=HCW`"><b>Hochschule Campus Wien</b></a>
+          <a :href="`/#${$route.path}?scrollTo=HCW`"
+            ><b>Hochschule Campus Wien</b></a
+          >
           <ul class="nav-list">
             <li>
               <a :href="`/#${$route.path}?scrollTo=HCW-Y1`"> Year 1 </a>
@@ -309,9 +311,7 @@ watch(
         <p class="no-top-margin">
           <b>School year 2023/2024</b>
         </p>
-        <div class="flex flex-many">
-          Coming soon!
-        </div>
+        <div class="flex flex-many">Coming soon!</div>
         <!--
         <h2 id="HTL-5">5th Grade (Cumulative: 13)</h2>
 
@@ -324,9 +324,7 @@ watch(
         -->
       </GlassCard>
       <GlassCard id="HCW" title="Hochschule Campus Wien" class="main-card">
-        <p class="text-justify">
-          Coming soon!
-        </p>
+        <p class="text-justify">Coming soon!</p>
         <h2 id="HCW-Y1" class="no-top-margin">Year 1</h2>
         <p class="no-top-margin">
           <b>2025/2026</b>
@@ -357,7 +355,7 @@ watch(
         </p>
         <h3 id="HCW-S3" class="no-top-margin">Semester 3</h3>
         <h3 id="HCW-S4" class="no-top-margin">Semester 4</h3>
-        <h2 id="HCW-Y2" class="no-top-margin">Year 3</h2>
+        <h2 id="HCW-Y3" class="no-top-margin">Year 3</h2>
         <p class="no-top-margin">
           <b>2027/2028</b>
         </p>
