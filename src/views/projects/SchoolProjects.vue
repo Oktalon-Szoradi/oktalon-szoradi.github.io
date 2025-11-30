@@ -97,28 +97,24 @@ watch(
                 4th Grade (Cumulative: 12)
               </a>
             </li>
-            <!--
               <li>
                 <a :href="`/#${$route.path}?scrollTo=HTL-5`">
                   5th Grade (Cumulative: 13)
                 </a>
               </li>
-              -->
           </ul>
-          <!--
-            <a :href="`/#${$route.path}?scrollTo=FH`"><b>FH Campus Wien</b></a>
-            <ul class="nav-list">
-              <li>
-                <a :href="`/#${$route.path}?scrollTo=FH-1`"> Year 1 </a>
-              </li>
-              <li>
-                <a :href="`/#${$route.path}?scrollTo=FH-2`"> Year 2 </a>
-              </li>
-              <li>
-                <a :href="`/#${$route.path}?scrollTo=FH-3`"> Year 3 </a>
-              </li>
-            </ul>
-            -->
+          <a :href="`/#${$route.path}?scrollTo=HCW`"><b>Hochschule Campus Wien</b></a>
+          <ul class="nav-list">
+            <li>
+              <a :href="`/#${$route.path}?scrollTo=HCW-Y1`"> Year 1 </a>
+            </li>
+            <li>
+              <a :href="`/#${$route.path}?scrollTo=HCW-Y2`"> Year 2 </a>
+            </li>
+            <li>
+              <a :href="`/#${$route.path}?scrollTo=HCW-Y3`"> Year 3 </a>
+            </li>
+          </ul>
         </GlassCard>
         <GlassCard class="reference-card aside-card">
           <h1>Reference</h1>
@@ -309,6 +305,13 @@ watch(
             </div>
           </ProjectLink>
         </div>
+        <h2 id="HTL-5">5th Grade (Cumulative: 13)</h2>
+        <p class="no-top-margin">
+          <b>School year 2023/2024</b>
+        </p>
+        <div class="flex flex-many">
+          Coming soon!
+        </div>
         <!--
         <h2 id="HTL-5">5th Grade (Cumulative: 13)</h2>
 
@@ -319,6 +322,44 @@ watch(
         <h2 id="FH-2">Year 2</h2>
         <h2 id="FH-3">Year 3</h2>
         -->
+      </GlassCard>
+      <GlassCard id="HCW" title="Hochschule Campus Wien" class="main-card">
+        <h2 id="HCW-Y1" class="no-top-margin">Year 1</h2>
+        <p class="no-top-margin">
+          <b>2025/2026</b>
+        </p>
+        <h3 id="HCW-S1" class="no-top-margin">Semester 1</h3>
+        <!-- <div class="flex flex-many">
+          <ProjectLink
+            title="Something"
+            icon_src="/images/Coins_FrameAero_MLM_Large.webp"
+          >
+            <p class="text-justify">
+              Something
+            </p>
+            <div class="text-center">
+              <PushButton
+                color="green"
+                :stayHere="true"
+              >
+                Button
+              </PushButton>
+            </div>
+          </ProjectLink>
+        </div> -->
+        <h3 id="HCW-S2" class="no-top-margin">Semester 2</h3>
+        <h2 id="HCW-Y2" class="no-top-margin">Year 2</h2>
+        <p class="no-top-margin">
+          <b>2026/2027</b>
+        </p>
+        <h3 id="HCW-S3" class="no-top-margin">Semester 3</h3>
+        <h3 id="HCW-S4" class="no-top-margin">Semester 4</h3>
+        <h2 id="HCW-Y2" class="no-top-margin">Year 3</h2>
+        <p class="no-top-margin">
+          <b>2027/2028</b>
+        </p>
+        <h3 id="HCW-S5" class="no-top-margin">Semester 5</h3>
+        <h3 id="HCW-S6" class="no-top-margin">Semester 6</h3>
       </GlassCard>
     </main>
   </div>
