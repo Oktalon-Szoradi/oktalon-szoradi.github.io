@@ -110,7 +110,7 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
           and find high enough quality to make a video about.
         </p>
         My videos are CC BY-NC-SA licensed. I do not aim to monetize or make
-        money or upload regularly. I'm not a YouTuber.
+        money or upload regularly. I do not consider myself a YouTuber.
         <div class="text-center">
           <PushButton href="https://www.youtube.com/@oktalon">
             Talon S.

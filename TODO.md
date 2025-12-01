@@ -41,7 +41,7 @@ This is a personal To-Do-List for my website.
   - [ ] [Maybe] Make page about Tetris Stardust / Feevo
 - Other
   - [x] Reformat my gear specs, especially when I get my Framework laptop
-  - [ ] [Maybe] Explaining my music tastes
+  - [x] [Maybe] Explaining my music tastes
 
 ---
 

@@ -9,6 +9,11 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/music',
+    name: 'Music Taste(s)',
+    component: () => import('../views/MusicTastesView.vue')
+  },
+  {
     path: '/projects',
     name: 'Projects',
     component: () => import('../views/ProjectsView.vue')
