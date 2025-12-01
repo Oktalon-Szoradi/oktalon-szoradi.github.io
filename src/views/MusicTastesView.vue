@@ -360,11 +360,6 @@ import AbbreviationMobile from '@/components/AbbreviationMobile.vue'
           &rightarrow; Portal is a game I like, and their music and songs are
           cool too!
         </li>
-        <li>
-          Want You Gone - Portal 2<br />
-          &rightarrow; Portal is a game I like, and their music and songs are
-          cool too!
-        </li>
         <br />
         <li>
           HelloWorld.java - Nanowar of Steel<br />
@@ -372,6 +367,7 @@ import AbbreviationMobile from '@/components/AbbreviationMobile.vue'
           this lol
         </li>
       </ul>
+      <br />
       <b>SUPER EUROBEAT</b>:
       <p>
         Running In The 90s is one of the most popular ones, heard it on YouTube.
