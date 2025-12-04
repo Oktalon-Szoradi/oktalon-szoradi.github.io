@@ -106,7 +106,7 @@ watch(
 </template>
 
 <style scoped lang="scss">
-@use '@/assets/layout_side-by-side.scss';
+@use '@/assets/layout_side-by-side';
 @use '@/assets/variables.scss' as vars;
 
 .top-margin {
