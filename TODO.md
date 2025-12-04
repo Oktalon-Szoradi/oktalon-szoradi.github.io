@@ -7,6 +7,7 @@ This is a personal To-Do-List for my website.
 - Bug Fixes
   - **Bold = Fix "done", in testing phase**
   - [ ] Blink (Chromium)
+    - [ ] Favicon doesn't work????
     - [ ] My logo looks jagged/weird. Antialiasing issue?
     - [ ] `/#/projects`: Oxygen icon applications-education-university.svg
                          looks weird. Maybe same issue as above?
