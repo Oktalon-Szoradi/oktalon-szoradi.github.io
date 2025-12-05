@@ -311,19 +311,26 @@ watch(
         <p class="no-top-margin">
           <b>School year 2023/2024</b>
         </p>
-        <div class="flex flex-many">Coming soon!</div>
-        <!--
-        <h2 id="HTL-5">5th Grade (Cumulative: 13)</h2>
-
-        <hr />
-
-        <h1 id="FH">FH Campus Wien</h1>
-        <h2 id="FH-1">Year 1</h2>
-        <h2 id="FH-2">Year 2</h2>
-        <h2 id="FH-3">Year 3</h2>
-        -->
+        <div class="flex flex-many">
+          <ProjectLink
+            title="3D (Blender)"
+            icon_src="/images/TalonOpenGraphImage.webp"
+          >
+            <p class="text-justify">Description</p>
+            <div class="text-center">
+              <PushButton :stayHere="true" :to="`${$route.path}/htl5_3d`">
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
+        </div>
       </GlassCard>
       <GlassCard id="HCW" title="Hochschule Campus Wien" class="main-card">
+        <p class="text-justify">
+          This is a University of Applied Sciences, which isn't the same thing
+          as a university. This section here is for the Bachelor's program
+          Computer Science and Digital Communications.
+        </p>
         <p class="text-justify">Coming soon!</p>
         <h2 id="HCW-Y1" class="no-top-margin">Year 1</h2>
         <p class="no-top-margin">
@@ -510,7 +517,7 @@ watch(
   font-size: 0.75rem;
 }
 
-@media (width <= vars.$breakpoint-lg) {
+@media (width <=vars.$breakpoint-lg) {
   .flex {
     flex-direction: column;
 

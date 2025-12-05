@@ -25,28 +25,33 @@ const routes = [
   },
   {
     path: '/projects/school/htl4_photo',
-    name: 'Photography Project',
+    name: 'Photography Project - HTL 4',
     component: () => import('../views/projects/HTL/4/PhotoProject.vue')
   },
   {
     path: '/projects/school/htl4_3d',
-    name: '3D Project',
+    name: '3D Project - HTL 4',
     component: () => import('../views/projects/HTL/4/BlenderProject.vue')
   },
   {
     path: '/projects/school/htl4_video',
-    name: 'Video Project',
+    name: 'Video Project - HTL 4',
     component: () => import('../views/projects/HTL/4/VideoProject.vue')
   },
   {
     path: '/projects/school/htl4_audio-soundtrap',
-    name: 'Audio: Soundtrap',
+    name: 'Audio: Soundtrap - HTL 4',
     component: () => import('../views/projects/HTL/4/AudioSoundtrapProject.vue')
   },
   {
     path: '/projects/school/htl4_audio-synchro',
-    name: 'Audio: Syncing',
+    name: 'Audio: Syncing - HTL 4',
     component: () => import('../views/projects/HTL/4/AudioSynchroProject.vue')
+  },
+  {
+    path: '/projects/school/htl5_3d',
+    name: '3D Project - HTL 5',
+    component: () => import('../views/projects/HTL/5/BlenderProject.vue')
   },
   {
     path: '/projects/personal',
@@ -86,7 +91,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   isNextViewLoading.value = true
-  document.title = `${String(to.name)} - Talon's Homepage`
+  document.title = `${String(to.name)} | Talon's Homepage`
   if (to.path === '/') document.title = "Talon's Homepage"
   next()
 })
