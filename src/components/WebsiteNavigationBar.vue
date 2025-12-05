@@ -64,10 +64,10 @@ onBeforeUnmount(() => {
                 ? 'Close the navigation menu'
                 : 'Open the navigation menu'
             "
-            class="menu-button"
+            class="menu-button symbol"
             :class="showTouchMenu ? 'menu-button-active' : ''"
             @click="toggleShowTouchMenu()"
-            >≡</a
+            >𑁔</a
           >
         </div>
         <div class="nav-links">
@@ -373,7 +373,8 @@ nav {
   .menu-button {
     display: none;
     padding-right: 0;
-    font-size: 2.777em;
+    /* font-family: 'Fira Code', monospace; */
+    font-size: 2.6667em;
   }
 
   .menu-button-active,
