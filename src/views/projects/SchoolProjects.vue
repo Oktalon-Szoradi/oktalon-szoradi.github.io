@@ -326,7 +326,7 @@ watch(
           </ProjectLink>
           <ProjectLink
             title="Design"
-            icon_src="/images/TalonOpenGraphImage.webp"
+            icon_src="/images/thumbnails/Thumbnail_Design-1080p.webp"
           >
             <p class="text-justify">
               UI/UX, Graphic, Magazine, Website, etc. design. We usually had to
