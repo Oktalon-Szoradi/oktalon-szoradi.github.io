@@ -28,6 +28,7 @@
           <span class="icon">✕</span>
         </PushButton>
         <PushButton
+          v-if="!noDownload"
           class="download"
           color="purple"
           :href="currentImageDownloadLink"
@@ -69,6 +70,7 @@ const props = withDefaults(
     squareImages?: boolean
     perRow?: number
     legacyImages?: boolean
+    noDownload?: boolean
     downloadExt?: string
   }>(),
   {
