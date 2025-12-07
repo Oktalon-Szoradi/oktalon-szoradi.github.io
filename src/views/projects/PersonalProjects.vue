@@ -39,9 +39,9 @@ watch(
 
 <template>
   <div class="container">
-    <GlassCard title="more coming soon" class="text-center">
+    <!-- <GlassCard title="more coming soon" class="text-center">
       Don't worry, this page will be populated soon!
-    </GlassCard>
+    </GlassCard> -->
     <div class="flex area-with-side-nav">
       <aside class="sticky flex">
         <div class="main-aside">
@@ -66,6 +66,21 @@ watch(
                 </a>
               </li>
             </ul>
+            <a
+              :href="`/#${$route.path}?scrollTo=Music`"
+              @click="scrollToTarget()"
+              ><b>Music</b></a
+            >
+            <a
+              :href="`/#${$route.path}?scrollTo=GraphicDesign`"
+              @click="scrollToTarget()"
+              ><b>Graphic Design</b></a
+            >
+            <a
+              :href="`/#${$route.path}?scrollTo=Misc`"
+              @click="scrollToTarget()"
+              ><b>Miscellaneous</b></a
+            >
           </GlassCard>
         </div>
         <div class="separator"></div>
@@ -95,6 +110,85 @@ watch(
                   href="https://github.com/Talon125/talon125.github.io"
                 >
                   GitHub Repository
+                </PushButton>
+              </div>
+            </ProjectLink>
+          </div>
+        </GlassCard>
+        <GlassCard id="Music" title="Music">
+          <div class="flex flex-many">
+            <ProjectLink
+              title="Soundtrap"
+              icon_src="/images/TalonOpenGraphImage.webp"
+            >
+              <p class="text-justify">Soundtrap!</p>
+              <div class="text-center">
+                <PushButton :stayHere="true" :to="`${$route.path}/soundtrap`">
+                  View
+                </PushButton>
+              </div>
+            </ProjectLink>
+          </div>
+        </GlassCard>
+        <GlassCard id="GraphicDesign" title="Graphic Design">
+          <div class="flex flex-many">
+            <ProjectLink
+              title="Icons"
+              icon_src="/images/TalonOpenGraphImage.webp"
+            >
+              <p class="text-justify">Icons!</p>
+              <div class="text-center">
+                <PushButton
+                  :stayHere="true"
+                  :to="`${$route.path}/graphic-design_icons`"
+                >
+                  View
+                </PushButton>
+              </div>
+            </ProjectLink>
+            <ProjectLink
+              title="Original Creations"
+              icon_src="/images/TalonOpenGraphImage.webp"
+            >
+              <p class="text-justify">Skeuomorphism!</p>
+              <div class="text-center">
+                <PushButton
+                  :stayHere="true"
+                  :to="`${$route.path}/graphic-design_oc`"
+                >
+                  View
+                </PushButton>
+              </div>
+            </ProjectLink>
+            <ProjectLink
+              title="Recreations"
+              icon_src="/images/TalonOpenGraphImage.webp"
+            >
+              <p class="text-justify">Skeuomorphism!</p>
+              <div class="text-center">
+                <PushButton
+                  :stayHere="true"
+                  :to="`${$route.path}/graphic-design_recreations`"
+                >
+                  View
+                </PushButton>
+              </div>
+            </ProjectLink>
+          </div>
+        </GlassCard>
+        <GlassCard id="Misc" title="Miscellaneous">
+          <div class="flex flex-many">
+            <ProjectLink
+              title="EU English Linux Locale"
+              icon_src="/images/TalonOpenGraphImage.webp"
+            >
+              <p class="text-justify">description</p>
+              <div class="text-center">
+                <PushButton
+                  :stayHere="true"
+                  :to="`${$route.path}/eu-linux-locale`"
+                >
+                  View
                 </PushButton>
               </div>
             </ProjectLink>
@@ -212,7 +306,7 @@ td {
   margin-top: 2em;
 }
 
-@media (width <= vars.$breakpoint-lg) {
+@media (width <=vars.$breakpoint-lg) {
   .flex {
     gap: 0;
   }

@@ -304,6 +304,9 @@ watch(
         >
           I have trouble answering this question, so… here's this page then!
         </CommandLink>
+        <CommandLink title="Recipes" to="/recipes" icon_src="/icons/.svg">
+          Check out some recipes I've made!
+        </CommandLink>
       </div>
     </GlassCard>
 

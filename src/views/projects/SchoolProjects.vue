@@ -324,6 +324,18 @@ watch(
               </PushButton>
             </div>
           </ProjectLink>
+          <ProjectLink
+            title="Design"
+            icon_src="/images/TalonOpenGraphImage.webp"
+          >
+            <b>...</b>
+            <p class="text-justify">Medientechnik (Media Tech) - Design</p>
+            <div class="text-center">
+              <PushButton :stayHere="true" :to="`${$route.path}/htl4_design`">
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
         </div>
         <h2 id="HTL-5">5th Grade (Cumulative: 13)</h2>
         <p class="no-top-margin">
@@ -344,6 +356,54 @@ watch(
             </p>
             <div class="text-center">
               <PushButton :stayHere="true" :to="`${$route.path}/htl5_3d`">
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
+          <ProjectLink
+            title="Design"
+            icon_src="/images/TalonOpenGraphImage.webp"
+          >
+            <b>...</b>
+            <p class="text-justify">Medientechnik (Media Tech) - Design</p>
+            <div class="text-center">
+              <PushButton :stayHere="true" :to="`${$route.path}/htl5_design`">
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
+          <ProjectLink
+            title="Web Tech - PWA"
+            icon_src="/images/TalonOpenGraphImage.webp"
+          >
+            <b>...</b>
+            <p class="text-justify">Progressive Web App ("Audio Archive")</p>
+            <div class="text-center">
+              <PushButton :stayHere="true" :to="`${$route.path}/htl5_pwa`">
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
+          <ProjectLink
+            title="Audio"
+            icon_src="/images/TalonOpenGraphImage.webp"
+          >
+            <b>...</b>
+            <p class="text-justify">Added SFX and new BGM to a random YT vid</p>
+            <div class="text-center">
+              <PushButton :stayHere="true" :to="`${$route.path}/htl5_audio`">
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
+          <ProjectLink
+            title="Video"
+            icon_src="/images/TalonOpenGraphImage.webp"
+          >
+            <b>...</b>
+            <p class="text-justify">Video...</p>
+            <div class="text-center">
+              <PushButton :stayHere="true" :to="`${$route.path}/htl5_video`">
                 View
               </PushButton>
             </div>
