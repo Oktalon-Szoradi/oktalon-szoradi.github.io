@@ -137,18 +137,20 @@ function closeImage() {
 }
 
 document.addEventListener('keydown', (event) => {
-  switch (event.key) {
-    case 'ArrowLeft':
-      viewPrevious()
-      break
-    case 'ArrowRight':
-      viewNext()
-      break
-    case 'Escape':
-      closeImage()
-      break
-    default:
-      break
+  if (currentImage.value) {
+    switch (event.key) {
+      case 'ArrowLeft':
+        viewPrevious()
+        break
+      case 'ArrowRight':
+        viewNext()
+        break
+      case 'Escape':
+        closeImage()
+        break
+      default:
+        break
+    }
   }
 })
 </script>
