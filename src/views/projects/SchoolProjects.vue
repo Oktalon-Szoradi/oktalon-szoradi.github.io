@@ -328,8 +328,14 @@ watch(
             title="Design"
             icon_src="/images/TalonOpenGraphImage.webp"
           >
-            <b>...</b>
-            <p class="text-justify">Medientechnik (Media Tech) - Design</p>
+            <p class="text-justify">
+              UI/UX, Graphic, Magazine, Website, etc. design. We usually had to
+              use Adobe XD. Workflow was usually wireframe → prototype → mockup
+            </p>
+            <p class="text-justify">
+              Check out some of my work for a couple of assignments we had to
+              do!
+            </p>
             <div class="text-center">
               <PushButton :stayHere="true" :to="`${$route.path}/htl4_design`">
                 View
@@ -356,18 +362,6 @@ watch(
             </p>
             <div class="text-center">
               <PushButton :stayHere="true" :to="`${$route.path}/htl5_3d`">
-                View
-              </PushButton>
-            </div>
-          </ProjectLink>
-          <ProjectLink
-            title="Design"
-            icon_src="/images/TalonOpenGraphImage.webp"
-          >
-            <b>...</b>
-            <p class="text-justify">Medientechnik (Media Tech) - Design</p>
-            <div class="text-center">
-              <PushButton :stayHere="true" :to="`${$route.path}/htl5_design`">
                 View
               </PushButton>
             </div>

@@ -49,6 +49,11 @@ const routes = [
     component: () => import('../views/projects/HTL/4/AudioSynchroProject.vue')
   },
   {
+    path: '/projects/school/htl4_design',
+    name: 'Design - HTL 4',
+    component: () => import('../views/projects/HTL/4/MEDTDesigns.vue')
+  },
+  {
     path: '/projects/school/htl5_3d',
     name: '3D Project - HTL 5',
     component: () => import('../views/projects/HTL/5/BlenderProject.vue')
