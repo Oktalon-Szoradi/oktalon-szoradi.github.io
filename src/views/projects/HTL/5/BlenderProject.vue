@@ -59,7 +59,7 @@ const IMAGES = [
       <p>
         Initially, I wanted to make an ANIMUSIC-like animation inspired by Aqua
         Harp but have it play Super Mario 64's water level theme (e.g. Dire Dire
-        Docks). I even recreated the theme in SoundTrap, I also had an idea for
+        Docks). I even recreated the theme in Soundtrap, I also had an idea for
         an alternate version of the theme where the harp plays the same notes as
         the bass; this theme would be used for the concept art or director's
         commentary video.
