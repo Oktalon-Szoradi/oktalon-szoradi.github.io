@@ -21,7 +21,7 @@ This is a personal To-Do-List for my website.
         but too big to fit vertical space!
 - School Projects
   - [ ] Content from HTL 5CHITM (2023/2024)
-    - [ ] Blender (3D) Project
+    - [x] Blender (3D) Project
     - [ ] [Maybe] MEDT Audio/Video Project
     - [ ] [Maybe] Audio Archive PWA
   - [ ] [Maybe] Gallery: IT-Projekte
