@@ -95,9 +95,7 @@ const IMAGES = [
         YouTube. Since I took stuff from Radiant Ensemble, this is also
         available under a copyleft license.
       </p>
-      <p>
-        And hey, this is my very first Blender animation!
-      </p>
+      <p>And hey, this is my very first Blender animation!</p>
       <!-- <pre>
 Test video. Title, description, and visibility may change at any time.
 
