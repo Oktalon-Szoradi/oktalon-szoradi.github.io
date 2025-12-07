@@ -96,6 +96,8 @@ const IMAGES = [
         available under a copyleft license.
       </p>
       <p>And hey, this is my very first Blender animation!</p>
+      <h2>Here's another video:</h2>
+      <VideoHandler src="/videos/TetrisAnimated.mp4" />
       <!-- <pre>
 Test video. Title, description, and visibility may change at any time.
 
