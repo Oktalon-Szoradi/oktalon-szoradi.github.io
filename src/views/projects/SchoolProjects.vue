@@ -314,9 +314,16 @@ watch(
         <div class="flex flex-many">
           <ProjectLink
             title="3D (Blender)"
-            icon_src="/images/TalonOpenGraphImage.webp"
+            icon_src="/images/thumbnails/Thumbnail_MIDIanimTetr-1080p.webp"
           >
-            <p class="text-justify">Description</p>
+            <p class="text-justify">
+              If I remember correctly, I don't think there was a specific theme
+              this time; we could do whatever we want.
+            </p>
+            <p class="text-justify">
+              I was a bit overestimatedly ambitious and wanted to try
+              MIDIAnimator. But hey, I did achieve something!
+            </p>
             <div class="text-center">
               <PushButton :stayHere="true" :to="`${$route.path}/htl5_3d`">
                 View
