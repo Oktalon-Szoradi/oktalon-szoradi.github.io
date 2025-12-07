@@ -98,23 +98,41 @@ watch(
               </a>
             </li>
             <li>
-              <a :href="`/#${$route.path}?scrollTo=HTL-5`">
+              <a
+                :href="`/#${$route.path}?scrollTo=HTL-5`"
+                @click="scrollToTarget()"
+              >
                 5th Grade (Cumulative: 13)
               </a>
             </li>
           </ul>
-          <a :href="`/#${$route.path}?scrollTo=HCW`"
+          <a :href="`/#${$route.path}?scrollTo=HCW`" @click="scrollToTarget()"
             ><b>Hochschule Campus Wien</b></a
           >
           <ul class="nav-list">
             <li>
-              <a :href="`/#${$route.path}?scrollTo=HCW-Y1`"> Year 1 </a>
+              <a
+                :href="`/#${$route.path}?scrollTo=HCW-Y1`"
+                @click="scrollToTarget()"
+              >
+                Year 1
+              </a>
             </li>
             <li>
-              <a :href="`/#${$route.path}?scrollTo=HCW-Y2`"> Year 2 </a>
+              <a
+                :href="`/#${$route.path}?scrollTo=HCW-Y2`"
+                @click="scrollToTarget()"
+              >
+                Year 2
+              </a>
             </li>
             <li>
-              <a :href="`/#${$route.path}?scrollTo=HCW-Y3`"> Year 3 </a>
+              <a
+                :href="`/#${$route.path}?scrollTo=HCW-Y3`"
+                @click="scrollToTarget()"
+              >
+                Year 3
+              </a>
             </li>
           </ul>
         </GlassCard>
