@@ -59,6 +59,11 @@ const routes = [
     component: () => import('../views/projects/HTL/5/BlenderProject.vue')
   },
   {
+    path: '/projects/school/htl5_pwa',
+    name: 'Web Tech PWA Project - HTL 5',
+    component: () => import('../views/projects/HTL/5/PWAProject.vue')
+  },
+  {
     path: '/projects/personal',
     name: 'Personal Projects',
     component: () => import('../views/projects/PersonalProjects.vue')

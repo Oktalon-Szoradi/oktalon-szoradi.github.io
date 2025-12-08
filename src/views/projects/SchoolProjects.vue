@@ -368,10 +368,15 @@ watch(
           </ProjectLink>
           <ProjectLink
             title="Web Tech - PWA"
-            icon_src="/images/TalonOpenGraphImage.webp"
+            icon_src="/images/thumbnails/Thumbnail_PWA-1080p.webp"
           >
-            <b>...</b>
-            <p class="text-justify">Progressive Web App ("Audio Archive")</p>
+            <p class="text-justify">
+              We had to make a Progressive Web App. I decided to make an audio
+              recorder called AudioArchive.
+            </p>
+            <p class="text-justify">
+              Did I spend too much time on the design again?
+            </p>
             <div class="text-center">
               <PushButton :stayHere="true" :to="`${$route.path}/htl5_pwa`">
                 View
@@ -383,7 +388,9 @@ watch(
             icon_src="/images/TalonOpenGraphImage.webp"
           >
             <b>...</b>
-            <p class="text-justify">Added SFX and new BGM to a random YT vid</p>
+            <p class="text-justify">
+              Added SFX and new BGM to a random YT vid 2023-12-13 and 2024-01-29
+            </p>
             <div class="text-center">
               <PushButton :stayHere="true" :to="`${$route.path}/htl5_audio`">
                 View
@@ -395,7 +402,7 @@ watch(
             icon_src="/images/TalonOpenGraphImage.webp"
           >
             <b>...</b>
-            <p class="text-justify">Video...</p>
+            <p class="text-justify">Video... 2024-04-17</p>
             <div class="text-center">
               <PushButton :stayHere="true" :to="`${$route.path}/htl5_video`">
                 View
