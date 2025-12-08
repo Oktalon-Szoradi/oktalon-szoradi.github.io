@@ -23,9 +23,9 @@ This is a personal To-Do-List for my website.
   - [ ] Content from HTL 5CHITM (2023/2024)
     - [x] Blender (3D) Project
     - [ ] [Maybe] MEDT Audio/Video Project
-    - [ ] [Maybe] Audio Archive PWA
+    - [x] [Maybe] Audio Archive PWA
   - [ ] [Maybe] Gallery: IT-Projekte
-  - [ ] [Maybe] Gallery: MEDT-Design
+  - [x] [Maybe] Gallery: MEDT-Design
 - Personal Projects
   - [ ] My own Soundtrap songs/recreations
   - [ ] Graphic Designs!
