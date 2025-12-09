@@ -123,3 +123,149 @@ Output #0, webm, to 'TetrisAnimatedRendered(ish).webm':
 [out#0/webm @ 0x558f4c5cac40] video:11452KiB audio:3401KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.334504%
 frame= 4763 fps= 70 q=35.0 Lsize=   14903KiB time=00:01:19.36 bitrate=1538.2kbits/s speed=1.17x
 talon@talon-framework-debian:~/Documents/GitHubSchool/oktalon-szoradi.github.io/public/videos$
+
+################################################################################
+
+talon@talon-framework-debian:~/Documents/GitHubSchool/oktalon-szoradi.github.io/public/videos$ ffmpeg -i Szoradi_Fruits_\(AudioUpdate\).mp4 -c:v libsvtav1 -preset 6 -c:a libopus -b:a 320k Szoradi_Fruits_\(AudioUpdate\).webm
+ffmpeg version 7.1.3-1 Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15 (Debian 15.2.0-9)
+  configuration: --prefix=/usr --extra-version=1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-libmfx --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libcaca --enable-libdvdnav --enable-libdvdread --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.101 / 61. 19.101
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'Szoradi_Fruits_(AudioUpdate).mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: mp42mp41
+    creation_time   : 2023-12-13T18:56:14.000000Z
+  Duration: 00:00:50.05, start: 0.000000, bitrate: 12000 kb/s
+  Stream #0:0[0x1](eng): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 1:1 DAR 16:9], 11661 kb/s, 23.98 fps, 23.98 tbr, 24k tbn (default)
+      Metadata:
+        creation_time   : 2023-12-13T18:56:14.000000Z
+        handler_name    : ?Mainconcept Video Media Handler
+        vendor_id       : [0][0][0][0]
+        encoder         : AVC Coding
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 317 kb/s (default)
+      Metadata:
+        creation_time   : 2023-12-13T18:56:14.000000Z
+        handler_name    : #Mainconcept MP4 Sound Media Handler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> av1 (libsvtav1))
+  Stream #0:1 -> #0:1 (aac (native) -> opus (libopus))
+Press [q] to stop, [?] for help
+Svt[info]: -------------------------------------------
+Svt[info]: SVT [version]:       SVT-AV1 Encoder Lib v2.3.0
+Svt[info]: SVT [build]  :       GCC 14.2.0       64 bit
+Svt[info]: -------------------------------------------
+Svt[info]: Level of Parallelism: 5
+Svt[info]: Number of PPCS 140
+Svt[info]: [asm level on system : up to avx512]
+Svt[info]: [asm level selected : up to avx512]
+Svt[info]: -------------------------------------------
+Svt[info]: SVT [config]: main profile   tier (auto)     level (auto)
+Svt[info]: SVT [config]: width / height / fps numerator / fps denominator               : 1920 / 1080 / 24000 / 1001
+Svt[info]: SVT [config]: bit-depth / color format                                       : 8 / YUV420
+Svt[info]: SVT [config]: preset / tune / pred struct                                    : 6 / PSNR / random access
+Svt[info]: SVT [config]: gop size / mini-gop size / key-frame type                      : 161 / 32 / key frame
+Svt[info]: SVT [config]: BRC mode / rate factor                                         : CRF / 35
+Svt[info]: SVT [config]: AQ mode / variance boost                                       : 2 / 0
+Svt[info]: -------------------------------------------
+Output #0, webm, to 'Szoradi_Fruits_(AudioUpdate).webm':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: mp42mp41
+    encoder         : Lavf61.7.100
+  Stream #0:0(eng): Video: av1, yuv420p(tv, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 23.98 fps, 1k tbn (default)
+      Metadata:
+        creation_time   : 2023-12-13T18:56:14.000000Z
+        handler_name    : ?Mainconcept Video Media Handler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.101 libsvtav1
+  Stream #0:1(eng): Audio: opus, 48000 Hz, stereo, flt, 320 kb/s (default)
+      Metadata:
+        creation_time   : 2023-12-13T18:56:14.000000Z
+        handler_name    : #Mainconcept MP4 Sound Media Handler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.101 libopus
+[out#0/webm @ 0x55b1c9cdef80] video:7703KiB audio:2070KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.242028%
+frame= 1200 fps= 48 q=33.0 Lsize=    9796KiB time=00:00:50.00 bitrate=1604.7kbits/s speed=2.01x
+talon@talon-framework-debian:~/Documents/GitHubSchool/oktalon-szoradi.github.io/public/videos$ ffmpeg -i Strawberry\ Commercial\ Vers.\ 1.5.mp4 -c:v libsvtav1 -preset 6 -c:a libopus -b:a 320k Strawberry\ Commercial\ Vers.\ 1.5.webm
+ffmpeg version 7.1.3-1 Copyright (c) 2000-2025 the FFmpeg developers
+  built with gcc 15 (Debian 15.2.0-9)
+  configuration: --prefix=/usr --extra-version=1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-libmfx --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libcaca --enable-libdvdnav --enable-libdvdread --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.101 / 61. 19.101
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'Strawberry Commercial Vers. 1.5.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: mp42mp41
+    creation_time   : 2024-04-17T13:44:20.000000Z
+  Duration: 00:00:27.07, start: 0.000000, bitrate: 13381 kb/s
+  Stream #0:0[0x1](eng): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(progressive), 1920x1080 [SAR 1:1 DAR 16:9], 13051 kb/s, 23.98 fps, 23.98 tbr, 24k tbn (default)
+      Metadata:
+        creation_time   : 2024-04-17T13:44:20.000000Z
+        handler_name    : ?Mainconcept Video Media Handler
+        vendor_id       : [0][0][0][0]
+        encoder         : AVC Coding
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 317 kb/s (default)
+      Metadata:
+        creation_time   : 2024-04-17T13:44:20.000000Z
+        handler_name    : #Mainconcept MP4 Sound Media Handler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> av1 (libsvtav1))
+  Stream #0:1 -> #0:1 (aac (native) -> opus (libopus))
+Press [q] to stop, [?] for help
+Svt[info]: -------------------------------------------
+Svt[info]: SVT [version]:       SVT-AV1 Encoder Lib v2.3.0
+Svt[info]: SVT [build]  :       GCC 14.2.0       64 bit
+Svt[info]: -------------------------------------------
+Svt[info]: Level of Parallelism: 5
+Svt[info]: Number of PPCS 140
+Svt[info]: [asm level on system : up to avx512]
+Svt[info]: [asm level selected : up to avx512]
+Svt[info]: -------------------------------------------
+Svt[info]: SVT [config]: main profile   tier (auto)     level (auto)
+Svt[info]: SVT [config]: width / height / fps numerator / fps denominator               : 1920 / 1080 / 24000 / 1001
+Svt[info]: SVT [config]: bit-depth / color format                                       : 8 / YUV420
+Svt[info]: SVT [config]: preset / tune / pred struct                                    : 6 / PSNR / random access
+Svt[info]: SVT [config]: gop size / mini-gop size / key-frame type                      : 161 / 32 / key frame
+Svt[info]: SVT [config]: BRC mode / rate factor                                         : CRF / 35
+Svt[info]: SVT [config]: AQ mode / variance boost                                       : 2 / 0
+Svt[info]: -------------------------------------------
+Output #0, webm, to 'Strawberry Commercial Vers. 1.5.webm':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: mp42mp41
+    encoder         : Lavf61.7.100
+  Stream #0:0(eng): Video: av1, yuv420p(tv, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 23.98 fps, 1k tbn (default)
+      Metadata:
+        creation_time   : 2024-04-17T13:44:20.000000Z
+        handler_name    : ?Mainconcept Video Media Handler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.101 libsvtav1
+  Stream #0:1(eng): Audio: opus, 48000 Hz, stereo, flt, 320 kb/s (default)
+      Metadata:
+        creation_time   : 2024-04-17T13:44:20.000000Z
+        handler_name    : #Mainconcept MP4 Sound Media Handler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.101 libopus
+[out#0/webm @ 0x556a8bc68640] video:3002KiB audio:1006KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.325604%
+frame=  649 fps= 52 q=33.0 Lsize=    4021KiB time=00:00:27.02 bitrate=1218.9kbits/s speed=2.18x
+talon@talon-framework-debian:~/Documents/GitHubSchool/oktalon-szoradi.github.io/public/videos$
