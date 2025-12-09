@@ -385,11 +385,14 @@ watch(
           </ProjectLink>
           <ProjectLink
             title="Audio"
-            icon_src="/images/TalonOpenGraphImage.webp"
+            icon_src="/images/thumbnails/Thumbnail_AudioSFX-1080p.webp"
           >
-            <b>...</b>
             <p class="text-justify">
-              Added SFX and new BGM to a random YT vid 2023-12-13 and 2024-01-29
+              We were split into groups and had to partner up with someone in a
+              different group. We'd both find a video together; one, in the
+              audio group, would remake the audio (SFX, BGM), where as the
+              other, in the video group, would recreate the video (shots).
+              <!-- Added SFX and new BGM to a random YT vid 2023-12-13 and 2024-01-29 -->
             </p>
             <div class="text-center">
               <PushButton :stayHere="true" :to="`${$route.path}/htl5_audio`">
@@ -399,7 +402,7 @@ watch(
           </ProjectLink>
           <ProjectLink
             title="Video"
-            icon_src="/images/TalonOpenGraphImage.webp"
+            icon_src="/images/thumbnails/Thumbnail_Video-StrawberryYogurt-1080p.webp"
           >
             <b>...</b>
             <p class="text-justify">Video... 2024-04-17</p>
