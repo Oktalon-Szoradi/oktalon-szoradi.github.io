@@ -28,3 +28,6 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+# Custom
+/public/videos/RSI-OAS_Fruit.webm
