@@ -64,9 +64,44 @@ const routes = [
     component: () => import('../views/projects/HTL/5/PWAProject.vue')
   },
   {
+    path: '/projects/school/htl5_audio',
+    name: 'Audio Project - HTL 5',
+    component: () => import('../views/projects/HTL/5/AudioProject.vue')
+  },
+  {
+    path: '/projects/school/htl5_video',
+    name: 'Video Project - HTL 5',
+    component: () => import('../views/projects/HTL/5/VideoProject.vue')
+  },
+  {
     path: '/projects/personal',
     name: 'Personal Projects',
     component: () => import('../views/projects/PersonalProjects.vue')
+  },
+  {
+    path: '/projects/personal/soundtrap',
+    name: 'Music: Soundtrap',
+    component: () => import('../views/projects/Personal/MusicSoundtrap.vue')
+  },
+  {
+    path: '/projects/personal/graphic-design_icons',
+    name: 'Graphic Design: Icons',
+    component: () => import('../views/projects/Personal/GraphicDesignIcons.vue')
+  },
+  {
+    path: '/projects/personal/graphic-design_oc',
+    name: 'Graphic Design: Original Creations',
+    component: () => import('../views/projects/Personal/GraphicDesignOCs.vue')
+  },
+  {
+    path: '/projects/personal/graphic-design_recreations',
+    name: 'Graphic Design: Recreations',
+    component: () => import('../views/projects/Personal/GraphicDesignRecreations.vue')
+  },
+  {
+    path: '/projects/personal/github_eu-linux-locale',
+    name: 'EU English Linux Locale',
+    component: () => import('../views/projects/Personal/GitHubLinuxLocaleENEU.vue')
   },
   {
     path: '/connections',

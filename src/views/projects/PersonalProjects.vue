@@ -186,7 +186,7 @@ watch(
               <div class="text-center">
                 <PushButton
                   :stayHere="true"
-                  :to="`${$route.path}/eu-linux-locale`"
+                  :to="`${$route.path}/github_eu-linux-locale`"
                 >
                   View
                 </PushButton>
