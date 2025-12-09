@@ -22,7 +22,9 @@ This is a personal To-Do-List for my website.
 - School Projects
   - [ ] Content from HTL 5CHITM (2023/2024)
     - [x] Blender (3D) Project
+      - [ ] Also link to ttfaf and ddd audio files
     - [ ] [Maybe] MEDT Audio/Video Project
+      - [ ] Audio: also provide audio files!
     - [x] [Maybe] Audio Archive PWA
   - [ ] [Maybe] Gallery: IT-Projekte
   - [x] [Maybe] Gallery: MEDT-Design
