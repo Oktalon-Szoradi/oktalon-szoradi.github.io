@@ -304,7 +304,7 @@ watch(
         >
           I have trouble answering this question, so… here's this page then!
         </CommandLink>
-        <CommandLink title="Recipes" to="/recipes" icon_src="/icons/.svg">
+        <CommandLink title="Recipes" to="/recipes" icon_src="/icons/food.svg">
           Check out some recipes I've made!
         </CommandLink>
       </div>
