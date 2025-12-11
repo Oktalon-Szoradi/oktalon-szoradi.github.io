@@ -2,8 +2,10 @@
 import NavigationButtons from '@/components/NavigationButtons.vue'
 import GlassCard from '@/components/GlassCard.vue'
 import AbbreviationMobile from '@/components/AbbreviationMobile.vue'
+import AudioHandler from '@/components/AudioHandler.vue'
 import VideoHandler from '@/components/VideoHandler.vue'
 import AccordionSingle from '@/components/AccordionSingle.vue'
+import PushButton from '@/components/PushButton.vue'
 </script>
 
 <template>
@@ -54,6 +56,13 @@ import AccordionSingle from '@/components/AccordionSingle.vue'
         I took inspiration from Super Mario 64's Dire Dire Docks (well, the
         water level theme).
       </p>
+      <p>
+        I didn't really wanna try making the sound effects myself. I remembered
+        a nifty site to get some SFX: freesound.org<br />
+        Be sure to check the SFX Attributions below. They're mostly CC BY
+        3.0/4.0 DEED
+      </p>
+      <p>We had to do this in Adobe Premiere Pro, so that's what I did:</p>
       <VideoHandler src="/videos/Szoradi_Fruits_(AudioUpdate).webm" />
       <b>2023-12-13</b>
       <hr />
@@ -197,6 +206,71 @@ import AccordionSingle from '@/components/AccordionSingle.vue'
         </div>
       </AccordionSingle>
       <hr />
+      <p>
+        I'm pretty satisfied and proud of the result, especially considering how
+        the original video barely had any sound effects at all. The orange cut
+        is maybe too juicy-sounding, but eh it's fine.
+      </p>
+      </GlassCard>
+      <GlassCard title="Extras" :noCenter="true">
+      <p class="no-top-margin">
+        Here's the <b>final audio</b> used in the video. You can download the
+        <AbbreviationMobile title="Free Lossless Audio Codec"
+          >FLAC</AbbreviationMobile
+        >
+        (originally
+        <AbbreviationMobile title="Waveform Audio File Format"
+          >WAV</AbbreviationMobile
+        >, but I converted it to save a bit on file size) and the
+        <AbbreviationMobile title="Musical Instrument Digital Interface"
+          >MIDI</AbbreviationMobile
+        >!
+      </p>
+      <b>2023-12-09</b>
+      <AudioHandler src="/audio/FruitAd(Real).flac" />
+      <div class="button-section">
+        <PushButton color="purple" href="/audio/FruitAd(Real).flac"
+          >Download FLAC</PushButton
+        >
+        <PushButton color="purple" href="/audio/FruitAd(Real).mid"
+          >Download MIDI</PushButton
+        >
+      </div>
+      <hr />
+      <p>
+        Here's an <b>alt version</b> that I didn't end up using (ending is
+        slightly different):
+      </p>
+      <b>2023-11-08</b>
+      <AudioHandler src="/audio/FruitAd(Alt).flac" />
+      <div class="button-section">
+        <PushButton color="purple" href="/audio/FruitAd(Alt).flac"
+          >Download FLAC</PushButton
+        >
+      </div>
+      <hr />
+      <p>
+        Here's an <b>early version</b> of the video with the <b>music</b> I
+        initially made:
+      </p>
+      <VideoHandler src="/videos/FruitDrinkTest2.webm" />
+      <b>2023-10-25</b>
+      <p>
+        The drums are a basically 1:1 transcription of the ones in
+        <AbbreviationMobile title="Super Mario 64">SM64</AbbreviationMobile>
+        Dire Dire Docks
+      </p>
+      <div class="button-section">
+        <PushButton color="purple" href="/audio/FruitAd.mid"
+          >Download MIDI</PushButton
+        >
+      </div>
+      <hr />
+      <p>
+        Finally, here's an <b>earlier version</b> that's SFX only, no music:
+      </p>
+      <VideoHandler src="/videos/FruitDrinkTest1.webm" />
+      <b>2023-10-04</b>
       <!--
       <p>
         So, the idea was that at the end, the audio people and video people
@@ -219,5 +293,10 @@ import AccordionSingle from '@/components/AccordionSingle.vue'
   .left-right-padding {
     padding: 0 1.25em;
   }
+}
+
+.button-section {
+  padding-bottom: 1em;
+  text-align: center;
 }
 </style>
