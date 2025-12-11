@@ -80,7 +80,7 @@ watch(
       Copyleft (GPLv3) except for my logo. Please do not use my logo without
       permission.
       <br />
-      Other media are
+      Other media are, unless explicitly stated otherwise,
       <a
         href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
         target="_blank"
