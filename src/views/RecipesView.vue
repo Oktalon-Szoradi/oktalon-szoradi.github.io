@@ -11,9 +11,7 @@ import GlassCard from '@/components/GlassCard.vue'
       <code>&lt;-</code>&ensp;Back to Home
     </NavigationButton>
     <GlassCard title="Recipes">
-      <p>
-        Coming soon!
-      </p>
+      <p>Coming soon!</p>
     </GlassCard>
     <NavigationButton to="/">
       <code>&lt;-</code>&ensp;Back to Home

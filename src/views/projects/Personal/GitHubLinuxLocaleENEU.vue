@@ -7,9 +7,7 @@ import GlassCard from '@/components/GlassCard.vue'
   <main class="container">
     <NavigationButtons :queryIndex="1" :queryParams="{ scrollTo: 'Misc' }" />
     <GlassCard title="EU English Linux Locale">
-      <p>
-        Coming soon…
-      </p>
+      <p>Coming soon…</p>
     </GlassCard>
   </main>
 </template>

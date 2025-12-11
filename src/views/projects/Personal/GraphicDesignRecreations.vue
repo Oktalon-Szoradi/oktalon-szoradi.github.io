@@ -5,11 +5,12 @@ import GlassCard from '@/components/GlassCard.vue'
 
 <template>
   <main class="container">
-    <NavigationButtons :queryIndex="1" :queryParams="{ scrollTo: 'GraphicDesign' }" />
+    <NavigationButtons
+      :queryIndex="1"
+      :queryParams="{ scrollTo: 'GraphicDesign' }"
+    />
     <GlassCard title="Graphic Design: Recreations">
-      <p>
-        Coming soon…
-      </p>
+      <p>Coming soon…</p>
     </GlassCard>
   </main>
 </template>

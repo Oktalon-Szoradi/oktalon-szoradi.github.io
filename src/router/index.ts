@@ -101,12 +101,14 @@ const routes = [
   {
     path: '/projects/personal/graphic-design_recreations',
     name: 'Graphic Design: Recreations',
-    component: () => import('../views/projects/Personal/GraphicDesignRecreations.vue')
+    component: () =>
+      import('../views/projects/Personal/GraphicDesignRecreations.vue')
   },
   {
     path: '/projects/personal/github_eu-linux-locale',
     name: 'EU English Linux Locale',
-    component: () => import('../views/projects/Personal/GitHubLinuxLocaleENEU.vue')
+    component: () =>
+      import('../views/projects/Personal/GitHubLinuxLocaleENEU.vue')
   },
   {
     path: '/connections',
