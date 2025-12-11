@@ -404,8 +404,14 @@ watch(
             title="Video"
             icon_src="/images/thumbnails/Thumbnail_Video-StrawberryYogurt-1080p.webp"
           >
-            <b>...</b>
-            <p class="text-justify">Video... 2024-04-17</p>
+            <p class="text-justify">
+              See the description for Audio to the left of or above this? Yeah
+              so this is when it was my turn for the video part.
+            </p>
+            <p class="text-justify">
+              Although I did set up the shots and bring some props, a friend of
+              mine put it together.
+            </p>
             <div class="text-center">
               <PushButton :stayHere="true" :to="`${$route.path}/htl5_video`">
                 View
