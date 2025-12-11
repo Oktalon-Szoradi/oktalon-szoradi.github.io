@@ -211,8 +211,8 @@ import PushButton from '@/components/PushButton.vue'
         the original video barely had any sound effects at all. The orange cut
         is maybe too juicy-sounding, but eh it's fine.
       </p>
-      </GlassCard>
-      <GlassCard title="Extras" :noCenter="true">
+    </GlassCard>
+    <GlassCard title="Extras" :noCenter="true">
       <p class="no-top-margin">
         Here's the <b>final audio</b> used in the video. You can download the
         <AbbreviationMobile title="Free Lossless Audio Codec"
