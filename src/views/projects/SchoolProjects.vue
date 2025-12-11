@@ -633,7 +633,7 @@ watch(
   }
 
   .main-card {
-    margin: 0 1em;
+    margin: 0 1em 2em;
   }
 }
 </style>
