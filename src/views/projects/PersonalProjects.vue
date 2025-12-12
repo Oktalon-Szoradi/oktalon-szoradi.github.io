@@ -121,7 +121,9 @@ watch(
               title="Soundtrap"
               icon_src="/images/TalonOpenGraphImage.webp"
             >
-              <p class="text-justify">Soundtrap!</p>
+              <p class="text-justify">
+                Stuff I made in Soundtrap in my free time while at HTL
+              </p>
               <div class="text-center">
                 <PushButton :stayHere="true" :to="`${$route.path}/soundtrap`">
                   View
