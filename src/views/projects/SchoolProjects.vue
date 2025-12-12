@@ -168,6 +168,43 @@ watch(
     <main>
       <GlassCard id="HTL" title="HTL Wien West" class="main-card">
         <!-- <h1 id="HTL" class="no-top-margin">HTL Wien West</h1> -->
+        <h3>What is a HTL?</h3>
+        <p>
+          In Austria, after middle school, you can choose to go to a Gymnasium
+          or a HTL. Well maybe there's even more options too but idk them
+        </p>
+        <blockquote
+          cite="https://en.wikipedia.org/wiki/H%C3%B6here_Technische_Lehranstalt"
+        >
+          <p>
+            A Höhere Technische Lehranstalt (German for
+            <em>Higher Technical Education Institute</em>, or more loosely
+            translated <em>Technical College</em>), commonly known as
+            <b>HTL</b>, is an engineering-focused high school/institution of
+            further education in Austria.
+          </p>
+        </blockquote>
+        <p>
+          —<cite
+            ><a
+              href="https://en.wikipedia.org/wiki/H%C3%B6here_Technische_Lehranstalt"
+              target="_blank"
+              >Höhere Technische Lehranstalt on Wikipedia</a
+            ></cite
+          >
+        </p>
+        <p class="text-justify">
+          After finishing 4th grade Elementary school, I would have done 5th
+          grade, but then we moved to Austria. There is no 5th grade Elementary
+          school here, so I started with middle school.
+        </p>
+        <p class="text-justify">
+          During middle school times, I grew an interest in IT. HTL Wien West
+          has a couple "departments", one being IT, which is where I went. I
+          learned programming (Python, C# (OOP)), web development, media and
+          network technology, databases (SQL), LaTeX, Windows and Linux, and
+          some more stuff.
+        </p>
         <h2 id="HTL-3" class="no-top-margin">3rd Grade (Cumulative: 11)</h2>
         <p class="no-top-margin">
           <b>School year 2021/2022</b>
@@ -423,8 +460,9 @@ watch(
       <GlassCard id="HCW" title="Hochschule Campus Wien" class="main-card">
         <p class="text-justify">
           This is a University of Applied Sciences, which isn't the same thing
-          as a university. This section here is for the Bachelor's program
-          Computer Science and Digital Communications.
+          as a university ("Fachhochschule" vs "Universität"). This section here
+          is for the Bachelor's program Computer Science and Digital
+          Communications.
         </p>
         <p class="text-justify">Coming soon!</p>
         <h2 id="HCW-Y1" class="no-top-margin">Year 1</h2>
@@ -432,6 +470,10 @@ watch(
           <b>2025/2026</b>
         </p>
         <h3 id="HCW-S1" class="no-top-margin">Semester 1</h3>
+        <p>
+          We're learning Java in programming as well as JavaFX! Now I see what
+          people online mean by how Java and C# are similar, they are!
+        </p>
         <!-- <div class="flex flex-many">
           <ProjectLink
             title="Something"
