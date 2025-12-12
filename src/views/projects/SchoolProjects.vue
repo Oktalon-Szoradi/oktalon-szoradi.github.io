@@ -461,8 +461,8 @@ watch(
         <p class="text-justify">
           This is a University of Applied Sciences, which isn't the same thing
           as a university ("Fachhochschule" vs "Universität"). This section here
-          is for the Bachelor's program Computer Science and Digital
-          Communications.
+          is for the Bachelor's program
+          <b>Computer Science and Digital Communications</b>.
         </p>
         <p class="text-justify">Coming soon!</p>
         <h2 id="HCW-Y1" class="no-top-margin">Year 1</h2>
