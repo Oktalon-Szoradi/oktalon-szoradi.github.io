@@ -125,6 +125,44 @@ import GlassCard from '@/components/GlassCard.vue'
         </div>
       </div>
     </GlassCard>
+    <GlassCard title="Extra" :noCenter="true">
+      <div class="audio-section">
+        <h3 class="no-top-margin">
+          &lt;<i>I don't have a name for this</i>&gt;
+        </h3>
+        <p>Started on <code>2023-04-28</code>.</p>
+        <p>
+          This was actually from the first lesson where we started using
+          Soundtrap. I put some pre-recorded presets, so unfortunately those
+          aren't in the MIDI. Over time, some random melody came to me based on
+          <a
+            href="https://www.newgrounds.com/audio/listen/714208"
+            target="_blank"
+            >S.C.I.L.I. by Kreyowitz on Newgrounds</a
+          >
+          which I heard first on
+          <a href="https://rayblastgames.com/spiritdrop.php" target="_blank"
+            >Spirit Drop</a
+          >.
+        </p>
+        <AudioHandler src="/audio/Szoradi_MEDT_2023-04-28.flac" />
+        <div class="button-section">
+          <PushButton color="purple" href="/audio/Szoradi_MEDT_2023-04-28.flac"
+            >Download FLAC</PushButton
+          >
+          <PushButton color="purple" href="/audio/Szoradi_MEDT_2023-04-28.mid"
+            >Download MIDI</PushButton
+          >
+        </div>
+        <p class="no-bottom-margin">
+          Original WAV converted to
+          <AbbreviationMobile title="Free Lossless Audio Codec"
+            >FLAC</AbbreviationMobile
+          >
+          to reduce file size
+        </p>
+      </div>
+    </GlassCard>
   </main>
 </template>
 
