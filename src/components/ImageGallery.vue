@@ -83,11 +83,11 @@
           v-if="currentImage?.alt && currentImage?.name !== currentImage?.alt"
           class="alt-text-section"
         >
-          <hr />
+          <!-- <hr /> -->
           <AccordionSingle
             class="alt-text"
-            title="Click here to show description"
-            open-title="Click here to hide description"
+            title="Show description"
+            open-title="Hide description"
           >
             <!-- <hr /> -->
             {{ currentImage?.alt }}
@@ -552,12 +552,15 @@ document.addEventListener('keydown', (event) => {
       :deep([data-part='item-indicator']),
       :deep([data-part='item-trigger']) {
         padding-bottom: 0.1em;
+        text-decoration: underline;
+        text-decoration-thickness: 0.1px;
         text-shadow:
           0 2px 8px hsl(0deg 0% 0% / 100%),
           0 2px 8px hsl(0deg 0% 0% / 100%);
         letter-spacing: 0.1em;
         color: hsl(0deg 0% 100% / 75%);
         font-size: 0.9em;
+        font-weight: 100;
         font-style: italic;
       }
 
