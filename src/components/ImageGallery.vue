@@ -76,8 +76,23 @@
         :alt="currentImage?.alt"
       />
       <div class="fullscreen-view-details">
+        <code>{{ currentImageIndex + 1 }}</code
+        >/<code>{{ src.length }}</code>
         <h1>{{ currentImage?.name }}</h1>
-        {{ currentImageIndex + 1 }}/{{ src.length }}
+        <div
+          v-if="currentImage?.alt && currentImage?.name !== currentImage?.alt"
+          class="alt-text-section"
+        >
+          <hr />
+          <AccordionSingle
+            class="alt-text"
+            title="Click here to show description"
+            open-title="Click here to hide description"
+          >
+            <!-- <hr /> -->
+            {{ currentImage?.alt }}
+          </AccordionSingle>
+        </div>
       </div>
     </div>
   </div>
@@ -88,6 +103,7 @@ import { ref, computed } from 'vue'
 import GlassCard from '@/components/GlassCard.vue'
 import ImageHandler from '@/components/ImageHandler.vue'
 import PushButton from '@/components/PushButton.vue'
+import AccordionSingle from './AccordionSingle.vue'
 // import { DownloadTrigger } from '@ark-ui/vue'
 import { useAutoHide } from '@/composables/useAutoHide'
 
@@ -506,7 +522,49 @@ document.addEventListener('keydown', (event) => {
     color: hsl(0deg 0% 100% / 80%);
 
     h1 {
-      margin: 0 0 0.5em;
+      margin: 0.25em 0 0.3333em;
+    }
+
+    hr {
+      margin: 0 0 4px;
+      box-shadow: none;
+      background: linear-gradient(
+        to right,
+        hsl(0deg 0% 100% / 50%),
+        transparent
+      );
+      height: 1px;
+    }
+
+    // .alt-text-section {
+    //   width: 75%;
+    // }
+
+    .alt-text {
+      padding-right: 0.25em;
+
+      :deep([data-part='item-content']) {
+        text-shadow:
+          0 2px 8px hsl(0deg 0% 0% / 100%),
+          0 2px 8px hsl(0deg 0% 0% / 100%);
+      }
+
+      :deep([data-part='item-indicator']),
+      :deep([data-part='item-trigger']) {
+        padding-bottom: 0.1em;
+        text-shadow:
+          0 2px 8px hsl(0deg 0% 0% / 100%),
+          0 2px 8px hsl(0deg 0% 0% / 100%);
+        letter-spacing: 0.1em;
+        color: hsl(0deg 0% 100% / 75%);
+        font-size: 0.9em;
+        font-style: italic;
+      }
+
+      :deep([data-part='item-indicator']) {
+        opacity: 0;
+        font-style: normal;
+      }
     }
   }
 }
