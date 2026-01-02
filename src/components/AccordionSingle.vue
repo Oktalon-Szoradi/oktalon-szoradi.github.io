@@ -2,7 +2,10 @@
   <Accordion.Root collapsible :defaultValue="open ? [title] : ['']">
     <Accordion.Item :value="title">
       <Accordion.ItemTrigger>
-        {{ title }}
+        <Accordion.ItemContext v-slot="context">
+          <span v-if="openTitle && context.expanded">{{ openTitle }}</span>
+          <span v-else>{{ title }}</span>
+        </Accordion.ItemContext>
         <Accordion.ItemIndicator> ʌ </Accordion.ItemIndicator>
       </Accordion.ItemTrigger>
       <Accordion.ItemContent>
@@ -17,6 +20,7 @@ import { Accordion } from '@ark-ui/vue/accordion'
 
 defineProps<{
   title: string
+  openTitle?: string
   open?: boolean
 }>()
 </script>
