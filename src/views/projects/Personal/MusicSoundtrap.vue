@@ -437,6 +437,8 @@ const NAVIGATION: ScrollToObjects[] = [
 </template>
 
 <style scoped lang="scss">
+@use '@/assets/extra_fancy-headings';
+
 .accordion {
   :deep([data-part='item-trigger']) {
     padding: 0 0.75em;
@@ -450,32 +452,6 @@ const NAVIGATION: ScrollToObjects[] = [
 .button-section {
   padding-bottom: 1em;
   text-align: center;
-}
-
-h2,
-h3 {
-  scroll-margin-top: calc(64px + 24px);
-  margin: 1em 0 0.5em;
-  color: hsl(0deg 0% 100% / 75%);
-
-  &::after {
-    display: block;
-    margin-top: 0.1em;
-    box-shadow: 0 0 2px hsl(0deg 0% 0% / 75%);
-    background: linear-gradient(
-      to right,
-      hsl(0deg 0% 100% / 50%),
-      hsl(0deg 0% 100% / 5%)
-    );
-    width: 100%;
-    height: 1px;
-    content: '';
-  }
-
-  code {
-    font-size: inherit;
-    font-weight: 500;
-  }
 }
 
 .audio-section {

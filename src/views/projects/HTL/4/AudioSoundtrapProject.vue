@@ -167,26 +167,7 @@ import GlassCard from '@/components/GlassCard.vue'
 </template>
 
 <style lang="scss" scoped>
-h2,
-h3 {
-  scroll-margin-top: calc(64px + 24px);
-  margin: 1em 0 0.5em;
-  color: hsl(0deg 0% 100% / 75%);
-
-  &::after {
-    display: block;
-    margin-top: 0.1em;
-    box-shadow: 0 0 2px hsl(0deg 0% 0% / 75%);
-    background: linear-gradient(
-      to right,
-      hsl(0deg 0% 100% / 50%),
-      hsl(0deg 0% 100% / 5%)
-    );
-    width: 100%;
-    height: 1px;
-    content: '';
-  }
-}
+@use '@/assets/extra_fancy-headings';
 
 .banner {
   :deep(img) {

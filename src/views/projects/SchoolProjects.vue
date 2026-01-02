@@ -511,9 +511,10 @@ watch(
 </template>
 
 <style scoped lang="scss">
-@use '@/assets/extra_layout_side-by-side';
 @use '@/assets/variables.scss' as vars;
 @use '@/assets/mixins.scss' as mixins;
+@use '@/assets/extra_layout_side-by-side';
+@use '@/assets/extra_fancy-headings';
 
 .flex {
   aside {
@@ -610,27 +611,6 @@ watch(
     text-align: center;
     color: hsl(0deg 0% 100% / 50%);
     scroll-margin-top: calc(64px + 24px);
-  }
-
-  h2,
-  h3 {
-    scroll-margin-top: calc(64px + 24px);
-    margin: 1em 0 0.5em;
-    color: hsl(0deg 0% 100% / 75%);
-
-    &::after {
-      display: block;
-      margin-top: 0.1em;
-      box-shadow: 0 0 2px hsl(0deg 0% 0% / 75%);
-      background: linear-gradient(
-        to right,
-        hsl(0deg 0% 100% / 50%),
-        hsl(0deg 0% 100% / 5%)
-      );
-      width: 100%;
-      height: 1px;
-      content: '';
-    }
   }
 }
 

@@ -69,9 +69,15 @@ const IMAGES = [
       :queryParams="{ scrollTo: 'GraphicDesign' }"
     />
     <GlassCard title="Recreations - Graphic Design">
-      <p>Coming soon…</p>
+      <p>
+        Here are things I've made that aim to be an accurate recreation of
+        something.
+      </p>
     </GlassCard>
     <ImageGallery :src="IMAGES" :perRow="6" :squareImages="false" />
+    <GlassCard>
+      <h1>Coming soon…</h1>
+    </GlassCard>
   </main>
 </template>
 
