@@ -331,7 +331,7 @@ document.addEventListener('keydown', (event) => {
   justify-content: center;
   z-index: 20;
   background-color: hsl(0deg 0% 0% / 50%);
-  width: 100vw;
+  width: 100%;
   height: 100%;
   backdrop-filter: blur(4px);
 
