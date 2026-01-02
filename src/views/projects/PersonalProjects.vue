@@ -224,7 +224,7 @@ const NAVIGATION: ScrollToObjects[] = [
 </template>
 
 <style scoped lang="scss">
-@use '@/assets/layout_side-by-side';
+@use '@/assets/extra_layout_side-by-side';
 @use '@/assets/variables.scss' as vars;
 
 .top-margin {
