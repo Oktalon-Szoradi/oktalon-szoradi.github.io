@@ -1,203 +1,225 @@
 <script setup lang="ts">
-import { onMounted, watch } from 'vue'
-import { useRoute } from 'vue-router'
-import NavigationButton from '@/components/NavigationButton.vue'
 import GlassCard from '@/components/GlassCard.vue'
 // import ImageHandler from '@/components/ImageHandler.vue'
 import ProjectLink from '@/components/ProjectLink.vue'
 import PushButton from '@/components/PushButton.vue'
+import NavigationSideBySide from '@/components/NavigationSideBySide.vue'
+import type { ScrollToObjects } from '@/assets/types'
 
-const route = useRoute()
-
-function scrollToTarget(timeout: number = 0) {
-  const scrollToId = route.query.scrollTo as string | undefined
-  if (scrollToId) {
-    setTimeout(() => {
-      const element = document.getElementById(scrollToId)
-      if (element) {
-        const navbar = document.querySelector('header') as HTMLElement | null
-        const navbarHeight = navbar?.offsetHeight ?? 0
-        const y =
-          element.getBoundingClientRect().top + window.scrollY - navbarHeight
-        window.scrollTo({ top: y, behavior: 'smooth' })
-      }
-    }, timeout)
+const NAVIGATION: ScrollToObjects[] = [
+  {
+    name: 'Games',
+    id: 'Games'
+    // children: [
+    //   {
+    //     name: 'Tetra Legends Ultimate',
+    //     id: 'TLU'
+    //   }
+    // ]
+  },
+  {
+    name: 'Music',
+    id: 'Music'
+  },
+  {
+    name: 'Graphic Design',
+    id: 'GraphicDesign'
+  },
+  {
+    name: 'Miscellaneous',
+    id: 'Misc'
   }
-}
-
-onMounted(() => {
-  scrollToTarget(100)
-})
-
-watch(
-  () => route.fullPath,
-  () => {
-    scrollToTarget()
-  }
-)
+]
 </script>
 
 <template>
   <div class="container">
-    <!-- <GlassCard title="more coming soon" class="text-center">
-      Don't worry, this page will be populated soon!
-    </GlassCard> -->
-    <div class="flex area-with-side-nav">
-      <aside class="sticky flex">
-        <div class="main-aside">
-          <NavigationButton to="/projects">
-            <code>&lt;-</code>&ensp;Back to Projects
-          </NavigationButton>
-          <GlassCard class="aside-card navigation">
-            <h1>Navigation</h1>
-            <a
-              :href="`/#${$route.path}?scrollTo=Games`"
-              class="no-top-margin"
-              @click="scrollToTarget()"
-              ><b>Games</b></a
-            >
-            <ul class="nav-list">
-              <li>
-                <a
-                  :href="`/#${$route.path}?scrollTo=TLU`"
-                  @click="scrollToTarget()"
-                >
-                  Tetra Legends Ultimate
-                </a>
-              </li>
-            </ul>
-            <a
-              :href="`/#${$route.path}?scrollTo=Music`"
-              @click="scrollToTarget()"
-              ><b>Music</b></a
-            >
-            <a
-              :href="`/#${$route.path}?scrollTo=GraphicDesign`"
-              @click="scrollToTarget()"
-              ><b>Graphic Design</b></a
-            >
-            <a
-              :href="`/#${$route.path}?scrollTo=Misc`"
-              @click="scrollToTarget()"
-              ><b>Miscellaneous</b></a
-            >
-          </GlassCard>
+    <NavigationSideBySide
+      :scrollToHeadings="NAVIGATION"
+      :navigationButtons_queryIndex="1"
+      :onlyOneLevel="true"
+    >
+      <GlassCard id="Games" class="first-card" title="Games">
+        <div class="flex flex-many">
+          <ProjectLink
+            id="TLU"
+            title="Tetra Legends Ultimate"
+            icon_src="/images/thumbnails/Thumbnail_TetraLegendsUltimate-1080p.webp"
+          >
+            <p>
+              My fork of Tetra Legends, an abandoned Tetris clone by
+              <a
+                href="https://github.com/doktorocelot?tab=repositories"
+                target="_blank"
+                >Dr Ocelot</a
+              >.
+            </p>
+            <p>For more info on this, see its GitHub repository.</p>
+            <div class="text-center">
+              <PushButton color="green" href="https://talon125.github.io/">
+                Play
+              </PushButton>
+              <PushButton href="https://github.com/Talon125/talon125.github.io">
+                GitHub Repository
+              </PushButton>
+            </div>
+          </ProjectLink>
         </div>
-        <div class="separator"></div>
-      </aside>
-      <main>
-        <GlassCard id="Games" title="Games">
-          <div class="flex flex-many">
-            <ProjectLink
-              id="TLU"
-              title="Tetra Legends Ultimate"
-              icon_src="/images/thumbnails/Thumbnail_TetraLegendsUltimate-1080p.webp"
-            >
-              <p>
-                My fork of Tetra Legends, an abandoned Tetris clone by
-                <a
-                  href="https://github.com/doktorocelot?tab=repositories"
-                  target="_blank"
-                  >Dr Ocelot</a
-                >.
-              </p>
-              <p>For more info on this, see its GitHub repository.</p>
-              <div class="text-center">
-                <PushButton color="green" href="https://talon125.github.io/">
-                  Play
-                </PushButton>
-                <PushButton
-                  href="https://github.com/Talon125/talon125.github.io"
-                >
-                  GitHub Repository
-                </PushButton>
-              </div>
-            </ProjectLink>
-          </div>
-        </GlassCard>
-        <GlassCard id="Music" title="Music">
-          <div class="flex flex-many">
-            <ProjectLink
-              title="Soundtrap"
-              icon_src="/images/TalonOpenGraphImage.webp"
-            >
-              <p class="text-justify">
-                Stuff I made in Soundtrap in my free time while at HTL
-              </p>
-              <div class="text-center">
-                <PushButton :stayHere="true" :to="`${$route.path}/soundtrap`">
-                  View
-                </PushButton>
-              </div>
-            </ProjectLink>
-          </div>
-        </GlassCard>
-        <GlassCard id="GraphicDesign" title="Graphic Design">
-          <div class="flex flex-many">
-            <ProjectLink
-              title="Icons"
-              icon_src="/images/TalonOpenGraphImage.webp"
-            >
-              <p class="text-justify">Icons!</p>
-              <div class="text-center">
-                <PushButton
-                  :stayHere="true"
-                  :to="`${$route.path}/graphic-design_icons`"
-                >
-                  View
-                </PushButton>
-              </div>
-            </ProjectLink>
-            <ProjectLink
-              title="Original Creations"
-              icon_src="/images/TalonOpenGraphImage.webp"
-            >
-              <p class="text-justify">Skeuomorphism!</p>
-              <div class="text-center">
-                <PushButton
-                  :stayHere="true"
-                  :to="`${$route.path}/graphic-design_oc`"
-                >
-                  View
-                </PushButton>
-              </div>
-            </ProjectLink>
-            <ProjectLink
-              title="Recreations"
-              icon_src="/images/TalonOpenGraphImage.webp"
-            >
-              <p class="text-justify">Skeuomorphism!</p>
-              <div class="text-center">
-                <PushButton
-                  :stayHere="true"
-                  :to="`${$route.path}/graphic-design_recreations`"
-                >
-                  View
-                </PushButton>
-              </div>
-            </ProjectLink>
-          </div>
-        </GlassCard>
-        <GlassCard id="Misc" title="Miscellaneous">
-          <div class="flex flex-many">
-            <ProjectLink
-              title="EU English Linux Locale"
-              icon_src="/images/TalonOpenGraphImage.webp"
-            >
-              <p class="text-justify">description</p>
-              <div class="text-center">
-                <PushButton
-                  :stayHere="true"
-                  :to="`${$route.path}/github_eu-linux-locale`"
-                >
-                  View
-                </PushButton>
-              </div>
-            </ProjectLink>
-          </div>
-        </GlassCard>
-      </main>
-    </div>
+      </GlassCard>
+      <GlassCard id="Music" title="Music">
+        <div class="flex flex-many">
+          <ProjectLink
+            title="Soundtrap"
+            icon_src="/images/thumbnails/Thumbnail_PersonalProjects-Soundtrap.webp"
+          >
+            <p class="text-justify">
+              Stuff I made in Soundtrap in my free time while at HTL.
+            </p>
+            <div class="text-center">
+              <PushButton :stayHere="true" :to="`${$route.path}/soundtrap`">
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
+        </div>
+      </GlassCard>
+      <GlassCard id="GraphicDesign" title="Graphic Design">
+        <div class="flex flex-many">
+          <ProjectLink
+            title="Original Creations"
+            icon_src="/images/thumbnails/Thumbnail_PersonalProjects-GraphicDesign-OC.webp"
+          >
+            <p class="text-justify">
+              Stuff I've made that are completely original. Some you could even
+              use as a desktop background!
+            </p>
+            <div class="text-center">
+              <PushButton
+                :stayHere="true"
+                :to="`${$route.path}/graphic-design_oc`"
+              >
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
+          <ProjectLink
+            title="Recreations"
+            icon_src="/images/thumbnails/Thumbnail_PersonalProjects-GraphicDesign-Recreations.png"
+          >
+            <p class="text-justify">
+              Stuff I've made that recreate something that already exists.
+            </p>
+            <div class="text-center">
+              <PushButton
+                :stayHere="true"
+                :to="`${$route.path}/graphic-design_recreations`"
+              >
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
+          <ProjectLink
+            title="Remixes"
+            icon_src="/images/thumbnails/Thumbnail_PersonalProjects-GraphicDesign-kindaOC.webp"
+          >
+            <p class="text-justify">
+              In between original creation and recreation.
+            </p>
+            <div class="text-center">
+              <PushButton
+                :stayHere="true"
+                :to="`${$route.path}/graphic-design_kinda-oc`"
+              >
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
+          <ProjectLink
+            title="Icons"
+            icon_src="/images/thumbnails/Thumbnail_PersonalProjects-GraphicDesign-Icons.webp"
+          >
+            <p class="text-justify">
+              Icons I made. Some I actually used on my phone.
+            </p>
+            <div class="text-center">
+              <PushButton
+                :stayHere="true"
+                :to="`${$route.path}/graphic-design_icons`"
+              >
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
+          <ProjectLink
+            title="Tetris"
+            icon_src="/images/thumbnails/Thumbnail_PersonalProjects-GraphicDesign-Tetr.webp"
+          >
+            <p class="text-justify">
+              Concepts and other stuff I made involving Tetris. Some are
+              original, some are recreations.
+            </p>
+            <div class="text-center">
+              <PushButton
+                :stayHere="true"
+                :to="`${$route.path}/graphic-design_tetr`"
+              >
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
+        </div>
+      </GlassCard>
+      <GlassCard id="Misc" title="Miscellaneous">
+        <div class="flex flex-many">
+          <ProjectLink
+            title="EU English Linux Locale"
+            icon_src="/images/thumbnails/Thumbnail_PersonalProjects-GraphicDesign-en150LinuxLocale.webp"
+          >
+            <p class="text-justify">
+              I wasn't satisfied that there wasn't a specific locale in Linux
+              and KDE that had the exact formats I want, since in Linux you
+              choose a locale, whereas in Windows you can kinda just easily
+              custom define (have AM and PM be emojis if you really want).
+            </p>
+            <p class="text-justify">
+              So, as you do in Linux when you want something specific, I went to
+              see how locales are even defined and made my own!
+            </p>
+            <div class="text-center">
+              <PushButton
+                :stayHere="true"
+                :to="`${$route.path}/github_eu-linux-locale`"
+              >
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
+          <ProjectLink
+            title="ANIMUSIC-like thing"
+            icon_src="/images/thumbnails/Thumbnail_MIDIanimTtFaF-1080p.webp"
+          >
+            <p class="text-justify">
+              Only after my HTL-5 3D (Blender) project/assignment was over did I
+              get more interest. Or maybe cuz I was tight on time before. Either
+              way, I decided to try a bit more of MIDIAnimator!
+            </p>
+            <p class="text-justify">
+              This one is just basic drums animated to Through The Fire And
+              Flames. I'd also like to animate flying drumsticks, but idk yet
+              how to do that. I may come back to this in the future.
+            </p>
+            <div class="text-center">
+              <PushButton
+                :stayHere="true"
+                :to="`${$route.path}/midi-animation_ttfaf`"
+              >
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
+        </div>
+      </GlassCard>
+    </NavigationSideBySide>
   </div>
 </template>
 
@@ -282,11 +304,6 @@ h1 {
   }
 }
 
-td {
-  padding: 0 0.5em;
-  vertical-align: top;
-}
-
 .divider-row {
   hr {
     opacity: 0.25;
@@ -301,26 +318,6 @@ td {
       0 0 0 1px hsl(0deg 0% 0% / 75%),
       0 0 0 2px hsl(0deg 0% 100% / 25%);
     width: 100%;
-  }
-}
-
-.separator {
-  margin-top: 2em;
-}
-
-@media (width <=vars.$breakpoint-lg) {
-  .flex {
-    gap: 0;
-  }
-
-  .area-with-side-nav {
-    flex-direction: column;
-
-    aside {
-      display: block;
-      flex-basis: auto;
-      width: 100%;
-    }
   }
 }
 </style>

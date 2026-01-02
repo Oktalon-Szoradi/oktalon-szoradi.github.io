@@ -636,7 +636,6 @@ watch(
 
 .nav-list,
 .ref-list {
-  /* margin: 0.5em 0 1em; */
   margin: 0.5em 0 0;
   padding-left: 1em;
   list-style: none;
@@ -644,6 +643,10 @@ watch(
   li {
     margin: 0.25em 0;
   }
+}
+
+.nav-list {
+  margin: 0.5em 0 1em;
 }
 
 .indent {
@@ -654,7 +657,7 @@ watch(
   font-size: 0.75rem;
 }
 
-@media (width <=vars.$breakpoint-lg) {
+@media (height < 885px) {
   .flex {
     flex-direction: column;
 
@@ -667,6 +670,69 @@ watch(
         margin-left: 0;
       }
     }
+  }
+
+  .flex-many {
+    flex-direction: row;
+
+    > * {
+      width: calc(100% / 3 - 8em / 3);
+    }
+  }
+
+  .sticky {
+    position: static;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .main-aside {
+    display: block;
+    padding: 0 1em;
+  }
+
+  .main-card {
+    margin: 0 1em 2em;
+  }
+}
+
+@media (height < 885px) and (width < vars.$breakpoint-xl) {
+  .flex-many > * {
+    width: calc(50% - 8em / 3);
+  }
+}
+
+@media (width < vars.$breakpoint-lg) {
+  .flex {
+    flex-direction: column;
+
+    aside {
+      display: block;
+      flex-basis: auto;
+      width: 100%;
+
+      a {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .flex-many {
+    > * {
+      display: block;
+      margin: 0;
+      width: auto;
+    }
+  }
+
+  .sticky {
+    position: static;
+  }
+
+  .separator {
+    display: none;
   }
 
   .main-aside {

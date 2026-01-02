@@ -1,55 +1,74 @@
 <script setup lang="ts">
-import { onMounted, watch } from 'vue'
-import { useRoute } from 'vue-router'
-import NavigationButtons from '@/components/NavigationButtons.vue'
 import GlassCard from '@/components/GlassCard.vue'
 import AudioHandler from '@/components/AudioHandler.vue'
 import VideoHandler from '@/components/VideoHandler.vue'
 import PushButton from '@/components/PushButton.vue'
+import NavigationSideBySide from '@/components/NavigationSideBySide.vue'
+import type { ScrollToObjects } from '@/assets/types'
 
-const route = useRoute()
-
-function scrollToTarget(timeout: number = 0) {
-  const scrollToId = route.query.scrollTo as string | undefined
-  if (scrollToId) {
-    setTimeout(() => {
-      const element = document.getElementById(scrollToId)
-      if (element) {
-        // Optional: adjust for sticky navbar
-        const navbar = document.querySelector('header') as HTMLElement | null
-        const navbarHeight = navbar?.offsetHeight ?? 0
-        const y =
-          element.getBoundingClientRect().top + window.scrollY - navbarHeight
-        window.scrollTo({ top: y, behavior: 'smooth' })
-        // window.scrollTo({ top: y })
+const NAVIGATION: ScrollToObjects[] = [
+  {
+    name: 'Non-Original and Original-ish Creations',
+    id: 'nonOCandKindaOC',
+    children: [
+      {
+        name: 'Dire Dire Docks',
+        id: 'sm64_ddd'
+      },
+      {
+        name: 'Tetris',
+        id: 'tetris'
+      },
+      {
+        name: 'Tetris (Non-Korobeiniki)',
+        id: 'tetris_other'
+      },
+      {
+        name: '"Something idk"',
+        id: 'something_idk'
+      },
+      {
+        name: '切ない想い',
+        id: 'sad_thought'
+      },
+      {
+        name: '"Cheer"',
+        id: 'cheer'
       }
-    }, timeout)
+    ]
+  },
+  {
+    name: 'Original Creations',
+    id: 'OCs',
+    children: [
+      {
+        name: '"Relax"',
+        id: 'relax'
+      },
+      {
+        name: '"Untitled song (4)"',
+        id: 'untitled_song_4'
+      }
+    ]
   }
-}
-
-onMounted(() => {
-  scrollToTarget(100)
-})
-
-watch(
-  () => route.fullPath,
-  () => {
-    scrollToTarget()
-  }
-)
+]
 </script>
 
 <template>
-  <main class="container">
-    <NavigationButtons :queryIndex="1" :queryParams="{ scrollTo: 'Music' }" />
-    <GlassCard title="Music: Soundtrap">
+  <NavigationSideBySide
+    :scrollToHeadings="NAVIGATION"
+    :navigationButtons_queryIndex="1"
+    :navigationButtons_queryParams="{ scrollTo: 'Music' }"
+    width="personal"
+  >
+    <GlassCard title="Music: Soundtrap" class="first-card">
       <p>
         While I was at HTL (2023–2024), we got Soundtrap Education. Here's some
         stuff I made not for school in my free time!
       </p>
     </GlassCard>
     <GlassCard>
-      <h2>Non-Original and Original-ish Creations</h2>
+      <h2 id="nonOCandKindaOC">Non-Original and Original-ish Creations</h2>
       <p>
         So, like, recreations or covers and stuff<br />
         as well as stuff inspired by or based on something that already exists,
@@ -374,7 +393,7 @@ watch(
       </div>
     </GlassCard>
     <GlassCard>
-      <h2>Original Creations</h2>
+      <h2 id="OCs">Original Creations</h2>
       <p>Stuff I made entirely myself</p>
       <p>
         The thing is, sometimes I have some random idea, but the moment I go
@@ -405,16 +424,16 @@ watch(
         <h3>"Untitled song (4)"</h3>
         <AudioHandler src="/audio/Untitled song (4).flac" />
         <div class="button-section">
-          <PushButton color="purple" href="/audio/Untitled song (4).flac"
-            >Download FLAC
+          <PushButton color="purple" href="/audio/Untitled song (4).flac">
+            Download FLAC
           </PushButton>
-          <PushButton color="purple" href="/audio/Untitled song (4).mid"
-            >Download MIDI
+          <PushButton color="purple" href="/audio/Untitled song (4).mid">
+            Download MIDI
           </PushButton>
         </div>
       </div>
     </GlassCard>
-  </main>
+  </NavigationSideBySide>
 </template>
 
 <style scoped lang="scss">

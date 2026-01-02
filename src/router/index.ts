@@ -90,25 +90,41 @@ const routes = [
   },
   {
     path: '/projects/personal/graphic-design_icons',
-    name: 'Graphic Design: Icons',
+    name: 'Icons - Graphic Design',
     component: () => import('../views/projects/Personal/GraphicDesignIcons.vue')
   },
   {
     path: '/projects/personal/graphic-design_oc',
-    name: 'Graphic Design: Original Creations',
+    name: 'Original Creations - Graphic Design',
     component: () => import('../views/projects/Personal/GraphicDesignOCs.vue')
   },
   {
+    path: '/projects/personal/graphic-design_kinda-oc',
+    name: 'Remixes - Graphic Design',
+    component: () =>
+      import('../views/projects/Personal/GraphicDesignKindaOCs.vue')
+  },
+  {
     path: '/projects/personal/graphic-design_recreations',
-    name: 'Graphic Design: Recreations',
+    name: 'Recreations - Graphic Design',
     component: () =>
       import('../views/projects/Personal/GraphicDesignRecreations.vue')
+  },
+  {
+    path: '/projects/personal/graphic-design_tetr',
+    name: 'Tetris - Graphic Design',
+    component: () => import('../views/projects/Personal/GraphicDesignTetr.vue')
   },
   {
     path: '/projects/personal/github_eu-linux-locale',
     name: 'EU English Linux Locale',
     component: () =>
       import('../views/projects/Personal/GitHubLinuxLocaleENEU.vue')
+  },
+  {
+    path: '/projects/personal/midi-animation_ttfaf',
+    name: 'ANIMUSIC-like Thing',
+    component: () => import('../views/projects/Personal/AnimusicLikeThing.vue')
   },
   {
     path: '/connections',

@@ -158,7 +158,7 @@ button {
   }
 }
 
-@media (width <= vars.$breakpoint-sm) {
+@media (width < vars.$breakpoint-sm) {
   .flex {
     flex-direction: column;
   }

@@ -1,7 +1,36 @@
 <script setup lang="ts">
-import NavigationButtons from '@/components/NavigationButtons.vue'
+import NavigationSideBySide from '@/components/NavigationSideBySide.vue'
 import GlassCard from '@/components/GlassCard.vue'
 import ImageGallery from '@/components/ImageGallery.vue'
+import type { ScrollToObjects } from '@/assets/types'
+
+const NAVIGATION: ScrollToObjects[] = [
+  {
+    name: 'Typography',
+    date: '2022-09',
+    id: '2022-09'
+  },
+  {
+    name: 'Magazine (Website)',
+    date: '2022-11',
+    id: '2022-11'
+  },
+  {
+    name: 'Learning App',
+    date: '2023-01',
+    id: '2023-01'
+  },
+  {
+    name: 'Magazine (Magazine)',
+    date: '2023-05',
+    id: '2023-05_Magazine'
+  },
+  {
+    name: 'Magazine (Poster)',
+    date: '2023-05',
+    id: '2023-05_Poster'
+  }
+]
 
 const IMAGES = {
   TYPOGRAPHY: [
@@ -138,9 +167,14 @@ const IMAGES = {
 </script>
 
 <template>
-  <main class="container">
-    <NavigationButtons :queryIndex="1" :queryParams="{ scrollTo: 'HTL-4' }" />
-    <GlassCard title="Design" :noCenter="true">
+  <NavigationSideBySide
+    :scrollToHeadings="NAVIGATION"
+    :navigationButtons_queryIndex="1"
+    :navigationButtons_queryParams="{ scrollTo: 'HTL-4' }"
+    width="school"
+    :onlyOneLevel="true"
+  >
+    <GlassCard title="Design" class="main-card" :noCenter="true">
       <h1 class="year-marker">
         HTL 4th Grade (Cumulative: 12) | School year 2022/2023
       </h1>
@@ -154,7 +188,7 @@ const IMAGES = {
         the "mobile-first" mindset.
       </p>
       <p>Here's a couple of assignments I had and my work:</p>
-      <h2><code>2022-09</code>: Typography</h2>
+      <h2 id="2022-09"><code>2022-09</code>: Typography</h2>
       <b>Late September</b>
       <p>
         I don't remember if this was our very first assignment; it might have
@@ -173,7 +207,7 @@ const IMAGES = {
         backgrounds.
       </p>
       <ImageGallery :src="IMAGES.TYPOGRAPHY" :perRow="6" :noDownload="true" />
-      <h2><code>2022-11</code>: Magazine (Website)</h2>
+      <h2 id="2022-11"><code>2022-11</code>: Magazine (Website)</h2>
       <b>Early November</b>
       <p>
         Here we had to design what the mobile version of a website for a
@@ -205,7 +239,7 @@ const IMAGES = {
       <div class="flex-center">
         <div class="tetrazine-logo"></div>
       </div>
-      <h2><code>2023-01</code>: Learning App</h2>
+      <h2 id="2023-01"><code>2023-01</code>: Learning App</h2>
       <b>Early January</b>
       <p>
         In this assignment, we were tasked with designing a kind of learning
@@ -223,7 +257,7 @@ const IMAGES = {
         something resulting in nothing)
       </p>
       <ImageGallery :src="IMAGES.LEARNING_APP" :perRow="6" :noDownload="true" />
-      <h2><code>2023-05</code>: Magazine (Magazine)</h2>
+      <h2 id="2023-05_Magazine"><code>2023-05</code>: Magazine (Magazine)</h2>
       <b>Mid May</b>
       <p>
         We made a mobile version of the website for some made up magazine
@@ -235,7 +269,7 @@ const IMAGES = {
         :perRow="6"
         :noDownload="true"
       />
-      <h2><code>2023-05</code>: Magazine (Poster)</h2>
+      <h2 id="2023-05_Poster"><code>2023-05</code>: Magazine (Poster)</h2>
       <b>Late May</b>
       <p>Now, a poster to advertise the magazine</p>
       <ImageGallery
@@ -244,7 +278,7 @@ const IMAGES = {
         :noDownload="true"
       />
     </GlassCard>
-  </main>
+  </NavigationSideBySide>
 </template>
 
 <style lang="scss" scoped>

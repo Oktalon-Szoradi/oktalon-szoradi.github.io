@@ -304,9 +304,13 @@ watch(
         >
           I have trouble answering this question, so… here's this page then!
         </CommandLink>
-        <CommandLink title="Recipes" to="/recipes" icon_src="/icons/food.svg">
+        <!-- <CommandLink
+          title="Recipes"
+          to="/recipes"
+          icon_src="/icons/FoodIcon_ForkPlateKnife.svg"
+        >
           Check out some recipes I've made!
-        </CommandLink>
+        </CommandLink> -->
       </div>
     </GlassCard>
 
@@ -374,7 +378,7 @@ h3 {
     /* width: 100%; */
   }
 
-  @media (width <=vars.$breakpoint-sm) {
+  @media (width < vars.$breakpoint-sm) {
     flex-direction: column;
     align-items: center;
     margin: 2em 1em 0;
@@ -444,7 +448,7 @@ td {
     margin: 1.5em 0 0;
   }
 
-  @media (width <=vars.$breakpoint-sm) {
+  @media (width < vars.$breakpoint-sm) {
     > * {
       margin: 2em 1em 0;
     }

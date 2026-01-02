@@ -61,6 +61,11 @@ const IMAGES = [...PHOTO_NAMES_19, ...PHOTO_NAMES_20].map((n, i) => ({
         </PushButton>
       </div>
     </GlassCard>
-    <ImageGallery :src="IMAGES" :perRow="7" :legacyImages="true" />
+    <ImageGallery
+      :src="IMAGES"
+      :perRow="7"
+      :legacyImages="true"
+      downloadExt="png"
+    />
   </main>
 </template>

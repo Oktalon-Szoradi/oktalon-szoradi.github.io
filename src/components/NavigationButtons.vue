@@ -30,10 +30,7 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
-
-interface QueryParams {
-  [key: string]: string | number | boolean
-}
+import type { QueryParams } from '@/assets/types'
 
 const props = defineProps<{
   queryIndex?: number
@@ -85,6 +82,10 @@ function buildQueryParameterString(): string {
 @use '../assets/variables.scss' as vars;
 
 $corner-roundness: 8px;
+
+.root {
+  margin-top: calc(1em - 4px);
+}
 
 .extraneous-text {
   margin-left: 1em;
@@ -243,6 +244,8 @@ button {
 }
 
 .middle {
+  margin-top: 4px;
+
   .bottom,
   .side,
   .face {
@@ -251,6 +254,7 @@ button {
 }
 
 .end {
+  margin-top: 4px;
   margin-left: 1px;
 
   .bottom,
@@ -269,7 +273,7 @@ button {
 }
 /* stylelint-enable no-descending-specificity */
 
-@media (width <= vars.$breakpoint-sm) {
+@media (width < vars.$breakpoint-sm) {
   .root {
     margin-left: 1em;
   }

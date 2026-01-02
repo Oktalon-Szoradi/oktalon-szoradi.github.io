@@ -48,7 +48,7 @@ import LoadingCircle from '@/components/LoadingCircle.vue'
   user-select: none;
   filter: blur(0.333vw);
 
-  @media (width <= vars.$breakpoint-lg) {
+  @media (width < vars.$breakpoint-lg) {
     display: none;
   }
 }

@@ -844,7 +844,7 @@ hr {
   }
 }
 
-@media (width <= vars.$breakpoint-md) {
+@media (width < vars.$breakpoint-md) {
   .flex {
     gap: 0;
   }

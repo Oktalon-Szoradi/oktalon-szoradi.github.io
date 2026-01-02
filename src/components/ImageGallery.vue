@@ -18,17 +18,37 @@
     </div>
     <div class="fullscreen-view" v-if="currentImage">
       <div class="fullscreen-view-controls">
-        <div class="control previous">
-          <code @click="viewPrevious()">&lt;-</code>
-        </div>
-        <div class="control next"><code @click="viewNext()">-&gt;</code></div>
+        <Transition name="gentle-fade">
+          <div
+            class="control previous"
+            v-show="isVisible"
+            @mouseenter="onMouseEnter"
+            @mouseleave="onMouseLeave"
+          >
+            <div @click="viewPrevious()">
+              <code>&lt;-</code>
+            </div>
+          </div>
+        </Transition>
+        <Transition name="gentle-fade">
+          <div
+            class="control next"
+            v-show="isVisible"
+            @mouseenter="onMouseEnter"
+            @mouseleave="onMouseLeave"
+          >
+            <div @click="viewNext()">
+              <code>-&gt;</code>
+            </div>
+          </div>
+        </Transition>
         <PushButton class="close" color="red" @click="closeImage()">
           <!-- <span class="icon">x</span> -->
           <!-- <span class="icon">╳</span> -->
           <span class="icon">✕</span>
         </PushButton>
         <PushButton
-          v-if="!noDownload"
+          v-if="!noDownload && downloadExt"
           class="download"
           color="purple"
           :href="currentImageDownloadLink"
@@ -36,6 +56,17 @@
           <span class="flex">
             <code class="icon">&DownArrow;</code>
             <span>Download {{ downloadExt.toUpperCase() }}</span>
+          </span>
+        </PushButton>
+        <PushButton
+          v-if="!noDownload && !downloadExt"
+          class="download"
+          color="purple-desat"
+          :href="currentImageDownloadLink"
+        >
+          <span class="flex">
+            <code class="icon">&DownArrow;</code>
+            <span>Download {{ currentImageExtension.toUpperCase() }}</span>
           </span>
         </PushButton>
       </div>
@@ -57,6 +88,10 @@ import { ref, computed } from 'vue'
 import GlassCard from '@/components/GlassCard.vue'
 import ImageHandler from '@/components/ImageHandler.vue'
 import PushButton from '@/components/PushButton.vue'
+// import { DownloadTrigger } from '@ark-ui/vue'
+import { useAutoHide } from '@/composables/useAutoHide'
+
+const { isVisible, onMouseEnter, onMouseLeave } = useAutoHide(3000)
 
 interface ImageData {
   name: string
@@ -74,8 +109,8 @@ const props = withDefaults(
     downloadExt?: string
   }>(),
   {
-    perRow: 5,
-    downloadExt: 'png'
+    perRow: 5
+    // downloadExt: 'png'
   }
 )
 
@@ -102,7 +137,15 @@ const currentImageDownloadLink = computed(() => {
     }/${nameWithoutExt}.${props.downloadExt}`
   }
 
-  return ''
+  return currentImage.value.src
+})
+const currentImageExtension = computed(() => {
+  if (!currentImage.value) return ''
+
+  const parts = currentImage.value.src.split('.')
+  const lastPart = parts[parts.length - 1]
+
+  return lastPart
 })
 
 function viewImage(img: ImageData): void
@@ -298,49 +341,83 @@ document.addEventListener('keydown', (event) => {
       position: absolute;
       top: 0;
       align-items: center;
-      opacity: 0.333;
+      // opacity: 0.333;
       height: 100%;
 
-      code {
+      div {
+        display: flex;
         transition-duration: vars.$transdur-mouseleave;
         /* background: red; */
+        opacity: 0.75;
         cursor: pointer;
-        padding: 4em 5vw;
-        text-shadow: 0 2px 8px hsl(0deg 0% 0% / 100%);
-        color: hsl(0deg 0% 80%);
-        font-size: 5em;
-        user-select: none;
 
         &:hover {
           transition-duration: vars.$transdur-mouseenter;
-          text-shadow: 0 0 0.25em hsl(0deg 0% 100% / 90%);
-          filter: brightness(1.5);
+
+          code {
+            transition-duration: vars.$transdur-mouseenter;
+            text-shadow: 0 0 0.25em hsl(0deg 0% 100% / 90%);
+            filter: brightness(1.5);
+          }
         }
 
         &:active {
           transition-duration: vars.$transdur-press;
-          text-shadow: 0 -2px 8px hsl(0deg 0% 0% / 100%);
-          filter: brightness(0.75);
+
+          code {
+            transition-duration: vars.$transdur-press;
+            filter: brightness(0.75);
+          }
+        }
+
+        /* stylelint-disable-next-line no-descending-specificity */
+        code {
+          transition-duration: vars.$transdur-mouseleave;
+          padding: 4em 5vw;
+          text-shadow: 0 2px 8px hsl(0deg 0% 0% / 33.3333%);
+          color: hsl(0deg 0% 90%);
+          font-size: 5em;
+          user-select: none;
         }
       }
     }
 
     .previous {
       left: 0;
-      background: linear-gradient(
-        to right,
-        hsl(0deg 0% 0% / 90%) 50%,
-        transparent
-      );
+      transition-duration: vars.$transdur-mouseleave;
+      background: linear-gradient(to right, hsl(0deg 0% 0% / 50%), transparent);
+
+      div {
+        &:hover code {
+          transform: translateX(-8px);
+        }
+
+        &:active code {
+          transform: translateX(-24px);
+          text-shadow:
+            8px 0 8px hsl(0deg 0% 0% / 100%),
+            16px 0 8px hsl(0deg 0% 0% / 50%);
+        }
+      }
     }
 
     .next {
       right: 0;
-      background: linear-gradient(
-        to left,
-        hsl(0deg 0% 0% / 90%) 50%,
-        transparent
-      );
+      transition-duration: vars.$transdur-mouseleave;
+      background: linear-gradient(to left, hsl(0deg 0% 0% / 50%), transparent);
+
+      div {
+        &:hover code {
+          transform: translateX(8px);
+        }
+
+        &:active code {
+          transform: translateX(24px);
+          text-shadow:
+            -8px 0 8px hsl(0deg 0% 0% / 100%),
+            -16px 0 8px hsl(0deg 0% 0% / 50%);
+        }
+      }
     }
 
     :deep(a),
@@ -356,7 +433,7 @@ document.addEventListener('keydown', (event) => {
         font-size: 2em;
       }
 
-      @media (width <= vars.$breakpoint-sm) {
+      @media (width < vars.$breakpoint-sm) {
         right: 1em;
       }
     }
@@ -434,7 +511,20 @@ document.addEventListener('keydown', (event) => {
   }
 }
 
-@media (width <= vars.$breakpoint-sm) {
+.gentle-fade-enter-active {
+  transition: opacity 100ms !important;
+}
+
+.gentle-fade-leave-active {
+  transition: opacity 1000ms !important;
+}
+
+.gentle-fade-enter-from,
+.gentle-fade-leave-to {
+  opacity: 0;
+}
+
+@media (width < vars.$breakpoint-sm) {
   [per-row='6'],
   [per-row='7'] {
     --image-size: 9em;

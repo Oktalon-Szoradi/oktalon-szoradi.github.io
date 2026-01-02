@@ -30,8 +30,10 @@ const IMAGES = [
       <h1>Blender Project – 5th grade</h1>
       <b>Teacher's grade: 3 or 2? i forgor </b>
       <p class="description">
-        This is a Blender animation controlled by a MIDI of a Tetris theme
-        rendition I made in Soundtrap.
+        This is a Blender animation controlled by a MIDI of a
+        <a href="/#/projects/personal/soundtrap?scrollTo=tetris"
+          >Tetris theme rendition I made in Soundtrap</a
+        >.
       </p>
       <div class="text-center">
         <PushButton
@@ -98,6 +100,13 @@ const IMAGES = [
       <p>And hey, this is my very first Blender animation!</p>
       <h2>Here's another video:</h2>
       <VideoHandler src="/videos/TetrisAnimated.mp4" />
+      <p>
+        After this, I wanted to redo the drum and try something else (in my free
+        time, after the assignment).
+        <a href="/#/projects/personal/midi-animation_ttfaf"
+          >Check it out here!</a
+        >
+      </p>
       <!-- <pre>
 Test video. Title, description, and visibility may change at any time.
 

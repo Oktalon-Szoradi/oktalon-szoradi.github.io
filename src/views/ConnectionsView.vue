@@ -354,16 +354,16 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
   > * {
     flex: 1;
 
-    @media (width <= vars.$breakpoint-sm) {
+    @media (width < vars.$breakpoint-sm) {
       margin: 0 1em;
     }
   }
 
-  @media (width <= vars.$breakpoint-md) {
+  @media (width < vars.$breakpoint-md) {
     gap: 0;
   }
 
-  @media (width <= vars.$breakpoint-sm) {
+  @media (width < vars.$breakpoint-sm) {
     flex-direction: column;
     gap: 2em;
     margin-top: 2em;
@@ -380,7 +380,7 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
     flex-grow: 1;
     margin: 0;
 
-    @media (width <= vars.$breakpoint-sm) {
+    @media (width < vars.$breakpoint-sm) {
       margin: 0 1em;
     }
   }

@@ -294,4 +294,8 @@ button {
 .purple {
   @include button-colored(263deg, 64%);
 }
+
+.purple-desat {
+  @include button-colored(263deg, 32%);
+}
 </style>

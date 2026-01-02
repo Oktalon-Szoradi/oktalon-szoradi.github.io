@@ -34,7 +34,7 @@ import CommandLink from '@/components/CommandLink.vue'
     margin: 2em 0 0;
   }
 
-  @media (width <= vars.$breakpoint-sm) {
+  @media (width < vars.$breakpoint-sm) {
     > * {
       margin: 2em 1em 0;
     }

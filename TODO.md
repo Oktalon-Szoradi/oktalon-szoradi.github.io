@@ -17,19 +17,19 @@ This is a personal To-Do-List for my website.
   - [ ] Webkit (Safari)
     - [ ] Download [PNG|JPG] button icon's underline collides with arrow point;
           Find an actual icon
-  - [ ] On pages with side navigation, able to be shown on mobile in landscape,
+  - [x] On pages with side navigation, able to be shown on mobile in landscape,
         but too big to fit vertical space!
 - School Projects
   - [ ] Content from HTL 5CHITM (2023/2024)
     - [x] Blender (3D) Project
-      - [ ] Also link to ttfaf and ddd audio files
-    - [ ] [Maybe] MEDT Audio/Video Project
-      - [ ] Audio: also provide audio files!
+      - [x] Also link to ttfaf and ddd audio files
+    - [x] [Maybe] MEDT Audio/Video Project
+      - [x] Audio: also provide audio files!
     - [x] [Maybe] Audio Archive PWA
   - [ ] [Maybe] Gallery: IT-Projekte
   - [x] [Maybe] Gallery: MEDT-Design
 - Personal Projects
-  - [ ] My own Soundtrap songs/recreations
+  - [x] My own Soundtrap songs/recreations
   - [ ] Graphic Designs!
     - [ ] Iconography
     - [ ] Skeuomorphic/Glossy concepts
@@ -73,3 +73,9 @@ Testing environments:
   - Samsung Internet
 - macOS/iOS
   - Safari
+
+<!--
+https://github.com/Oktalon-Szoradi/oktalon-szoradi.github.io/commits/main/?before=674a87b1fe2a522d2e8a8761c84c925f61f0b1ef+280
+https://github.com/Oktalon-Szoradi/oktalon-szoradi.github.io/commit/cc5483c8ca31250a3a517b037d796dd4d6befce8
+https://www.youtube.com/watch?v=a4P2vU7yU3c
+-->
