@@ -588,7 +588,7 @@ document.addEventListener('keydown', (event) => {
         padding: 0 0 0 1.5em;
 
         li::marker {
-          color: #98A1E5;
+          color: #98a1e5;
         }
 
         li a * {
