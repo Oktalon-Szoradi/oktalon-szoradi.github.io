@@ -1,7 +1,27 @@
 <script setup lang="ts">
-import NavigationButtons from '@/components/NavigationButtons.vue'
 import GlassCard from '@/components/GlassCard.vue'
 import ImageGallery from '@/components/ImageGallery.vue'
+import NavigationSideBySide from '@/components/NavigationSideBySide.vue'
+import type { ScrollToObjects } from '@/assets/types'
+
+const NAVIGATION: ScrollToObjects[] = [
+  {
+    name: 'Résumé',
+    id: 'Resume'
+  },
+  {
+    name: 'Glossy',
+    id: 'Glossy'
+  },
+  {
+    name: 'Modern',
+    id: 'Modern'
+  },
+  {
+    name: 'Miscellaneous',
+    id: 'Misc'
+  }
+]
 
 const IMAGES = {
   RESUME: [
@@ -268,7 +288,9 @@ const IMAGES = {
       name: 'Windows Aero Cube',
       src: '/images/GraphicDesign/Iconography/Other/WindowsAeroCube.webp',
       alt: 'Making an Aero cube to be used for the 3D Objects folder icon. Following the perspective used for Aero icons',
-      links: ['https://learn.microsoft.com/en-us/windows/win32/uxguide/vis-icons#:~:text=Three-dimensional%20objects%20are%20represented%20in%20perspective%20as%20solid%20objects,%20seen%20from%20a%20low%20birds-eye%20view%20with%20two%20vanishing%20points.'],
+      links: [
+        'https://learn.microsoft.com/en-us/windows/win32/uxguide/vis-icons#:~:text=Three-dimensional%20objects%20are%20represented%20in%20perspective%20as%20solid%20objects,%20seen%20from%20a%20low%20birds-eye%20view%20with%20two%20vanishing%20points.'
+      ],
       date: '2024-06-25'
     },
     {
@@ -288,35 +310,58 @@ const IMAGES = {
 </script>
 
 <template>
-  <main class="container">
-    <NavigationButtons
+  <div class="container">
+    <!-- <NavigationButtons
       :queryIndex="1"
       :queryParams="{ scrollTo: 'GraphicDesign' }"
-    />
-    <GlassCard title="Icons - Graphic Design">
-      <p>Coming soon…</p>
-    </GlassCard>
-    <GlassCard id="Resume">
-      <p class="date-marker"><code>2024-06-19</code></p>
-      <h2></h2>
-      <ImageGallery :src="IMAGES.RESUME" :perRow="6" :squareImages="false" />
-    </GlassCard>
-    <GlassCard id="Glossy">
-      <p class="date-marker">started on <code>2023-02-09</code></p>
-      <h2></h2>
-      <ImageGallery :src="IMAGES.GLOSSY" :perRow="6" :squareImages="false" />
-    </GlassCard>
-    <GlassCard id="Modern">
-      <p class="date-marker">started on <code>2024-04-07</code></p>
-      <h2></h2>
-      <ImageGallery :src="IMAGES.MODERN" :perRow="6" :squareImages="false" />
-    </GlassCard>
-    <GlassCard id="Misc">
-      <h2></h2>
-      <ImageGallery :src="IMAGES.OTHER" :perRow="6" :squareImages="false" />
-    </GlassCard>
-  </main>
+    /> -->
+    <NavigationSideBySide
+      :scrollToHeadings="NAVIGATION"
+      :navigationButtons_queryIndex="1"
+      :navigationButtons_queryParams="{ scrollTo: 'GraphicDesign' }"
+      :onlyOneLevel="true"
+      width="personal"
+    >
+      <GlassCard title="Icons - Graphic Design">
+        <p>Here are some icons I made!</p>
+      </GlassCard>
+      <GlassCard id="Resume">
+        <p class="date-marker"><code>2024-06-19</code></p>
+        <h2>Résumé</h2>
+        <p>
+          Icons I made for use in that Aero résumé that I was going to make.
+        </p>
+        <ImageGallery :src="IMAGES.RESUME" :perRow="6" :squareImages="false" />
+      </GlassCard>
+      <GlassCard id="Glossy">
+        <p class="date-marker">started on <code>2023-02-09</code></p>
+        <h2>Glossy</h2>
+        <p>
+          Glossy icons I made when I themed my phone's icons to look like the
+          ones from back then (old Android/Samsung)
+        </p>
+        <ImageGallery :src="IMAGES.GLOSSY" :perRow="6" :squareImages="false" />
+      </GlassCard>
+      <GlassCard id="Modern">
+        <p class="date-marker">started on <code>2024-04-07</code></p>
+        <h2>Modern</h2>
+        <p>
+          "Modern" icons I made. A mix of Samsung's squircle shape, the 3D-ness
+          of macOS Big Sur's icons, and a bit of glossiness. I wanted to use
+          these, and did, but wanted to make even more icons. Never finished
+          'em.
+        </p>
+        <ImageGallery :src="IMAGES.MODERN" :perRow="6" :squareImages="false" />
+      </GlassCard>
+      <GlassCard id="Misc">
+        <h2>Miscellaneous</h2>
+        <p>Other stuff I made which are icon-like.</p>
+        <ImageGallery :src="IMAGES.OTHER" :perRow="6" :squareImages="false" />
+      </GlassCard>
+    </NavigationSideBySide>
+  </div>
 </template>
 
-<!-- <style scoped lang="scss">
-</style> -->
+<style scoped lang="scss">
+@use '@/assets/extra_fancy-headings';
+</style>
