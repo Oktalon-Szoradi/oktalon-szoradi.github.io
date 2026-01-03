@@ -37,12 +37,12 @@ const IMAGES = {
     {
       name: 'Birthday Invitation',
       src: '/images/htl4/design/Typography_Birthday-Invitation.webp',
-      alt: 'A birthday invitation example for practicing typography'
+      alt: 'Birthday invitation example for practicing typography'
     },
     {
       name: 'Congrats on your New Job',
       src: '/images/htl4/design/Typography_New-Job-Congratulation.webp',
-      alt: 'A "congrats on your new job" card example for practicing typography'
+      alt: '"congrats on your new job" card example for practicing typography'
     },
     {
       name: 'Intentions',

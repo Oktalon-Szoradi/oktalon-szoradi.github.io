@@ -5,127 +5,128 @@ import ImageGallery from '@/components/ImageGallery.vue'
 
 const IMAGES = [
   {
-    name: 'Btn Playnow (new)',
+    name: 'btn_playnow (new)',
     src: '/images/GraphicDesign/Tetr/btn_playnow_(new).png',
-    alt: '',
+    alt: '"PLAY NOW ON SPIRIT ACCOUNT!" button sprite sheet',
     date: '2024-08-13'
   },
   {
-    name: 'Tetr 3',
+    name: '3',
     src: '/images/GraphicDesign/Tetr/Tetr_3.webp',
-    alt: '',
+    alt: 'Countdown timer 3 recreation from Tetris FireTV/Roku/OUYA',
     date: '2021-04-05'
   },
   {
-    name: 'Tetr 2',
+    name: '2',
     src: '/images/GraphicDesign/Tetr/Tetr_2.webp',
-    alt: '',
+    alt: 'Countdown timer 2 recreation from Tetris FireTV/Roku/OUYA',
     date: '2021-04-05'
   },
   {
-    name: 'Tetr 1',
+    name: '1',
     src: '/images/GraphicDesign/Tetr/Tetr_1.webp',
-    alt: '',
+    alt: 'Countdown timer 1 recreation from Tetris FireTV/Roku/OUYA',
     date: '2021-04-05'
   },
   {
-    name: 'Tetr GO',
+    name: 'GO',
     src: '/images/GraphicDesign/Tetr/Tetr_GO.webp',
-    alt: '',
+    alt: "Countdown timer GO recreation from Tetris FireTV/Roku/OUYA; The gloss/reflection isn't super accurate",
     date: '2021-04-05'
   },
   {
-    name: 'Tetr Perfect Clear',
+    name: 'Perfect Clear!',
     src: '/images/GraphicDesign/Tetr/Tetr_PerfectClear.webp',
-    alt: '',
+    alt: 'PERFECT CLEAR! action text recreation from Tetris Battle/Friends/FireTV/Roku/OUYA',
     date: '2020-12-07'
   },
   {
-    name: 'Tetr Color Clear',
+    name: 'Color Clear!',
     src: '/images/GraphicDesign/Tetr/Tetr_ColorClear.webp',
-    alt: '',
+    alt: 'Concept for COLOR CLEAR! action text in the style of Tetris Battle/Friends/FireTV/Roku/OUYA. A Color Clear would be when all colored minoes are cleared from the matrix, garbage is allowed to stay',
     date: '2020-12-07'
   },
   {
-    name: 'Mini T Spin Double',
+    name: 'Mini T-Spin Double (rainbow background)',
     src: '/images/GraphicDesign/Tetr/Mini_T-Spin_Double.webp',
-    alt: '',
+    alt: 'Mini T-Spin Double action text in the style of Tetris FireTV/Roku/OUYA over a background of a rainbow gradient',
     date: '2021-07-21'
   },
   {
-    name: 'Mini T Spin Double Transparent',
+    name: 'Mini T-Spin Double',
     src: '/images/GraphicDesign/Tetr/Mini_T-Spin_Double_Transparent.webp',
-    alt: '',
+    alt: 'Mini T-Spin Double action text in the style of Tetris FireTV/Roku/OUYA',
     date: '2021-07-21'
   },
   {
-    name: 'Tetr T Spin Mini Double Triple',
+    name: 'T-Spin Mini Double/Triple',
     src: '/images/GraphicDesign/Tetr/Tetr_T-Spin_Mini_DoubleTriple.webp',
-    alt: '',
+    alt: "T-Spin Mini Double (recreation) and T-Spin Mini Triple (custom-made) action text in the style of Tetris FireTV/Roku/OUYA. Silly because Mini T-Spin Triples aren't possible",
     date: '2021-09-05'
   },
   {
-    name: 'Tetr O Spin',
+    name: 'O-Spin',
     src: '/images/GraphicDesign/Tetr/Tetr_O-Spin.webp',
-    alt: '',
+    alt: "O-Spin action text in the style of Tetris FireTV/Roku/OUYA. Silly because O-Spins aren't possible",
     date: '202'
   },
   {
-    name: 'Tetris Online Designs',
+    name: 'Tetris | Notris',
     src: '/images/GraphicDesign/Tetr/TetrisOnlineDesigns.webp',
-    alt: '',
+    alt: 'Tetris (recreation but rounded corners) and Notris (custom-made) action text in the style of Tetris FireTV/Roku/OUYA',
     date: '2021-02-25'
   },
   {
-    name: 'TF3',
+    name: 'TETR.IO+ mino skin',
     src: '/images/GraphicDesign/Tetr/TF3.png',
-    alt: '',
-    date: '2021-07-15'
+    alt: 'Mino/Block skin that you can use with TETR.IO+. I think I actually used an SVG, but for some reason it rendered blurry',
+    links: ['https://www.youtube.com/watch?v=Ys5h8gN-ZMU'],
+    date: '2020-12-27'
   },
   {
-    name: 'Tetr Garbage Concept',
+    name: 'Garbage Concept',
     src: '/images/GraphicDesign/Tetr/TetrGarbageConcept.webp',
-    alt: '',
+    alt: "<Puyo Puyo>-like garbage symbols but different. Using Roman numerals. Amounts: 1, 4, 20, 100 (5×20), 200 (10×20), 1'000 (50×20), 2'000 (100×20), 10'000 (500×20), 20'000 (1'000×20)",
     date: '2025-05-30'
   },
   {
     name: 'My Tetris Design',
     src: '/images/GraphicDesign/Tetr/MyTetrisDesign.webp',
-    alt: '',
+    alt: 'My concept for a Tetrion. In the style of FireTV/Roku/OUYA. Also has a lock down bar and reset counter like Tetra Legends has (I love seeing such extra info). Garbage meter is old TETR.IO like, rainbow. Spawn indicators for hold and next pieces are shown here too',
     date: '2024-02-10'
   },
   {
-    name: 'Tetrio Battle Online Style',
+    name: 'TETR.IO Battle Online Style',
     src: '/images/GraphicDesign/Tetr/TetrioBattleOnlineStyle.webp',
-    alt: '',
+    alt: 'TETR.IO in the style of Tetris Battle',
     date: '2020-11-27'
   },
   {
-    name: 'Tetrio Battle Online Style 2',
+    name: 'TETR.IO Battle Online Style 2',
     src: '/images/GraphicDesign/Tetr/TetrioBattleOnlineStyle2.webp',
-    alt: '',
+    alt: 'TETR.IO if it used KRKZ Blockes and similar <Tetris Battle>-style UI',
     date: '2020-12-31'
   },
   {
-    name: 'TETR IO Road Sign',
+    name: 'TETR.IO Road Sign',
     src: '/images/GraphicDesign/Tetr/TETR.IO_RoadSign.webp',
-    alt: '',
+    alt: 'TETR.IO Zenith Tower (Quick Play) highest garbage windup warning if it were a road sign',
     date: '2024-09-25'
   },
   {
-    name: 'Titled Tetr',
+    name: 'Block Out Early Warning',
     src: '/images/GraphicDesign/Tetr/titledTetr.webp',
-    alt: '',
+    alt: 'Block Out warning in the style of the pop-up shown on Japanese TVs when an earthquake is about to occur',
     date: '2022-04-14'
   },
   {
-    name: 'TOP WideScreen WIP 4x',
+    name: 'TOP Widescreen WIP 4×',
     src: '/images/GraphicDesign/Tetr/TOP-WideScreen-WIP.4x.png',
-    alt: '',
+    alt: 'Concept if Tetris Online Poland were in widescreen',
     date: '2021-07-13'
   },
   // {
-  //   name: 'TOP WideScreen WIP',
+  //   name: 'TOP Widescreen WIP',
   //   src: '/images/GraphicDesign/Tetr/TOP-WideScreen-WIP.png',
   //   alt: '',
   //   date: '2021-07-13'
@@ -133,7 +134,7 @@ const IMAGES = [
   {
     name: 'Tetris Atari Arcade Widescreen',
     src: '/images/GraphicDesign/Tetr/TetrisAtariArcadeWidescreen.png',
-    alt: '',
+    alt: 'Arcade Tetris (Atari) title screen in widescreen',
     date: '2023-04-22'
   }
 ]
@@ -146,7 +147,37 @@ const IMAGES = [
       :queryParams="{ scrollTo: 'GraphicDesign' }"
     />
     <GlassCard title="Tetris - Graphic Design">
-      <p>Coming soon…</p>
+      <p>
+        Graphic design that involves Tetris or similar block stackers in some
+        way.
+      </p>
+      <p>I really like the aesthetic used in</p>
+      <ul>
+        <li>Tetris Friends</li>
+        <li>Tetris Battle</li>
+        <li>Tetris (Amazon Fire TV / Roku)</li>
+        <li>Tetris Battle Fusion (OUYA)</li>
+      </ul>
+      <p>and similar games from Tetris Online Inc. from this era.</p>
+      <p class="text-justify">
+        Did you know in the graphic sprite sheets
+        (<code>gfx_default_anim.png</code>) for Tetris FireTV/Roku/OUYA there's
+        action text for S-, Z-, L-, and J-Spins? I guess they were planning to
+        have All-Spin like in Tetris Party Deluxe? There are no Spin Single,
+        Double, Triple, nor Mini variants, though. And for some reason Z-Spin is
+        yellow.
+      </p>
+      <p class="text-justify">
+        The font used is called "KRKZ Blockes" (see
+        <a href="https://harddrop.com/wiki/Tetris_Battle#Trivia" target="_blank"
+          ><code>https://harddrop.com/wiki/Tetris_Battle#Trivia</code></a
+        >
+        ), which only has upper case letters. There is little difference between
+        typing lower and upper case letters, but both are in upper case style.
+        However, there exists a graphic in <code>gfx_images.png</code> that says
+        "Level Up", i.e. it has lowercase letters. This seems to hint at a
+        version of this font that has lowercase letters.
+      </p>
     </GlassCard>
     <ImageGallery :src="IMAGES" :perRow="7" :squareImages="false" />
   </main>

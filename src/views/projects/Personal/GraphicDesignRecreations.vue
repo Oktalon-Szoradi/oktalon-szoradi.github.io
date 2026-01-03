@@ -28,42 +28,42 @@ const IMAGES = {
     {
       name: '[WIP] Harmony',
       src: '/images/GraphicDesign/Recreations/WIP_Windows7_Background.png',
-      alt: 'A screenshot of Affinity Designer showing a work-in-progress recreation of the default Windows 7 "Harmony" desktop background'
+      alt: 'Screenshot of Affinity Designer showing a work-in-progress recreation of the default Windows 7 "Harmony" desktop background'
     },
     {
       name: '[WIP] Harmony Grass',
       src: '/images/GraphicDesign/Recreations/WIP_Windows7_Background_Grass.png',
-      alt: 'A screenshot of Affinity Designer showing a work-in-progress recreation of the default Windows 7 "Harmony" desktop background, zoomed into the grass section'
+      alt: 'Screenshot of Affinity Designer showing a work-in-progress recreation of the default Windows 7 "Harmony" desktop background, zoomed into the grass section'
     },
     {
       name: '[WIP] Harmony Butterfly',
       src: '/images/GraphicDesign/Recreations/WIP_Windows7_Background_Butterfly.png',
-      alt: 'A screenshot of Affinity Designer showing a work-in-progress recreation of the default Windows 7 "Harmony" desktop background, zoomed into the butterfly'
+      alt: 'Screenshot of Affinity Designer showing a work-in-progress recreation of the default Windows 7 "Harmony" desktop background, zoomed into the butterfly'
     }
   ],
   WINDOW_FRAMES: [
     {
       name: 'Windows Vista Aero',
       src: '/images/GraphicDesign/Recreations/SkeuomorphicRecreations_WindowsAero.webp',
-      alt: 'A recreation of the `winver` window in Windows Vista, sans the text and branding'
+      alt: 'Recreation of the `winver` window in Windows Vista, sans the text and branding'
     },
     {
       name: 'macOS X Aqua',
       src: '/images/GraphicDesign/Recreations/SkeuomorphicRecreations_macOSAqua.webp',
-      alt: 'A recreation of the "About This Mac" window in macOS X, sans the text and branding'
+      alt: 'Recreation of the "About This Mac" window in macOS X, sans the text and branding'
     }
   ],
   OTHER_WINDOWS: [
     {
       name: 'Purble Pairs Card',
       src: '/images/GraphicDesign/Recreations/SkeuomorphicCard.webp',
-      alt: 'A recreation of the card backdrop used in the game Purble Pairs, apart of the game Purble Place included in Windows Vista and Windows 7',
+      alt: 'Recreation of the card backdrop used in the game Purble Pairs, apart of the game Purble Place included in Windows Vista and Windows 7',
       date: '2022-03-06'
     },
     {
       name: 'Misc. Aero Stuff',
       src: '/images/GraphicDesign/Recreations/WindowsAeroElements.webp',
-      alt: 'A canvas/playground/sandbox where I experimented with a variety of Aero elements',
+      alt: 'Canvas/playground/sandbox where I experimented with a variety of Aero elements',
       date: '2024-05-14'
     },
     {
@@ -83,7 +83,7 @@ const IMAGES = {
     {
       name: 'Acer Webpage Error',
       src: '/images/GraphicDesign/Recreations/SkeuomorphicErrorRecreation.webp',
-      alt: 'A recreation of the error page seen when trying to visit www.acer-apac.com/acer_web',
+      alt: 'Recreation of the error page seen when trying to visit www.acer-apac.com/acer_web',
       links: ['https://www.acer-apac.com/acer_web'],
       date: '2022-12-21'
     },

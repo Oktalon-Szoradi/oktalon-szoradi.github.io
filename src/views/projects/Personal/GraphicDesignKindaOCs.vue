@@ -7,139 +7,139 @@ const IMAGES = [
   {
     name: 'Acer Quick Access Original',
     src: '/images/GraphicDesign/BetweenOCandRecreation/AcerQuickAccess.webp',
-    alt: '',
+    alt: 'Background image from old Samsung weather widget, upscaled. Acer Quick Access utility program in its original flat Metro-like design',
     date: '2023-01-19'
   },
   {
     name: 'Acer Quick Access After',
     src: '/images/GraphicDesign/BetweenOCandRecreation/AcerQuickAccess_After.webp',
-    alt: '',
+    alt: 'Background image from old Samsung weather widget, upscaled. Acer Quick Access utility program in an Aero-like design (concept)',
     date: '2023-01-19'
   },
   {
     name: 'Acer Quick Access After Hover',
     src: '/images/GraphicDesign/BetweenOCandRecreation/AcerQuickAccess_After-Hover.webp',
-    alt: '',
+    alt: 'Background image from old Samsung weather widget, upscaled. Acer Quick Access utility program in an Aero-like design (concept), title bar buttons in hover state',
     date: '2023-01-19'
   },
   {
     name: 'Acer Quick Access After Pressed',
     src: '/images/GraphicDesign/BetweenOCandRecreation/AcerQuickAccess_After-Pressed.webp',
-    alt: '',
+    alt: 'Background image from old Samsung weather widget, upscaled. Acer Quick Access utility program in an Aero-like design (concept), title bar buttons in pressed/active state',
     date: '2023-01-19'
   },
   {
     name: 'Aero Classic',
     src: '/images/GraphicDesign/BetweenOCandRecreation/AeroClassic.webp',
-    alt: '',
+    alt: "Alternative Windows Aero Basic concept with rounded corners and title bar button metrics a bit like those in Windows Classic, where they're mostly grouped except for the close button, which has a gap",
     date: '2025-07-05'
   },
   {
     name: 'Aero Icon Theme Preview Splash',
     src: '/images/GraphicDesign/BetweenOCandRecreation/AeroIconThemePreviewSplash.png',
-    alt: '',
+    alt: "Splash/Preview image for the 7tsp program that replaces system icons in Windows with your own (contained in DLLs). My icon theme currently isn't public, it's in a private GitHub repository about steps for Aeroifying Windows 10. Background image not made by me",
     date: '2024-07-13'
   },
   {
     name: 'Aero Metro Volume Media',
     src: '/images/GraphicDesign/BetweenOCandRecreation/AeroMetroVolumeMedia.webp',
-    alt: '',
+    alt: 'The Metro volume+media pop-up introduced in Windows 8 if it were glossier (Aero)',
     date: '2024-12-01'
   },
   {
-    name: 'Apple Vision OS Style Dialog',
+    name: 'Apple visionOS-style Dialog',
     src: '/images/GraphicDesign/BetweenOCandRecreation/AppleVisionOSStyleDialog.png',
-    alt: '',
+    alt: "Pop-up with design inspiration from Apple's visionOS",
     date: '2024-03-04'
   },
   {
     name: 'Aqua',
     src: '/images/GraphicDesign/BetweenOCandRecreation/Aqua.webp',
-    alt: '',
+    alt: "Tabs and a button in a style like Apple's Aqua",
     date: '2024-12-01'
   },
   {
     name: 'Avast German',
     src: '/images/GraphicDesign/BetweenOCandRecreation/AvastGerman.webp',
-    alt: '',
+    alt: 'Old avast! antivirus (e.g. version 4.8) virus found pop-up/warning translated into German',
     date: '2023-01-14'
   },
   {
     name: 'Glossy HTTP Error',
     src: '/images/GraphicDesign/BetweenOCandRecreation/GlossyHTTPerror.webp',
-    alt: '',
+    alt: 'HTTP 403 Forbidden error page in a glossier style than Internet Explorer. Reflection stripes taken from Aero atlas image',
     date: '2023-07-03'
   },
   {
     name: 'Lazy',
     src: '/images/GraphicDesign/BetweenOCandRecreation/lazy.webp',
-    alt: '',
+    alt: 'Inactive Windows 7 title bar buttons, file explorer search icon and refresh icon. I was going to recreate everything in a Windows 7 screenshot, but was too lazy to do everything',
     date: '2023-01-28'
   },
   {
     name: 'Metro Maybe',
     src: '/images/GraphicDesign/BetweenOCandRecreation/MetroMaybe.png',
-    alt: '',
+    alt: 'Windows 8 Metro Start Screen in a glowier, glossier, Aeroier design',
     date: '2025-06-09'
   },
   {
     name: 'Windows Aero Error Idk',
     src: '/images/GraphicDesign/BetweenOCandRecreation/WindowsAeroErrorIdk.webp',
-    alt: '',
+    alt: 'Various Windows Vista-like pop-up windows',
     date: '2024-12-01'
   },
   {
     name: 'Windows Aqua',
     src: '/images/GraphicDesign/BetweenOCandRecreation/WindowsAqua.png',
-    alt: '',
+    alt: "Window in a style a bit similar to Apple's Aqua",
     date: '2023-07-19'
   },
   {
-    name: 'Windows Embedded POS Ready 2009',
+    name: 'Windows Embedded POSReady 2009',
     src: '/images/GraphicDesign/BetweenOCandRecreation/WindowsEmbeddedPOSReady2009.png',
-    alt: '',
+    alt: 'Recreated the window frames and buttons from the theme unique to this version of Windows, but with rounded borders (i.e. the bottom corners are rounded too). Button states are: normal, hover, pressed, inactive, disabled',
     date: '2023-01-22'
   },
   {
-    name: 'Windows XP HD',
-    src: '/images/GraphicDesign/BetweenOCandRecreation/WindowsXP_HD.webp',
-    alt: '',
-    links: [
-      'https://github.com/marchmountain/-Windows-XP-High-Resolution-Icon-Pack'
-    ],
-    date: '2022-09-27'
-  },
-  {
-    name: 'Windows XP',
+    name: 'Windows XP HD - German',
     src: '/images/GraphicDesign/BetweenOCandRecreation/WindowsXP.webp',
-    alt: '',
+    alt: 'Recreated the Windows XP Luna start menu, start button, and taskbar. Sillily translated into German. Icons and background not by me, background (Bliss) is the HD 600 DPI one',
     links: [
       'https://github.com/marchmountain/-Windows-XP-High-Resolution-Icon-Pack'
     ],
     date: '2024-04-14'
   },
   {
-    name: 'Win OSX',
+    name: 'Windows XP HD - German - System Shutdown',
+    src: '/images/GraphicDesign/BetweenOCandRecreation/WindowsXP_HD.webp',
+    alt: "Recreated the Windows XP Luna window frames, then the whole System Shutdown dialog, in German. Custom power icon by me. Close button isn't by me iirc",
+    links: [
+      'https://github.com/marchmountain/-Windows-XP-High-Resolution-Icon-Pack'
+    ],
+    date: '2022-09-27'
+  },
+  {
+    name: 'winOS X',
     src: '/images/GraphicDesign/BetweenOCandRecreation/winOSX.webp',
-    alt: '',
+    alt: 'Windows boot screen if it was like macOS',
     date: '2025-02-04'
   },
   {
     name: 'Yet Another Run Dialog',
     src: '/images/GraphicDesign/BetweenOCandRecreation/YetAnotherRunDialog.webp',
-    alt: '',
+    alt: 'Run dialog contents with my input field and buttons. Icons taken from Vista/7',
     date: '2024-03-05'
   },
   {
     name: 'My Media Player Classic Theme',
     src: '/images/GraphicDesign/BetweenOCandRecreation/MyMediaPlayerClassicTheme.png',
-    alt: '',
+    alt: 'Glossy Aero-like icons for Media Player Classic. Glossy symbols are mine, but the film reel and audio icons are from Windows Vista. Media Player Classic recently changed their theming system, though, so this probably no longer works(?)',
     date: '2025-07-09'
   },
   {
     name: 'Vienna Lines - Quick Connections Plan',
     src: '/images/GraphicDesign/BetweenOCandRecreation/ViennaLines_QuickConnectionsPlan.webp',
-    alt: '',
+    alt: "Vienna's public transport lines map, but satirically translated into English",
     date: '2025-12-03'
   }
 ]
@@ -152,7 +152,14 @@ const IMAGES = [
       :queryParams="{ scrollTo: 'GraphicDesign' }"
     />
     <GlassCard title="Remixes - Graphic Design">
-      <p>Coming soon…</p>
+      <p>
+        Here are some thing I've made that aren't original, nor are they precise
+        1:1 recreations of anything.
+      </p>
+      <p>
+        Well, perhaps the <i>Windows Embedded POSReady 2009</i> one qualifies as
+        a recreation.
+      </p>
     </GlassCard>
     <ImageGallery :src="IMAGES" :perRow="6" :squareImages="false" />
   </main>
