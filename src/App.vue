@@ -178,4 +178,12 @@ main {
     margin: 0 0 0.75em;
   }
 }
+
+.date-marker {
+  margin: 0 0 -1.4em;
+  text-align: end;
+  text-shadow: none;
+  color: hsl(0deg 0% 100% / 50%);
+  // font-weight: lighter;
+}
 </style>
