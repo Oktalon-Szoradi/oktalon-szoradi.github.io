@@ -523,7 +523,8 @@ document.addEventListener('keydown', (event) => {
     );
     padding: 1em 0 1.5em 2em;
     width: 50vw;
-    text-shadow: 0 2px 4px hsl(0deg 0% 0% / 100%);
+    text-shadow: 0 2px 4px hsl(0deg 0% 0% / 50%),
+    0 2px 12px hsl(0deg 0% 0% / 100%);
     color: hsl(0deg 0% 100% / 80%);
 
     h1 {
