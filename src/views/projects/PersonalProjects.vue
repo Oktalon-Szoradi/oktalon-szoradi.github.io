@@ -171,7 +171,7 @@ const NAVIGATION: ScrollToObjects[] = [
       </GlassCard>
       <GlassCard id="Misc" title="Miscellaneous">
         <div class="flex flex-many">
-          <ProjectLink
+          <!-- <ProjectLink
             title="EU English Linux Locale"
             icon_src="/images/thumbnails/Thumbnail_PersonalProjects-GraphicDesign-en150LinuxLocale.webp"
           >
@@ -193,7 +193,7 @@ const NAVIGATION: ScrollToObjects[] = [
                 View
               </PushButton>
             </div>
-          </ProjectLink>
+          </ProjectLink> -->
           <ProjectLink
             title="ANIMUSIC-like thing"
             icon_src="/images/thumbnails/Thumbnail_MIDIanimTtFaF-1080p.webp"
