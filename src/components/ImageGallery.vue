@@ -79,19 +79,23 @@
         <code>{{ currentImageIndex + 1 }}</code
         >/<code>{{ src.length }}</code>
         <h1>{{ currentImage?.name }}</h1>
-        <div
-          v-if="currentImage?.alt && currentImage?.name !== currentImage?.alt"
-          class="alt-text-section"
-        >
-          <!-- <hr /> -->
-          <AccordionSingle
-            class="alt-text"
-            title="Show description"
-            open-title="Hide description"
+        <div class="">
+          <code>{{ currentImage?.date }}</code>
+          <div
+            v-if="currentImage?.alt && currentImage?.name !== currentImage?.alt"
+            class="alt-text-section"
           >
             <!-- <hr /> -->
-            {{ currentImage?.alt }}
-          </AccordionSingle>
+            <AccordionSingle
+              class="alt-text"
+              title="Show description"
+              open-title="Hide description"
+            >
+              <!-- <hr /> -->
+              <!-- <code>{{ currentImage?.date }}</code> ❘ -->
+              {{ currentImage?.alt }}
+            </AccordionSingle>
+          </div>
         </div>
       </div>
     </div>
@@ -113,6 +117,7 @@ interface ImageData {
   name: string
   src: string
   alt: string
+  date?: string
 }
 
 const props = withDefaults(
@@ -516,7 +521,7 @@ document.addEventListener('keydown', (event) => {
       hsl(0deg 0% 0% / 50%),
       transparent 50%
     );
-    padding: 2em;
+    padding: 1em 0 1.5em 2em;
     width: 50vw;
     text-shadow: 0 2px 4px hsl(0deg 0% 0% / 100%);
     color: hsl(0deg 0% 100% / 80%);
@@ -541,7 +546,8 @@ document.addEventListener('keydown', (event) => {
     // }
 
     .alt-text {
-      padding-right: 0.25em;
+      margin-top: 0.25em;
+      // padding-right: 0.25em;
 
       :deep([data-part='item-content']) {
         text-shadow:
@@ -558,7 +564,7 @@ document.addEventListener('keydown', (event) => {
           0 2px 8px hsl(0deg 0% 0% / 100%),
           0 2px 8px hsl(0deg 0% 0% / 100%);
         letter-spacing: 0.1em;
-        color: hsl(0deg 0% 100% / 75%);
+        color: hsl(0deg 0% 100% / 66.6667%);
         font-size: 0.9em;
         font-weight: 100;
         font-style: italic;
