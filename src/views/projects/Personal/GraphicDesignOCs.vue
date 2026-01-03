@@ -67,7 +67,7 @@ const IMAGES = {
     {
       name: 'Random Frutiger Aero Buttons',
       src: '/images/GraphicDesign/OC/RandomFrutigerButtons.webp',
-      alt: 'A colorful Aero-like background, with a glossy sphere and some buttons in some states; Also posted to Reddit: https://www.reddit.com/r/FrutigerAero/comments/14i7i8m/random_frutiger_aero_design_i_made/',
+      alt: 'A colorful Aero-like background, with a glossy sphere and some buttons in some states; Also posted to Reddit',
       links: [
         'https://www.reddit.com/r/FrutigerAero/comments/14i7i8m/random_frutiger_aero_design_i_made/'
       ],

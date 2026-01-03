@@ -84,7 +84,7 @@ const IMAGES = {
       name: 'Acer Webpage Error',
       src: '/images/GraphicDesign/Recreations/SkeuomorphicErrorRecreation.webp',
       alt: 'A recreation of the error page seen when trying to visit www.acer-apac.com/acer_web',
-      links: ['www.acer-apac.com/acer_web'],
+      links: ['https://www.acer-apac.com/acer_web'],
       date: '2022-12-21'
     },
     {
