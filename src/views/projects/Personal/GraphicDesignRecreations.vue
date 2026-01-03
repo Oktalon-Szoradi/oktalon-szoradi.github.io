@@ -1,7 +1,27 @@
 <script setup lang="ts">
-import NavigationButtons from '@/components/NavigationButtons.vue'
 import GlassCard from '@/components/GlassCard.vue'
 import ImageGallery from '@/components/ImageGallery.vue'
+import NavigationSideBySide from '@/components/NavigationSideBySide.vue'
+import type { ScrollToObjects } from '@/assets/types'
+
+const NAVIGATION: ScrollToObjects[] = [
+  {
+    name: 'Window frames in Aero and Aqua',
+    id: 'WindowFrames'
+  },
+  {
+    name: 'Windows 7 default desktop background "Harmony"',
+    id: 'Harmony'
+  },
+  {
+    name: 'Other Windows stuff',
+    id: 'OtherWindowsStuff'
+  },
+  {
+    name: 'Miscellaneous',
+    id: 'Misc'
+  }
+]
 
 const IMAGES = {
   WIN7_HARMONY: [
@@ -74,54 +94,62 @@ const IMAGES = {
 </script>
 
 <template>
-  <main class="container">
-    <NavigationButtons
+  <div class="container">
+    <!-- <NavigationButtons
       :queryIndex="1"
       :queryParams="{ scrollTo: 'GraphicDesign' }"
-    />
-    <GlassCard title="Recreations - Graphic Design">
-      <p>
-        Here are things I've made that aim to be an accurate recreation of
-        something.
-      </p>
-    </GlassCard>
-    <GlassCard>
-      <p class="date-marker">started on <code>2023-07-24</code></p>
-      <h2>Window frames in Aero and Aqua</h2>
-      <p>
-        I'm most proud of these. I've faithfully recreated the Windows Vista
-        <code>winver</code> window, though without the banner and text. I've
-        figured out how the close button is designed (to get it accurate, one of
-        the things to do is layer multiple gradients).
-      </p>
-      <p>
-        I've also done the same for the early version of macOS X, when Aqua
-        still had pinstripes.
-      </p>
-      <ImageGallery
-        :src="IMAGES.WINDOW_FRAMES"
-        :perRow="4"
-        :squareImages="false"
-      />
-    </GlassCard>
-    <GlassCard>
-      <p class="date-marker">started on <code>2023-11-22</code></p>
-      <h2>Windows 7 default desktop background "Harmony"</h2>
-      <p>
-        The artist of the original is Chuck Anderson, who still has the original
-        file made in Photoshop. Of course, not really sharable, as that could
-        cause legal troubles. It would be cool if we could have it, though.
-      </p>
-      <p>
-        <a
-          href="https://windowswallpaper.miraheze.org/wiki/Harmony#cite_ref-7"
-          target="_blank"
-          ><code
-            >https://windowswallpaper.miraheze.org/wiki/Harmony#cite_ref-7</code
-          ></a
-        >
-      </p>
-      <!-- <p>
+    /> -->
+    <NavigationSideBySide
+      :scrollToHeadings="NAVIGATION"
+      :navigationButtons_queryIndex="1"
+      :navigationButtons_queryParams="{ scrollTo: 'GraphicDesign' }"
+      :onlyOneLevel="true"
+      width="personal"
+    >
+      <GlassCard title="Recreations - Graphic Design">
+        <p>
+          Here are things I've made that aim to be an accurate recreation of
+          something.
+        </p>
+      </GlassCard>
+      <GlassCard id="WindowFrames">
+        <p class="date-marker">started on <code>2023-07-24</code></p>
+        <h2>Window frames in Aero and Aqua</h2>
+        <p>
+          I'm most proud of these. I've faithfully recreated the Windows Vista
+          <code>winver</code> window, though without the banner and text. I've
+          figured out how the close button is designed (to get it accurate, one
+          of the things to do is layer multiple gradients).
+        </p>
+        <p>
+          I've also done the same for the early version of macOS X, when Aqua
+          still had pinstripes.
+        </p>
+        <ImageGallery
+          :src="IMAGES.WINDOW_FRAMES"
+          :perRow="4"
+          :squareImages="false"
+        />
+      </GlassCard>
+      <GlassCard id="Harmony">
+        <p class="date-marker">started on <code>2023-11-22</code></p>
+        <h2>Windows 7 default desktop background "Harmony"</h2>
+        <p>
+          The artist of the original is Chuck Anderson, who still has the
+          original file made in Photoshop. Of course, not really sharable, as
+          that could cause legal troubles. It would be cool if we could have it,
+          though.
+        </p>
+        <p>
+          <a
+            href="https://windowswallpaper.miraheze.org/wiki/Harmony#cite_ref-7"
+            target="_blank"
+            ><code
+              >https://windowswallpaper.miraheze.org/wiki/Harmony#cite_ref-7</code
+            ></a
+          >
+        </p>
+        <!-- <p>
         <a
           href="https://x.com/NoPattern/status/1357451559655907331"
           target="_blank"
@@ -135,42 +163,43 @@ const IMAGES = {
           ><code>https://x.com/NoPattern/status/1366760967670034437</code></a
         >
       </p> -->
-      <p>
-        So, I decided to try recreating it myself! It's a lot of work, though;
-        trying to make it accurate and put in all the little details.
-      </p>
-      <p>
-        Each singular blade of grass I did manually, one by one. Also added a
-        hint of green blur amidst the grass.
-      </p>
-      <p>
-        The butterfly I also tried to trace and make look right manually. I was
-        thinking it might be the MSN butterfly, which would be cool, but it
-        isn't; it's a bit different.
-      </p>
-      <p>
-        I haven't touched this in a while. I don't know yet when I'll come back
-        to this and continue it.
-      </p>
-      <ImageGallery
-        :src="IMAGES.WIN7_HARMONY"
-        :perRow="4"
-        :squareImages="false"
-      />
-    </GlassCard>
-    <GlassCard>
-      <h2>Other Windows stuff</h2>
-      <ImageGallery
-        :src="IMAGES.OTHER_WINDOWS"
-        :perRow="4"
-        :squareImages="false"
-      />
-    </GlassCard>
-    <GlassCard>
-      <h2>Miscellaneous</h2>
-      <ImageGallery :src="IMAGES.MISC" :perRow="4" :squareImages="false" />
-    </GlassCard>
-  </main>
+        <p>
+          So, I decided to try recreating it myself! It's a lot of work, though;
+          trying to make it accurate and put in all the little details.
+        </p>
+        <p>
+          Each singular blade of grass I did manually, one by one. Also added a
+          hint of green blur amidst the grass.
+        </p>
+        <p>
+          The butterfly I also tried to trace and make look right manually. I
+          was thinking it might be the MSN butterfly, which would be cool, but
+          it isn't; it's a bit different.
+        </p>
+        <p>
+          I haven't touched this in a while. I don't know yet when I'll come
+          back to this and continue it.
+        </p>
+        <ImageGallery
+          :src="IMAGES.WIN7_HARMONY"
+          :perRow="4"
+          :squareImages="false"
+        />
+      </GlassCard>
+      <GlassCard>
+        <h2 id="OtherWindowsStuff">Other Windows stuff</h2>
+        <ImageGallery
+          :src="IMAGES.OTHER_WINDOWS"
+          :perRow="4"
+          :squareImages="false"
+        />
+      </GlassCard>
+      <GlassCard>
+        <h2 id="Misc">Miscellaneous</h2>
+        <ImageGallery :src="IMAGES.MISC" :perRow="4" :squareImages="false" />
+      </GlassCard>
+    </NavigationSideBySide>
+  </div>
 </template>
 
 <style scoped lang="scss">
