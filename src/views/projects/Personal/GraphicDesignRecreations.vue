@@ -106,7 +106,8 @@ const IMAGES = {
       :onlyOneLevel="true"
       width="personal"
     >
-      <GlassCard title="Recreations - Graphic Design">
+      <GlassCard title="Recreations" :noCenter="true">
+        <p class="category-marker">Graphic Design</p>
         <p>
           Here are things I've made that aim to be an accurate recreation of
           something.
