@@ -82,18 +82,40 @@
         <div class="">
           <code>{{ currentImage?.date }}</code>
           <div
-            v-if="currentImage?.alt && currentImage?.name !== currentImage?.alt"
+            v-if="
+              (currentImage?.alt && currentImage?.name !== currentImage?.alt) ||
+              currentImage?.links
+            "
             class="alt-text-section"
           >
             <!-- <hr /> -->
             <AccordionSingle
               class="alt-text"
-              title="Show description"
-              open-title="Hide description"
+              title="Show details"
+              open-title="Hide details"
             >
               <!-- <hr /> -->
               <!-- <code>{{ currentImage?.date }}</code> ❘ -->
               {{ currentImage?.alt }}
+              <div v-if="currentImage?.links" class="links-section">
+                <p
+                  :class="
+                    !currentImage?.alt ||
+                    currentImage?.name === currentImage?.alt
+                      ? 'no-top-margin'
+                      : ''
+                  "
+                >
+                  Links:
+                </p>
+                <ul>
+                  <li v-for="link of currentImage?.links" :key="link">
+                    <a :href="link" target="_blank">
+                      <code>{{ link }}</code>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </AccordionSingle>
           </div>
         </div>
@@ -118,6 +140,7 @@ interface ImageData {
   src: string
   alt: string
   date?: string
+  links?: string[]
 }
 
 const props = withDefaults(
@@ -519,10 +542,11 @@ document.addEventListener('keydown', (event) => {
     background-image: linear-gradient(
       to right,
       hsl(0deg 0% 0% / 50%),
-      transparent 50%
+      transparent
     );
-    padding: 1em 0 1.5em 2em;
-    width: 50vw;
+    padding: 1em 4em 1.5em 2em;
+    // width: clamp(0vw, auto, 50vw);
+    max-width: 50vw;
     text-shadow:
       0 2px 4px hsl(0deg 0% 0% / 50%),
       0 2px 12px hsl(0deg 0% 0% / 100%);
@@ -546,6 +570,28 @@ document.addEventListener('keydown', (event) => {
     // .alt-text-section {
     //   width: 75%;
     // }
+
+    .links-section {
+      p {
+        margin: 1em 0 0;
+        text-shadow:
+          0 2px 8px hsl(0deg 0% 0% / 100%),
+          0 2px 8px hsl(0deg 0% 0% / 100%);
+        letter-spacing: 0.1em;
+        color: hsl(0deg 0% 100% / 66.6667%);
+        font-size: 0.9em;
+        font-weight: 100;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0 0 0 1.5em;
+
+        li a * {
+          font-size: 0.75em;
+        }
+      }
+    }
 
     .alt-text {
       margin-top: 0.25em;
