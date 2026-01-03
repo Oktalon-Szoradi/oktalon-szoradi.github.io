@@ -233,6 +233,10 @@ watch(
       }
     }
   }
+
+  @media (width < vars.$breakpoint-sm) {
+    margin: 1em 1em 0;
+  }
 }
 
 main {
