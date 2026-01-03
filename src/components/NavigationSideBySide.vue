@@ -111,11 +111,11 @@ watch(
   }
 
   .personal {
-    flex-basis: 41.35em;
+    flex-basis: 41.41em;
   }
 
   .school {
-    flex-basis: 39.5em;
+    flex-basis: 39.59em;
   }
 
   main {
