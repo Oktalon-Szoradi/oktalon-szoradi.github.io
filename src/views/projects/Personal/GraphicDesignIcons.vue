@@ -287,8 +287,10 @@ const IMAGES = {
 
 <template>
   <main class="container">
-    <NavigationButtons :queryIndex="1"
-      :queryParams="{ scrollTo: 'GraphicDesign' }" />
+    <NavigationButtons
+      :queryIndex="1"
+      :queryParams="{ scrollTo: 'GraphicDesign' }"
+    />
     <GlassCard title="Icons - Graphic Design">
       <p>Coming soon…</p>
     </GlassCard>

@@ -233,89 +233,89 @@ const IMAGES = {
   ],
   DESKTOP_BACKGROUNDS: [
     {
-      name: "Aurora 1 Dark",
+      name: 'Aurora 1 Dark',
       src: '/images/GraphicDesign/DesktopBackgrounds/Aurora1_Dark.png',
       alt: '',
       date: '2024-01-27'
     },
     {
-      name: "Aurora 1 Dark (alt)",
+      name: 'Aurora 1 Dark (alt)',
       src: '/images/GraphicDesign/DesktopBackgrounds/Aurora1_Dark-alt.png',
       alt: '',
       date: '2024-01-27'
     },
     {
-      name: "Aurora 1 Light",
+      name: 'Aurora 1 Light',
       src: '/images/GraphicDesign/DesktopBackgrounds/Aurora1_Light.png',
       alt: '',
       date: '2024-01-27'
     },
     {
-      name: "Aurora 2 Dark",
+      name: 'Aurora 2 Dark',
       src: '/images/GraphicDesign/DesktopBackgrounds/Aurora2_Dark.png',
       alt: '',
       date: '2024-01-27'
     },
     {
-      name: "Aurora 2 Light",
+      name: 'Aurora 2 Light',
       src: '/images/GraphicDesign/DesktopBackgrounds/Aurora2_Light.png',
       alt: '',
       date: '2024-01-27'
     },
     {
-      name: "Aurora 3 Dark",
+      name: 'Aurora 3 Dark',
       src: '/images/GraphicDesign/DesktopBackgrounds/Aurora3_Dark.png',
       alt: '',
       date: '2024-01-27'
     },
     {
-      name: "Aurora 3 Dark (alt)",
+      name: 'Aurora 3 Dark (alt)',
       src: '/images/GraphicDesign/DesktopBackgrounds/Aurora3_Dark-alt.png',
       alt: '',
       date: '2024-01-27'
     },
     {
-      name: "Aurora 3 Light",
+      name: 'Aurora 3 Light',
       src: '/images/GraphicDesign/DesktopBackgrounds/Aurora3_Light.png',
       alt: '',
       date: '2024-01-27'
     },
     {
-      name: "My Desktop Background 2",
+      name: 'My Desktop Background 2',
       src: '/images/GraphicDesign/DesktopBackgrounds/MyDesktopBackground2.png',
       alt: '',
       date: '2022-10-15'
     },
     {
-      name: "My Background",
+      name: 'My Background',
       src: '/images/GraphicDesign/DesktopBackgrounds/MyBackground.png',
       alt: '',
       date: '2022-08-20'
     },
     {
-      name: "My Desktop Background",
+      name: 'My Desktop Background',
       src: '/images/GraphicDesign/DesktopBackgrounds/MyDesktopBackground.png',
       alt: '',
       date: '2021-10-15'
     },
     {
-      name: "My Windows 11 Desktop Background",
+      name: 'My Windows 11 Desktop Background',
       src: '/images/GraphicDesign/DesktopBackgrounds/MyWin11DesktopBackground.png',
       alt: '',
       date: '2021-12-17'
     },
     {
-      name: "My Windows 11 Desktop Background 2",
+      name: 'My Windows 11 Desktop Background 2',
       src: '/images/GraphicDesign/DesktopBackgrounds/MyWin11DesktopBackground2.png',
       alt: '',
       date: '2022-04-02'
     },
     {
-      name: "My 16:9 Desktop Background",
+      name: 'My 16:9 Desktop Background',
       src: '/images/GraphicDesign/DesktopBackgrounds/My16by10DesktopBackground.png',
       alt: '',
       date: '2022-08-20'
-    },
+    }
   ],
   MISC: [
     {
