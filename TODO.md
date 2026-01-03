@@ -7,7 +7,6 @@ This is a personal To-Do-List for my website.
 - Bug Fixes
   - **Bold = Fix "done", in testing phase**
   - [ ] Blink (Chromium)
-    - [x] Favicon doesn't work????
     - [ ] My logo looks jagged/weird. Antialiasing issue?
     - [ ] `/#/projects`: Oxygen icon applications-education-university.svg
                          looks weird. Maybe same issue as above?
@@ -17,17 +16,6 @@ This is a personal To-Do-List for my website.
   - [ ] Webkit (Safari)
     - [ ] Download [PNG|JPG] button icon's underline collides with arrow point;
           Find an actual icon
-  - [x] On pages with side navigation, able to be shown on mobile in landscape,
-        but too big to fit vertical space!
-- School Projects
-  - [ ] Content from HTL 5CHITM (2023/2024)
-    - [x] Blender (3D) Project
-      - [x] Also link to ttfaf and ddd audio files
-    - [x] [Maybe] MEDT Audio/Video Project
-      - [x] Audio: also provide audio files!
-    - [x] [Maybe] Audio Archive PWA
-  - [ ] [Maybe] Gallery: IT-Projekte
-  - [x] [Maybe] Gallery: MEDT-Design
 - Personal Projects
   - [x] My own Soundtrap songs/recreations
   - [ ] Graphic Designs!
@@ -42,9 +30,7 @@ This is a personal To-Do-List for my website.
           break, as line breaks are no longer accepted
     - [ ] Consider uploading other big files to also Mega|MediaFire|GoogleDrive
   - [ ] [Maybe] Make page about Tetris Stardust / Feevo
-- Other
-  - [x] Reformat my gear specs, especially when I get my Framework laptop
-  - [x] [Maybe] Explaining my music tastes
+  - [ ] [Maybe] Make page for cheat sheets? Like `rsync` command options I use
 
 ---
 
@@ -75,6 +61,7 @@ Testing environments:
   - Safari
 
 <!--
+Maybe link these somewhere? idk
 https://github.com/Oktalon-Szoradi/oktalon-szoradi.github.io/commits/main/?before=674a87b1fe2a522d2e8a8761c84c925f61f0b1ef+280
 https://github.com/Oktalon-Szoradi/oktalon-szoradi.github.io/commit/cc5483c8ca31250a3a517b037d796dd4d6befce8
 https://www.youtube.com/watch?v=a4P2vU7yU3c
