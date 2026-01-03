@@ -7,112 +7,134 @@ const IMAGES = [
   {
     name: 'Btn Playnow (new)',
     src: '/images/GraphicDesign/Tetr/btn_playnow_(new).png',
-    alt: ''
+    alt: '',
+    date: '2024-08-13'
   },
   {
     name: 'Mini T Spin Double Transparent',
     src: '/images/GraphicDesign/Tetr/Mini_T-Spin_Double_Transparent.webp',
-    alt: ''
+    alt: '',
+    date: '2021-07-21'
   },
   {
     name: 'Mini T Spin Double',
     src: '/images/GraphicDesign/Tetr/Mini_T-Spin_Double.webp',
-    alt: ''
+    alt: '',
+    date: '2021-07-21'
   },
   {
     name: 'My Tetris Design',
     src: '/images/GraphicDesign/Tetr/MyTetrisDesign.webp',
-    alt: ''
+    alt: '',
+    date: '2024-02-10'
   },
   {
     name: 'Tetr 1',
     src: '/images/GraphicDesign/Tetr/Tetr_1.webp',
-    alt: ''
+    alt: '',
+    date: '2021-04-05'
   },
   {
     name: 'Tetr 2',
     src: '/images/GraphicDesign/Tetr/Tetr_2.webp',
-    alt: ''
+    alt: '',
+    date: '2021-04-05'
   },
   {
     name: 'Tetr 3',
     src: '/images/GraphicDesign/Tetr/Tetr_3.webp',
-    alt: ''
+    alt: '',
+    date: '2021-04-05'
   },
   {
     name: 'Tetr Color Clear',
     src: '/images/GraphicDesign/Tetr/Tetr_ColorClear.webp',
-    alt: ''
+    alt: '',
+    date: '2020-12-07'
   },
   {
     name: 'Tetr Garbage Concept',
     src: '/images/GraphicDesign/Tetr/TetrGarbageConcept.webp',
-    alt: ''
+    alt: '',
+    date: '2025-05-30'
   },
   {
     name: 'Tetr GO',
     src: '/images/GraphicDesign/Tetr/Tetr_GO.webp',
-    alt: ''
+    alt: '',
+    date: '2021-04-05'
   },
   {
     name: 'Tetrio Battle Online Style 2',
     src: '/images/GraphicDesign/Tetr/TetrioBattleOnlineStyle2.webp',
-    alt: ''
+    alt: '',
+    date: '2020-12-31'
   },
   {
     name: 'Tetrio Battle Online Style',
     src: '/images/GraphicDesign/Tetr/TetrioBattleOnlineStyle.webp',
-    alt: ''
+    alt: '',
+    date: '2020-11-27'
   },
   {
     name: 'TETR IO Road Sign',
     src: '/images/GraphicDesign/Tetr/TETR.IO_RoadSign.webp',
-    alt: ''
+    alt: '',
+    date: '2024-09-25'
   },
   {
     name: 'Tetris Atari Arcade Widescreen',
     src: '/images/GraphicDesign/Tetr/TetrisAtariArcadeWidescreen.png',
-    alt: ''
+    alt: '',
+    date: '2023-04-22'
   },
   {
     name: 'Tetris Online Designs',
     src: '/images/GraphicDesign/Tetr/TetrisOnlineDesigns.webp',
-    alt: ''
+    alt: '',
+    date: '2021-02-25'
   },
   {
     name: 'Tetr O Spin',
     src: '/images/GraphicDesign/Tetr/Tetr_O-Spin.webp',
-    alt: ''
+    alt: '',
+    date: '202'
   },
   {
     name: 'Tetr Perfect Clear',
     src: '/images/GraphicDesign/Tetr/Tetr_PerfectClear.webp',
-    alt: ''
+    alt: '',
+    date: '2020-12-07'
   },
   {
     name: 'Tetr T Spin Mini Double Triple',
     src: '/images/GraphicDesign/Tetr/Tetr_T-Spin_Mini_DoubleTriple.webp',
-    alt: ''
+    alt: '',
+    date: '2021-09-05'
   },
   {
     name: 'TF3',
     src: '/images/GraphicDesign/Tetr/TF3.png',
-    alt: ''
+    alt: '',
+    date: '2021-07-15'
   },
   {
     name: 'Titled Tetr',
     src: '/images/GraphicDesign/Tetr/titledTetr.webp',
-    alt: ''
+    alt: '',
+    date: '2022-04-14'
   },
   {
     name: 'TOP WideScreen WIP 4x',
     src: '/images/GraphicDesign/Tetr/TOP-WideScreen-WIP.4x.png',
-    alt: ''
+    alt: '',
+    date: '2021-07-13'
   },
   {
     name: 'TOP WideScreen WIP',
     src: '/images/GraphicDesign/Tetr/TOP-WideScreen-WIP.png',
-    alt: ''
+    alt: '',
+    date: '2021-07-13'
   }
 ]
 </script>

@@ -64,6 +64,9 @@ const IMAGES = {
       name: 'Random Frutiger Aero Buttons',
       src: '/images/GraphicDesign/OC/RandomFrutigerButtons.webp',
       alt: 'A colorful Aero-like background, with a glossy sphere and some buttons in some states; Also posted to Reddit: https://www.reddit.com/r/FrutigerAero/comments/14i7i8m/random_frutiger_aero_design_i_made/',
+      links: [
+        'https://www.reddit.com/r/FrutigerAero/comments/14i7i8m/random_frutiger_aero_design_i_made/'
+      ],
       date: '2023-06-25'
     },
     {
@@ -89,151 +92,187 @@ const IMAGES = {
     {
       name: 'Media Center Thingy',
       src: '/images/GraphicDesign/OC/MediaCenterThingy.webp',
-      alt: ''
+      alt: '',
+      date: '2023-11-12'
     },
     {
       name: 'Aero GRUB Bootloader',
       src: '/images/GraphicDesign/OC/AeroGrubBootloader.webp',
-      alt: ''
+      alt: '',
+      date: '2024-04-13'
     },
     {
       name: 'Aero GRUB Startprogramm',
       src: '/images/GraphicDesign/OC/AeroGrubStartprogramm.webp',
-      alt: ''
+      alt: '',
+      date: '2024-04-13'
     },
     {
       name: 'Aero Résumé',
       src: '/images/GraphicDesign/OC/AeroResume.webp',
-      alt: ''
+      alt: '',
+      date: '2025-10-30'
     },
     {
       name: 'Thesi',
       src: '/images/GraphicDesign/OC/Thesi.webp',
-      alt: ''
+      alt: '',
+      date: '2024-01-17'
     },
     {
       name: 'Dashboard',
       src: '/images/GraphicDesign/OC/Dashboard.webp',
-      alt: ''
+      alt: '',
+      date: '2025-06-21'
     },
     {
       name: 'Forced Shutdown',
       src: '/images/GraphicDesign/OC/ForcedShutdown.webp',
-      alt: ''
+      alt: '',
+      date: '2023-01-28'
     },
     {
       name: 'Silly',
       src: '/images/GraphicDesign/OC/Silly.webp',
-      alt: ''
+      alt: '',
+      date: '2024-06-06'
     },
     {
       name: 'Pacer Test Info Screen Start',
       src: '/images/GraphicDesign/OC/PacerTestInfoScreen_Start.webp',
-      alt: ''
+      alt: '',
+      date: '2023-03-10'
     },
     {
       name: 'Pacer Test Info Screen Middle 1',
       src: '/images/GraphicDesign/OC/PacerTestInfoScreen_Middle1.webp',
-      alt: ''
+      alt: '',
+      date: '2023-03-10'
     },
     {
       name: 'Pacer Test Info Screen Middle 2',
       src: '/images/GraphicDesign/OC/PacerTestInfoScreen_Middle2.webp',
-      alt: ''
+      alt: '',
+      date: '2023-03-10'
     },
     {
       name: 'Pacer Test Info Screen End',
       src: '/images/GraphicDesign/OC/PacerTestInfoScreen_End.webp',
-      alt: ''
+      alt: '',
+      date: '2023-03-10'
     },
     {
       name: 'Skeuomorphism Website',
       src: '/images/GraphicDesign/OC/SkeuomorphismWebsite.webp',
-      alt: ''
+      alt: '',
+      date: '2024-03-04'
     },
     {
       name: 'Something',
       src: '/images/GraphicDesign/OC/Something.webp',
-      alt: ''
+      alt: '',
+      date: '2024-12-28'
     },
-        {
+    {
       name: 'Lasers Green',
       src: '/images/GraphicDesign/OC/LasersGreen.webp',
-      alt: ''
+      alt: 'Inspired by a dream I had',
+      date: '2023-10-08'
     },
     {
       name: 'Untitled',
       src: '/images/GraphicDesign/OC/untitled.webp',
-      alt: ''
+      alt: '',
+      date: '2024-12-05'
     }
   ],
   DECORATIVE: [
     {
       name: 'Frutiger Aero Sphere Circle',
       src: '/images/GraphicDesign/OC/FrutigerAeroSphereCircle.webp',
-      alt: ''
+      alt: '',
+      date: '2022-12-22'
     },
     {
       name: 'Idk (actually)',
       src: '/images/GraphicDesign/OC/idk_(actually).webp',
-      alt: ''
-    },
-    {
-      name: 'Idk Maybe Frutiger Aero',
-      src: '/images/GraphicDesign/OC/idkMaybeFrutigerAero.webp',
-      alt: ''
-    },
-    {
-      name: "I Have No Idea But It's Gay",
-      src: '/images/GraphicDesign/OC/IHaveNoIdeaButItsGay.webp',
-      alt: ''
+      alt: '',
+      date: '2024-06-09'
     },
     {
       name: 'Text Effects Demo',
       src: '/images/GraphicDesign/OC/TextEffectsDemo.webp',
-      alt: ''
+      alt: '',
+      date: '2024-06-18'
+    },
+    {
+      name: 'Idk Maybe Frutiger Aero',
+      src: '/images/GraphicDesign/OC/idkMaybeFrutigerAero.webp',
+      alt: '',
+      links: [
+        'https://www.reddit.com/r/FrutigerAero/comments/zva820/i_tried_making_a_frutiger_aero_background_i_think/'
+      ],
+      date: '2022-12-24'
+    },
+    {
+      name: "I Have No Idea But It's Gay",
+      src: '/images/GraphicDesign/OC/IHaveNoIdeaButItsGay.webp',
+      alt: '',
+      date: '2024-01-27'
     },
     {
       name: 'Wavy Lines',
       src: '/images/GraphicDesign/OC/WavyLines.webp',
-      alt: ''
+      alt: '',
+      date: '2025-06-02'
     }
   ],
   MISC: [
     {
       name: 'Ad (bad)',
       src: '/images/GraphicDesign/OC/ad_(bad).webp',
-      alt: ''
+      alt: '',
+      date: '2024-12-01'
     },
     {
       name: 'ChatGPT Will Remember That',
       src: '/images/GraphicDesign/OC/ChatGPT_will_remember_that.webp',
-      alt: ''
+      alt: '',
+      date: '2024-09-21'
     },
     {
       name: 'HTLWW Jahresbericht',
       src: '/images/GraphicDesign/OC/HTLWW_Jahresbericht.webp',
-      alt: ''
+      alt: '',
+      date: '2023-05-01'
     },
     {
       name: 'Phone Frame',
       src: '/images/GraphicDesign/OC/PhoneFrame.webp',
-      alt: ''
+      alt: '',
+      date: '2024-12-01'
     },
     {
       name: 'Profile Picture Border',
       src: '/images/GraphicDesign/OC/ProfilePictureBorder.webp',
-      alt: ''
+      alt: '',
+      date: '2024-05-14'
     },
     {
       name: 'Thermo Hygro',
       src: '/images/GraphicDesign/OC/ThermoHygro.webp',
-      alt: ''
+      alt: '',
+      links: [
+        'https://www.tfa-dostmann.de/en/product/digital-thermo-hygrometer-with-comfort-level-30-5053/',
+        'https://www.irasutoya.com/'
+      ],
+      date: '2023-07-30'
     }
     // {
     //   name: 'Vienna Lines Quick Connections Plan',
     //   src: '/images/GraphicDesign/OC/ViennaLines_QuickConnectionsPlan.webp',
-    //   alt: ''
+    //   alt: '',
+    //   date: '2025-12-03'
     // }
   ]
 }
@@ -241,10 +280,13 @@ const IMAGES = {
 
 <template>
   <div class="container">
-    <NavigationSideBySide :scrollToHeadings="NAVIGATION"
+    <NavigationSideBySide
+      :scrollToHeadings="NAVIGATION"
       :navigationButtons_queryIndex="1"
       :navigationButtons_queryParams="{ scrollTo: 'GraphicDesign' }"
-      :onlyOneLevel="true" width="personal">
+      :onlyOneLevel="true"
+      width="personal"
+    >
       <GlassCard title="Original Creations" :noCenter="true">
         <p class="category-marker">Graphic Design</p>
         <p>Here are things I've made that are mostly completely original.</p>
@@ -255,24 +297,35 @@ const IMAGES = {
       </GlassCard>
       <GlassCard>
         <h2 id="Interfaces">Interfaces-like</h2>
-        <ImageGallery :src="IMAGES.INTERFACES" :perRow="7"
-          :squareImages="true" />
+        <ImageGallery
+          :src="IMAGES.INTERFACES"
+          :perRow="7"
+          :squareImages="true"
+        />
       </GlassCard>
       <GlassCard>
         <h2 id="Decorative">Decorative</h2>
-        <ImageGallery :src="IMAGES.DECORATIVE" :perRow="7"
-          :squareImages="true" />
+        <ImageGallery
+          :src="IMAGES.DECORATIVE"
+          :perRow="7"
+          :squareImages="true"
+        />
       </GlassCard>
       <GlassCard>
         <h2 id="Misc">Miscellaneous</h2>
-        <ImageGallery :src="IMAGES.MISC" :perRow="7" :noDownload="false"
-          :squareImages="true" />
+        <ImageGallery
+          :src="IMAGES.MISC"
+          :perRow="7"
+          :noDownload="false"
+          :squareImages="true"
+        />
         <!-- <ImageGallery
         :src="[
           {
             name: 'My Media Player Classic Theme',
             src: '/images/GraphicDesign/OC/MyMediaPlayerClassicTheme.png',
-            alt: ''
+            alt: '',
+date: '202'
           }
         ]"
         :perRow="2"

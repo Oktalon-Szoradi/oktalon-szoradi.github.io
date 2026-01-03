@@ -164,102 +164,122 @@ const IMAGES = {
     {
       name: 'Aero Buttons 1',
       src: '/images/GraphicDesign/Iconography/Other/AeroButtons1.webp',
-      alt: ''
+      alt: '',
+      date: '2024-12-01'
     },
     {
       name: 'Aero Buttons 2',
       src: '/images/GraphicDesign/Iconography/Other/AeroButtons2.webp',
-      alt: ''
+      alt: '',
+      date: '2024-12-01'
     },
     {
       name: 'Aero Buttons 3',
       src: '/images/GraphicDesign/Iconography/Other/AeroButtons3.webp',
-      alt: ''
+      alt: '',
+      date: '2024-12-01'
     },
     {
       name: 'Aero Buttons 4',
       src: '/images/GraphicDesign/Iconography/Other/AeroButtons4.webp',
-      alt: ''
+      alt: '',
+      date: '2024-12-01'
     },
     {
       name: 'Aero Icon Critical Stop',
       src: '/images/GraphicDesign/Iconography/Other/AeroIcon_CriticalStop.webp',
-      alt: ''
+      alt: '',
+      date: '2022-12-22?'
     },
     {
       name: 'Aero Icon Do Not Enter',
       src: '/images/GraphicDesign/Iconography/Other/AeroIcon_DoNotEnter.webp',
-      alt: ''
+      alt: '',
+      date: '2022-12-24?'
     },
     {
       name: 'Aero Icon Success',
       src: '/images/GraphicDesign/Iconography/Other/AeroIcon_Success.webp',
-      alt: ''
+      alt: '',
+      date: '2022-12-22?'
     },
     {
       name: 'Baccess Icon Skeuomorphic',
       src: '/images/GraphicDesign/Iconography/Other/Baccess_Icon_Skeuomorphic.webp',
-      alt: ''
+      alt: '',
+      date: '2021-09-03'
     },
     {
       name: 'Broken Link (Missing Image)',
       src: '/images/GraphicDesign/Iconography/Other/BrokenLink(MissingImage).webp',
-      alt: ''
+      alt: '',
+      date: '2025-02-24'
     },
     {
       name: 'Icons 2 (signs)',
       src: '/images/GraphicDesign/Iconography/Other/Icons2(signs).webp',
-      alt: ''
+      alt: '',
+      date: '2024-09-21'
     },
     {
       name: 'Icon Win95 Speaker',
       src: '/images/GraphicDesign/Iconography/Other/Icon_Win95-Speaker.webp',
-      alt: ''
+      alt: '',
+      date: '2024-10-17'
     },
     {
       name: 'Skype Inspired Status Icons',
       src: '/images/GraphicDesign/Iconography/Other/SkypeInspiredStatusIcons.webp',
-      alt: ''
+      alt: '',
+      date: '2024-04-01'
     },
     {
       name: 'Stop Sign',
       src: '/images/GraphicDesign/Iconography/Other/StopSign.webp',
-      alt: ''
+      alt: '',
+      date: '2025-07-20'
     },
     {
       name: 'TWOFOOT CONTROL EXIT FOCUS',
       src: '/images/GraphicDesign/Iconography/Other/TWOFOOT.CONTROL.EXIT.FOCUS.webp',
-      alt: ''
+      alt: '',
+      date: '2022-09-07'
     },
     {
       name: 'Warning 2',
       src: '/images/GraphicDesign/Iconography/Other/Warning2.webp',
-      alt: ''
+      alt: '',
+      date: '2024-03-28'
     },
     {
       name: 'Warning',
       src: '/images/GraphicDesign/Iconography/Other/Warning.png',
-      alt: ''
+      alt: '',
+      date: '2023-05-25'
     },
     {
       name: 'Window Buttons',
       src: '/images/GraphicDesign/Iconography/Other/WindowButtons.webp',
-      alt: ''
+      alt: '',
+      date: '2021-01-07'
     },
     {
       name: 'Windows Aero Cube',
       src: '/images/GraphicDesign/Iconography/Other/WindowsAeroCube.webp',
-      alt: ''
+      alt: '',
+      date: '2024-06-25'
     },
     {
       name: 'Windows Folder 3D Objects',
       src: '/images/GraphicDesign/Iconography/Other/WindowsFolder3DObjects.webp',
-      alt: ''
+      alt: '',
+      date: '2024-06-25'
     },
     {
       name: 'WIP Sun',
       src: '/images/GraphicDesign/Iconography/Other/WIP_Sun.webp',
-      alt: ''
+      alt: '',
+      date: '2024-12-28'
     }
   ]
 }
@@ -267,17 +287,30 @@ const IMAGES = {
 
 <template>
   <main class="container">
-    <NavigationButtons
-      :queryIndex="1"
-      :queryParams="{ scrollTo: 'GraphicDesign' }"
-    />
+    <NavigationButtons :queryIndex="1"
+      :queryParams="{ scrollTo: 'GraphicDesign' }" />
     <GlassCard title="Icons - Graphic Design">
       <p>Coming soon…</p>
     </GlassCard>
-    <ImageGallery :src="IMAGES.RESUME" :perRow="6" :squareImages="false" />
-    <ImageGallery :src="IMAGES.GLOSSY" :perRow="6" :squareImages="false" />
-    <ImageGallery :src="IMAGES.MODERN" :perRow="6" :squareImages="false" />
-    <ImageGallery :src="IMAGES.OTHER" :perRow="6" :squareImages="false" />
+    <GlassCard id="">
+      <p class="date-marker"><code>2024-06-19</code></p>
+      <h2></h2>
+      <ImageGallery :src="IMAGES.RESUME" :perRow="6" :squareImages="false" />
+    </GlassCard>
+    <GlassCard id="">
+      <p class="date-marker">started on <code>2023-02-09</code></p>
+      <h2></h2>
+      <ImageGallery :src="IMAGES.GLOSSY" :perRow="6" :squareImages="false" />
+    </GlassCard>
+    <GlassCard id="">
+      <p class="date-marker">started on <code>2024-04-07</code></p>
+      <h2></h2>
+      <ImageGallery :src="IMAGES.MODERN" :perRow="6" :squareImages="false" />
+    </GlassCard>
+    <GlassCard id="">
+      <h2></h2>
+      <ImageGallery :src="IMAGES.OTHER" :perRow="6" :squareImages="false" />
+    </GlassCard>
   </main>
 </template>
 

@@ -77,17 +77,21 @@ const IMAGES = {
     // {
     //   name: 'Silly Cat',
     //   src: '/images/GraphicDesign/Recreations/SillyCat.webp',
-    //   alt: 'Recreation of a cartoony silly white cat drawing originally by mauzymice'
+    //   alt: 'Recreation of a cartoony silly white cat drawing originally by mauzymice',
+    //   date: '2023-11-15'
     // },
     {
       name: 'Acer Webpage Error',
       src: '/images/GraphicDesign/Recreations/SkeuomorphicErrorRecreation.webp',
-      alt: 'A recreation of the error page seen when trying to visit www.acer-apac.com/acer_web'
+      alt: 'A recreation of the error page seen when trying to visit www.acer-apac.com/acer_web',
+      links: ['www.acer-apac.com/acer_web'],
+      date: '2022-12-21'
     },
     {
       name: 'Wii U - Hulu',
       src: '/images/GraphicDesign/Recreations/WiiU_Hulu.webp',
-      alt: 'Wii U loading screen, loading Hulu, with the icon modified to be more glossy and reflective'
+      alt: 'Wii U loading screen, loading Hulu, with the icon modified to be more glossy and reflective',
+      date: '2024-04-07'
     }
   ]
 }
