@@ -88,6 +88,7 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
           <br />
           <!-- <p>My personal GitHub account which's got my own personal stuff.</p> -->
           <PushButton href="https://github.com/Talon125"> Personal </PushButton>
+          <PushButton href="https://gist.github.com/Talon125"> Gists </PushButton>
         </div>
         <div class="flex-item text-center github">
           <img class="resize" src="/icons/GitHub_School.svg" />
@@ -99,6 +100,9 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
           <PushButton href="https://github.com/Oktalon-Szoradi">
             "School"
           </PushButton>
+          <!-- <PushButton href="https://gist.github.com/Oktalon-Szoradi">
+            Gists
+          </PushButton> -->
         </div>
       </div>
     </ContactCard>
