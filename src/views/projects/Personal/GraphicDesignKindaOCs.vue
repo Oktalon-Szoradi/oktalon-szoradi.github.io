@@ -129,6 +129,18 @@ const IMAGES = [
     src: '/images/GraphicDesign/BetweenOCandRecreation/YetAnotherRunDialog.webp',
     alt: '',
     date: '2024-03-05'
+  },
+  {
+    name: 'My Media Player Classic Theme',
+    src: '/images/GraphicDesign/BetweenOCandRecreation/MyMediaPlayerClassicTheme.png',
+    alt: '',
+    date: '2025-07-09'
+  },
+  {
+    name: 'Vienna Lines - Quick Connections Plan',
+    src: '/images/GraphicDesign/BetweenOCandRecreation/ViennaLines_QuickConnectionsPlan.webp',
+    alt: '',
+    date: '2025-12-03'
   }
 ]
 </script>
