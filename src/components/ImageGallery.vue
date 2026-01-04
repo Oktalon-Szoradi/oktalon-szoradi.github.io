@@ -631,11 +631,11 @@ document.addEventListener('keydown', (event) => {
 }
 
 .gentle-fade-enter-active {
-  transition: opacity 100ms !important;
+  transition: opacity vars.$transdur-mouseenter !important;
 }
 
 .gentle-fade-leave-active {
-  transition: opacity 1000ms !important;
+  transition: opacity vars.$transdur-mouseleave !important;
 }
 
 .gentle-fade-enter-from,
