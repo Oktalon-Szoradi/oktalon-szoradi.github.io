@@ -356,6 +356,8 @@ nav {
     margin: 0 64px 0 0;
     cursor: text;
     padding: 0;
+    max-height: $navbar-height;
+    white-space: initial;
     color: hsl(0deg 0% 100% / 75%);
     /* letter-spacing: 0.1em; */
     font-size: 1.25em;
@@ -473,6 +475,18 @@ nav {
       border-image-outset: 0; */
     }
   }
+
+  @media (width < vars.$breakpoint-md) {
+    .where-am-i {
+      font-size: 1.125em;
+    }
+  }
+
+  @media (width < vars.$breakpoint-sm) {
+    .where-am-i {
+      margin: 0;
+    }
+  }
 }
 
 .nav-adjust {
@@ -514,6 +528,7 @@ nav {
   background-size: 128px 171px;
   padding: 0 16px 0 0;
   width: 128px;
+  min-width: 128px;
 
   &:hover {
     background-position: left -58.5px;
