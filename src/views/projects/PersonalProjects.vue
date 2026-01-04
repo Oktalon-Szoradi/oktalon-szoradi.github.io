@@ -169,7 +169,7 @@ const NAVIGATION: ScrollToObjects[] = [
           </ProjectLink>
         </div>
       </GlassCard>
-      <GlassCard id="Misc" title="Miscellaneous">
+      <GlassCard id="Misc" title="Mis&shy;cel&shy;la&shy;ne&shy;ous">
         <div class="flex flex-many">
           <!-- <ProjectLink
             title="EU English Linux Locale"

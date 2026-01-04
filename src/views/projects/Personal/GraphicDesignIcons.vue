@@ -354,7 +354,7 @@ const IMAGES = {
         <ImageGallery :src="IMAGES.MODERN" :perRow="6" :squareImages="false" />
       </GlassCard>
       <GlassCard id="Misc">
-        <h2>Miscellaneous</h2>
+        <h2>Mis&shy;cel&shy;la&shy;ne&shy;ous</h2>
         <p>Other stuff I made which are icon-like.</p>
         <ImageGallery :src="IMAGES.OTHER" :perRow="6" :squareImages="false" />
       </GlassCard>

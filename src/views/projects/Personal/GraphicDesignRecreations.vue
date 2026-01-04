@@ -200,7 +200,7 @@ const IMAGES = {
         />
       </GlassCard>
       <GlassCard>
-        <h2 id="Misc">Miscellaneous</h2>
+        <h2 id="Misc">Mis&shy;cel&shy;la&shy;ne&shy;ous</h2>
         <ImageGallery :src="IMAGES.MISC" :perRow="4" :squareImages="false" />
       </GlassCard>
     </NavigationSideBySide>
