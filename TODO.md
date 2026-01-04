@@ -19,6 +19,7 @@ This is a personal To-Do-List for my website.
   - [ ] Mobile
     - [ ] logo can get cut off
     - [ ] `.where-am-i` overlaps logo if too long
+    - [ ] NavigationButtons aren't vertically snug if screen width is wayy too narrow (phones and zoom be like)
 - Personal Projects
   - [x] My own Soundtrap songs/recreations
   - [ ] Graphic Designs!
