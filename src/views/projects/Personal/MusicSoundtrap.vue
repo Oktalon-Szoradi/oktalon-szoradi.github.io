@@ -352,12 +352,12 @@ const NAVIGATION: ScrollToObjects[] = [
     <GlassCard>
       <div id="cheer" class="audio-section">
         <h3>"Cheer"</h3>
-        <AudioHandler src="/audio/_Cheer_.flac" />
+        <AudioHandler src="/audio/Cheer.flac" />
         <div class="button-section">
-          <PushButton color="purple" href="/audio/_Cheer_.flac"
+          <PushButton color="purple" href="/audio/Cheer.flac"
             >Download FLAC
           </PushButton>
-          <PushButton color="purple" href="/audio/_Cheer_.mid"
+          <PushButton color="purple" href="/audio/Cheer.mid"
             >Download MIDI
           </PushButton>
         </div>
