@@ -175,7 +175,7 @@ watch(
 .navigation-buttons {
   :deep(a),
   :deep(button) {
-    margin-top: 4px;
+    margin-top: 4px !important;
   }
 }
 
@@ -239,17 +239,17 @@ watch(
   }
 }
 
-main {
-  :deep(.first-card),
-  :deep(.main-card) {
-    margin: 1em 0;
-  }
-}
+// main {
+//   :deep(.first-card),
+//   :deep(.main-card) {
+//     margin: 1em 0;
+//   }
+// }
 
 @media (width < vars.$breakpoint-lg) {
   .flex {
     flex-direction: column;
-    gap: 0;
+    // gap: 0;
 
     aside {
       display: block;
@@ -293,7 +293,8 @@ main {
   main {
     :deep(.first-card),
     :deep(.main-card) {
-      margin: 0 1em 2em;
+      // margin: 0 1em 2em;
+      margin-top: 1em;
     }
   }
 }
