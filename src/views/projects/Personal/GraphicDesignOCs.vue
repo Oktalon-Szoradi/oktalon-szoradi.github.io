@@ -215,7 +215,7 @@ const IMAGES = {
       date: '2024-06-18'
     },
     {
-      name: 'Idk Maybe Frutiger Aero',
+      name: 'idk maybe Frutiger Aero',
       src: '/images/GraphicDesign/OC/idkMaybeFrutigerAero.webp',
       alt: 'Tried to make a background in a <Frutiger Aero>-like style, but put too many elements',
       links: [

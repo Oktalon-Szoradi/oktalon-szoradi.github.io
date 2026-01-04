@@ -83,7 +83,7 @@ const IMAGES = [
     date: '2025-06-09'
   },
   {
-    name: 'Windows Aero Error Idk',
+    name: 'Windows Aero Error idk',
     src: '/images/GraphicDesign/BetweenOCandRecreation/WindowsAeroErrorIdk.webp',
     alt: 'Various Windows Vista-like pop-up windows',
     date: '2024-12-01'
