@@ -16,6 +16,9 @@ This is a personal To-Do-List for my website.
   - [ ] Webkit (Safari)
     - [ ] Download [PNG|JPG] button icon's underline collides with arrow point;
           Find an actual icon
+  - [ ] Mobile
+    - [ ] logo can get cut off
+    - [ ] `.where-am-i` overlaps logo if too long
 - Personal Projects
   - [x] My own Soundtrap songs/recreations
   - [ ] Graphic Designs!
