@@ -180,7 +180,8 @@ const IMAGES = {
     {
       name: 'Lasers Green',
       src: '/images/GraphicDesign/OC/LasersGreen.webp',
-      alt: 'Concept for a laser aesthetic website: Green. Inspired by a dream I had. Could also use red or blue',
+      alt: 'Concept for a laser aesthetic website: Green. Inspired by a dream I had. Could also use red or blue. Text from Wikipedia',
+      links: ['https://en.wikipedia.org/wiki/Green'],
       date: '2023-10-08'
     },
     {
@@ -358,7 +359,7 @@ const IMAGES = {
     {
       name: 'Thermo Hygro',
       src: '/images/GraphicDesign/OC/ThermoHygro.webp',
-      alt: 'Graph showing when the face on a specific thermo-/hygrometer smiles/frowns according to the manual. Background graphics for ice cubes, sun, deser, and rain from irasutoya.com',
+      alt: 'Graph showing when the face on a specific thermo-/hygrometer smiles/frowns according to the manual. Background graphics for ice cubes, sun, desert, and rain from irasutoya.com',
       links: [
         'https://www.tfa-dostmann.de/en/product/digital-thermo-hygrometer-with-comfort-level-30-5053/',
         'https://www.irasutoya.com/'
