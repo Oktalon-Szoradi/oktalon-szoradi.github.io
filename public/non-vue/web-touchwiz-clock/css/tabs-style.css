@@ -73,17 +73,17 @@
     &:active {
       .tab-icon {
         #tab-stopwatch & {
-          background: url("/assets/images/clock_tab_stopwatch_press.svg") no-repeat center/cover;
+          background: url("../assets/images/clock_tab_stopwatch_press.svg") no-repeat center/cover;
           filter: drop-shadow(0 2px 2px black);
         }
 
         #tab-timer & {
-          background: url("/assets/images/clock_tab_timer_press.svg") no-repeat center/cover;
+          background: url("../assets/images/clock_tab_timer_press.svg") no-repeat center/cover;
           filter: drop-shadow(0 2px 2px black);
         }
 
         #tab-clock & {
-          background: url("/assets/images/clock_tab_deskclock_press.svg") no-repeat center/cover;
+          background: url("../assets/images/clock_tab_deskclock_press.svg") no-repeat center/cover;
           filter: drop-shadow(0 2px 2px black);
         }
       }
@@ -95,15 +95,15 @@
       inline-size: 32px;
 
       #tab-stopwatch & {
-        background: url("/assets/images/clock_tab_stopwatch.svg") no-repeat center/cover;
+        background: url("../assets/images/clock_tab_stopwatch.svg") no-repeat center/cover;
       }
 
       #tab-timer & {
-        background: url("/assets/images/clock_tab_timer.svg") no-repeat center/cover;
+        background: url("../assets/images/clock_tab_timer.svg") no-repeat center/cover;
       }
 
       #tab-clock & {
-        background: url("/assets/images/clock_tab_deskclock.svg") no-repeat center/cover;
+        background: url("../assets/images/clock_tab_deskclock.svg") no-repeat center/cover;
       }
     }
 
@@ -114,17 +114,17 @@
 
       .tab-icon {
         #tab-stopwatch & {
-          background: url("/assets/images/clock_tab_stopwatch_press.svg") no-repeat center/cover;
+          background: url("../assets/images/clock_tab_stopwatch_press.svg") no-repeat center/cover;
           filter: drop-shadow(0 2px 2px black);
         }
 
         #tab-timer & {
-          background: url("/assets/images/clock_tab_timer_press.svg") no-repeat center/cover;
+          background: url("../assets/images/clock_tab_timer_press.svg") no-repeat center/cover;
           filter: drop-shadow(0 2px 2px black);
         }
 
         #tab-clock & {
-          background: url("/assets/images/clock_tab_deskclock_press.svg") no-repeat center/cover;
+          background: url("../assets/images/clock_tab_deskclock_press.svg") no-repeat center/cover;
           filter: drop-shadow(0 2px 2px black);
         }
       }

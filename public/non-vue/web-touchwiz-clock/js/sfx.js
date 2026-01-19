@@ -1,7 +1,7 @@
 /* eslint-env browser */
 
-const SFX_TOUCH = new Audio('/assets/media/TW_Touch.ogg')
-// const SFX_TOUCH_ALT = new Audio('/assets/media/simple_ripple_down.ogg')
+const SFX_TOUCH = new Audio('./assets/media/TW_Touch.ogg')
+// const SFX_TOUCH_ALT = new Audio('./assets/media/simple_ripple_down.ogg')
 SFX_TOUCH.preload = 'auto'
 
 const ELEMENTS = ['button', 'select']

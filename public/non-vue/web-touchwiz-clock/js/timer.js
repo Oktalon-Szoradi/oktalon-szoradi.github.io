@@ -23,7 +23,7 @@ const BUTTON_STOP = document.getElementById('timer-stop')
 const BUTTON_RESUME = document.getElementById('timer-resume')
 const BUTTON_RESET = document.getElementById('timer-reset')
 
-const SFX_TIMER_END = new Audio('/assets/media/Ticktac.ogg')
+const SFX_TIMER_END = new Audio('./assets/media/Ticktac.ogg')
 SFX_TIMER_END.preload = 'auto'
 SFX_TIMER_END.loop = true
 

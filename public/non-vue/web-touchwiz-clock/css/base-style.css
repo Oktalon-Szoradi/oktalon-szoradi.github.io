@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Android Clock";
-  src: url("/assets/fonts/AndroidClock.ttf");
+  src: url("../assets/fonts/AndroidClock.ttf");
 }
 
 @font-face {
   font-family: "7-Segment";
   font-display: block;
-  src: url("/assets/fonts/7segment.ttf");
+  src: url("../assets/fonts/7segment.ttf");
 }
 
 :root {
@@ -32,7 +32,7 @@ body {
   position: fixed;
   opacity: 0.5;
   z-index: -10;
-  background-image: url("/assets/images/timer_bg_\(edited\).png");
+  background-image: url("../assets/images/timer_bg_\(edited\).png");
   block-size: 100vb;
   inline-size: 100vi;
 }
