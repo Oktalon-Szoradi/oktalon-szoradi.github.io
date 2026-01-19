@@ -119,21 +119,24 @@ function getTimeStr (dateObject) {
 }
 
 function getDateStr (dateObject) {
-  const optionsDate = {
-    timeZone: 'Europe/Vienna',
-    year: 'numeric',
-    month: 'numeric',
-    day: 'numeric'
-  }
+  // const optionsDate = {
+  //   timeZone: setTimeZone,
+  //   year: 'numeric',
+  //   month: 'numeric',
+  //   day: 'numeric'
+  // }
   const optionsWeekDay = {
-    timeZone: 'Europe/Vienna',
+    timeZone: setTimeZone,
     weekday: 'long'
   }
   const optionsMonth = {
-    timeZone: 'Europe/Vienna',
+    timeZone: setTimeZone,
     month: 'long'
   }
-  const dateISO = dateObject.toLocaleDateString('se', optionsDate)
+  // const dateISO = dateObject.toLocaleDateString('se', optionsDate)
+  const dateISO = `${dateObject.getFullYear()}-${String(
+    dateObject.getMonth() + 1
+  ).padStart(2, '0')}-${String(dateObject.getDate()).padStart(2, '0')}`
   const weekday = dateObject.toLocaleDateString('en-US', optionsWeekDay)
   const month = dateObject.toLocaleDateString('en-US', optionsMonth)
 
