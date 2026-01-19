@@ -181,17 +181,26 @@ function actionReset () {
   HELP_TEXT.innerText = 'After you click Start, the Stopwatch will start.'
 }
 
-BUTTON_START.addEventListener('mousedown', actionStart)
-BUTTON_START.addEventListener('click', actionStart)
+function bindButton(button, action) {
+  let activated = false;
 
-BUTTON_STOP.addEventListener('mousedown', actionStop)
-BUTTON_STOP.addEventListener('click', actionStop)
+  button.addEventListener('pointerdown', e => {
+    if (e.pointerType === 'mouse' || e.pointerType === 'touch') {
+      activated = true;
+      action();
+    }
+  });
 
-BUTTON_LAP.addEventListener('mousedown', actionLap)
-BUTTON_LAP.addEventListener('click', actionLap)
+  button.addEventListener('click', () => {
+    if (!activated) {
+      action();
+    }
+    activated = false;
+  });
+}
 
-BUTTON_RESUME.addEventListener('mousedown', actionResume)
-BUTTON_RESUME.addEventListener('click', actionResume)
-
-BUTTON_RESET.addEventListener('mousedown', actionReset)
-BUTTON_RESET.addEventListener('click', actionReset)
+bindButton(BUTTON_START, actionStart);
+bindButton(BUTTON_STOP, actionStop);
+bindButton(BUTTON_LAP, actionLap);
+bindButton(BUTTON_RESUME, actionResume);
+bindButton(BUTTON_RESET, actionReset);
