@@ -1,0 +1,39 @@
+{
+  "extends": ["stylelint-config-concentric-order", "stylelint-config-standard"],
+  "plugins": [
+    "stylelint-high-performance-animation",
+    "stylelint-media-use-custom-media",
+    "stylelint-no-browser-hacks",
+    "stylelint-no-unsupported-browser-features",
+    "stylelint-plugin-logical-css",
+    "stylelint-plugin-use-baseline",
+    "stylelint-use-nesting",
+    "stylelint-value-no-unknown-custom-properties"
+  ],
+  "rules": {
+    "csstools/media-use-custom-media": "always",
+    "csstools/use-nesting": "always",
+    "plugin/no-browser-hacks": [true],
+    "plugin/no-low-performance-animation-properties": true,
+    "plugin/no-unsupported-browser-features": null,
+    "plugin/use-baseline": [
+      true,
+      {
+        "available": "newly"
+      }
+    ],
+    "plugin/use-logical-properties-and-values": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ],
+    "plugin/use-logical-units": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ],
+    "comment-empty-line-before": null
+  }
+}

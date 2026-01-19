@@ -1,0 +1,6 @@
+Source: SPH-M830 (Samsung Galaxy Rush) on Android Jellybean 4.1.2  
+in directory: `/system/fonts/`
+
+License unknown; may be proprietary!
+
+Apart of TouchWiz by Samsung
