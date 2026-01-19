@@ -8,8 +8,8 @@ import type { ScrollToObjects } from '@/assets/types'
 
 const NAVIGATION: ScrollToObjects[] = [
   {
-    name: 'Games',
-    id: 'Games'
+    name: 'Games & Utilities',
+    id: 'GamesAndUtil'
     // children: [
     //   {
     //     name: 'Tetra Legends Ultimate',
@@ -31,7 +31,6 @@ const NAVIGATION: ScrollToObjects[] = [
   }
 ]
 </script>
-
 <template>
   <div class="container">
     <NavigationSideBySide
@@ -39,7 +38,7 @@ const NAVIGATION: ScrollToObjects[] = [
       :navigationButtons_queryIndex="1"
       :onlyOneLevel="true"
     >
-      <GlassCard id="Games" class="first-card" title="Games">
+      <GlassCard id="GamesAndUtil" class="first-card" title="Games & Utilities">
         <div class="flex flex-many">
           <ProjectLink
             id="TLU"
@@ -61,6 +60,22 @@ const NAVIGATION: ScrollToObjects[] = [
               </PushButton>
               <PushButton href="https://github.com/Talon125/talon125.github.io">
                 GitHub Repository
+              </PushButton>
+            </div>
+          </ProjectLink>
+          <ProjectLink
+            id="WebTouchWizClock"
+            title="Web TouchWiz Clock"
+            icon_src="/images/thumbnails/Thumbnail_PersonalProjects-WebTouchWizClock.png"
+          >
+            <p>
+              Stopwatch, Timer, and Clock; where the UI is based on the default
+              clock app you'd see on Samsung devices running the TouchWiz UI,
+              like the Samsung Galaxy Rush. Complete with touch sound effects!
+            </p>
+            <div class="text-center">
+              <PushButton href="/non-vue/web-touchwiz-clock/index.html">
+                View
               </PushButton>
             </div>
           </ProjectLink>
@@ -222,7 +237,6 @@ const NAVIGATION: ScrollToObjects[] = [
     </NavigationSideBySide>
   </div>
 </template>
-
 <style scoped lang="scss">
 @use '@/assets/extra_layout_side-by-side';
 @use '@/assets/variables.scss' as vars;
