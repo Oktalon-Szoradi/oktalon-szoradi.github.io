@@ -1,0 +1,10 @@
+SPH-M830 (Samsung Galaxy Rush) on Android Jellybean 4.1.2
+
+/app/ClockPackage.apk
+
+inside the APK...
+- /res/drawable-sw320dp-mdpi/icon.png
+- /res/drawable-sw320dp-mdpi/stopwatch.png
+- /res/drawable-sw320dp-mdpi/timer.png
+- res/drawable-sw320dp-land-hdpi/timer_bg.png
+- clock_tab icons also in /res/drawable-sw320dp-mdpi/

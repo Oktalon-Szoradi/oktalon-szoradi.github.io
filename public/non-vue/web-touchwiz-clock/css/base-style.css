@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Android Clock";
+  src: url("/assets/fonts/AndroidClock.ttf");
+}
+
+@font-face {
+  font-family: "7-Segment";
+  font-display: block;
+  src: url("/assets/fonts/7segment.ttf");
+}
+
+:root {
+  color-scheme: only dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  block-size: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: #2D2A2A;
+  block-size: 100%;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.1rem;
+}
+
+#background {
+  position: fixed;
+  opacity: 0.5;
+  z-index: -10;
+  background-image: url("/assets/images/timer_bg_\(edited\).png");
+  block-size: 100vb;
+  inline-size: 100vi;
+}

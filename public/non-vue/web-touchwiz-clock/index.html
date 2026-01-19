@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link type="image/png" rel="icon" href="assets/images/icon.png"
+      sizes="40x40">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="css/base-style.css">
+    <link rel="stylesheet" href="css/tabs-style.css">
+    <link rel="stylesheet" href="css/main-style.css">
+    <link rel="stylesheet" href="css/sky-gradients.css">
+  </head>
+  <body>
+    <div id="background"></div>
+    <div class="tab-bar">
+      <button class="tab tab-active" id="tab-stopwatch" type="button">
+        <i class="tab-icon"></i>
+        <span class="tab-label">Stopwatch</span>
+      </button>
+      <span class="separator"></span>
+      <button class="tab" id="tab-timer" type="button">
+        <i class="tab-icon"></i>
+        <span class="tab-label">Timer</span>
+      </button>
+      <button class="tab" id="tab-clock" type="button">
+        <i class="tab-icon"></i>
+        <span class="tab-label">Desk Clock</span>
+      </button>
+    </div>
+    <main>
+      <section class="tab-content" id="content-stopwatch">
+        <div class="top-panel">
+          <h1 id="stopwatch">
+            <span class="hhmmss">00:00:00</span><span
+              class="centiseconds">00</span>
+          </h1>
+          <span class="separator"></span>
+        </div>
+        <div class="content-panel">
+          <div id="stopwatch-help">
+            <img src="/assets/images/stopwatch.svg" alt="Stopwatch">
+            <p class="help-text" id="stopwatch-help-text">After you click Start,
+              the Stopwatch will start.</p>
+          </div>
+          <div id="stopwatch-laps"></div>
+        </div>
+        <div class="bottom-panel">
+          <span class="separator"></span>
+          <div class="button-panel">
+            <button class="button button-green immediate" id="stopwatch-start"
+              type="button">Start</button>
+            <div class="button-area" id="stopwatch-buttons-started" hidden>
+              <button class="button button-red immediate" id="stopwatch-stop"
+                type="button">Stop</button>
+              <button class="button immediate" id="stopwatch-lap"
+                type="button">Lap</button>
+            </div>
+            <div class="button-area" id="stopwatch-buttons-stopped" hidden>
+              <button class="button button-green immediate"
+                id="stopwatch-resume" type="button">Resume</button>
+              <button class="button immediate" id="stopwatch-reset"
+                type="button">Reset</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="tab-content" id="content-timer" hidden>
+        <div class="content-panel">
+          <h2 hidden>Countdown Timer</h2>
+          <div id="timer">
+            <div class="labels help-text">
+              <label for="timer-hours">Hours</label>
+              <label for="timer-minutes">Minutes</label>
+              <label for="timer-seconds">Seconds</label>
+            </div>
+            <div class="timer">
+              <div class="input-wrapper">
+                <span class="backdrop">88</span>
+                <input id="timer-hours" type="text" value="00"
+                  inputmode="numeric" max="99" maxlength="2" min="00">
+              </div>
+              <span>:</span>
+              <div class="input-wrapper">
+                <span class="backdrop">88</span>
+                <input id="timer-minutes" type="text" value="00"
+                  inputmode="numeric" max="59" maxlength="2" min="00">
+              </div>
+              <span>:</span>
+              <div class="input-wrapper">
+                <span class="backdrop">88</span>
+                <input id="timer-seconds" type="text" value="00"
+                  inputmode="numeric" max="59" maxlength="2" min="00">
+              </div>
+            </div>
+          </div>
+          <div class="help-text" id="timer-help-text">
+            <span><br><br> Click a digit section of the timer and enter a number
+              to set it. <br> You can also use the scroll wheel. </span>
+          </div>
+        </div>
+        <div class="bottom-panel">
+          <span class="separator"></span>
+          <div class="button-panel">
+            <button class="button button-green" id="timer-start"
+              type="button">Start</button>
+            <div class="button-area" id="timer-button-group" hidden>
+              <button class="button button-red" id="timer-stop"
+                type="button">Stop</button>
+              <button class="button button-green" id="timer-resume"
+                type="button" hidden>Resume</button>
+              <button class="button" id="timer-reset"
+                type="button">Reset</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="tab-content" id="content-clock" hidden>
+        <div class="top-panel">
+          <span id="clock-progress">You are ?% through the day</span>
+          <div class="time-bar-area">
+            <div class="time-bar-labels">
+              <span class="time-bar-label">0</span>
+              <span class="time-bar-label">1</span>
+              <span class="time-bar-label">2</span>
+              <span class="time-bar-label">3</span>
+              <span class="time-bar-label">4</span>
+              <span class="time-bar-label">5</span>
+              <span class="time-bar-label">6</span>
+              <span class="time-bar-label">7</span>
+              <span class="time-bar-label">8</span>
+              <span class="time-bar-label">9</span>
+              <span class="time-bar-label">10</span>
+              <span class="time-bar-label">11</span>
+              <span class="time-bar-label">12</span>
+              <span class="time-bar-label">13</span>
+              <span class="time-bar-label">14</span>
+              <span class="time-bar-label">15</span>
+              <span class="time-bar-label">16</span>
+              <span class="time-bar-label">17</span>
+              <span class="time-bar-label">18</span>
+              <span class="time-bar-label">19</span>
+              <span class="time-bar-label">20</span>
+              <span class="time-bar-label">21</span>
+              <span class="time-bar-label">22</span>
+              <span class="time-bar-label">23</span>
+              <span class="time-bar-label">24</span>
+            </div>
+            <progress id="time-bar" value="0"></progress>
+          </div>
+        </div>
+        <div class="content-panel">
+          <h2 id="clock-time">
+            <span id="clock-time-hhmm">00:00</span><span
+              id="clock-time-ss">00</span><br>
+          </h2>
+          <span id="clock-date">0000-00-00</span>
+        </div>
+        <div class="bottom-panel">
+          <span class="separator"></span>
+          <div class="button-panel">
+            <button class="button" id="clock-settings"
+              type="button">Settings</button>
+          </div>
+        </div>
+        <div class="popup-area" id="clock-settings-popup" hidden>
+          <div class="popup-window">
+            <div class="popup-title">Desk Clock Settings</div>
+            <div class="popup-content">
+              <label for="clock-settings-timezone">Time Zone:</label>
+              <input id="clock-settings-timezone"
+                list="clock-settings-timezone-options">
+              <datalist id="clock-settings-timezone-options"></datalist>
+              <span class="error-text" hidden>Invalid time zone</span>
+            </div>
+            <div class="popup-buttons">
+              <button id="clock-settings-button-cancel"
+                type="button">Cancel</button>
+              <button id="clock-settings-button-ok" type="button">OK</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="popup-area" id="popup-area" hidden>
+      <div class="popup-window">
+        <div class="popup-title"></div>
+        <div class="popup-content"></div>
+        <div class="popup-buttons"></div>
+      </div>
+    </div>
+    <script src="js/tabs.js" type="module"></script>
+    <script src="js/stopwatch.js" type="module"></script>
+    <script src="js/timer.js" type="module"></script>
+    <script src="js/clock.js" type="module"></script>
+    <script src="js/sfx.js" type="module"></script>
+    <!-- <script src="/pwa.js" type="module"></script> -->
+  </body>
+</html>
