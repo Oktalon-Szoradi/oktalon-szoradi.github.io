@@ -56,7 +56,7 @@ for (const timeZone of TIME_ZONES) {
 }
 
 // let setTimeZone = 'UTC'
-let setTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone ?? 'UTC'
+let setTimeZone = Intl?.DateTimeFormat()?.resolvedOptions()?.timeZone ?? 'UTC'
 SETTINGS_INPUT_TIME_ZONE.value = setTimeZone
 BUTTON_SETTINGS.innerText = `Time Zone: ${setTimeZone}`
 
