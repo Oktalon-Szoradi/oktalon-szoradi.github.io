@@ -47,7 +47,10 @@ function enableInput () {
 
 function afterResetStuff () {
   APP_INFO.appNameParts = APP_INFO.appNameParts.filter(
-    part => part !== 'Timer Running' && part !== 'Timer Done!'
+    part =>
+      part !== 'Timer Running' &&
+      part !== 'Timer Paused' &&
+      part !== 'Timer Done!'
   )
   updateAppName()
 
@@ -116,7 +119,7 @@ function timerIsDoneStuff () {
   updateAppName()
 
   // eslint-disable-next-line no-irregular-whitespace
-  setPopupTitle(`Time is up • ${formattedTime.hhmmss}`)
+  setPopupTitle(`Time is up – ${formattedTime.hhmmss}`)
   setPopupContent(`Your ${naturalJoin(timer)} timer is up`)
   const buttonOK = newButton('OK')
   requestAnimationFrame(() => buttonOK.focus())

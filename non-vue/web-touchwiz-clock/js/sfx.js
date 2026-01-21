@@ -4,6 +4,10 @@ const SFX_TOUCH = new Audio('./assets/media/TW_Touch.ogg')
 // const SFX_TOUCH_ALT = new Audio('./assets/media/simple_ripple_down.ogg')
 SFX_TOUCH.preload = 'auto'
 
+export function playTouchSound () {
+  SFX_TOUCH.cloneNode().play()
+}
+
 const ELEMENTS = ['button', 'select']
 
 ;['click', 'mousedown', 'keydown'].forEach(eventName => {
@@ -25,7 +29,7 @@ const ELEMENTS = ['button', 'select']
         (e.key === ' ' || e.key === 'Enter')) ||
       (eventName === 'mousedown' && isImmediate)
     ) {
-      SFX_TOUCH.cloneNode().play()
+      playTouchSound()
     }
   })
 })
