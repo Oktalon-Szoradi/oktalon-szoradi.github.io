@@ -1,3 +1,5 @@
+import { playTouchSound } from './sfx.js'
+
 const EL_BACKGROUND = document.getElementById('content-clock')
 const EL_THE_TIME = document.getElementById('clock-time-hhmm')
 const EL_SECONDS = document.getElementById('clock-time-ss')
@@ -53,7 +55,8 @@ for (const timeZone of TIME_ZONES) {
   SETTINGS_DATALIST_TIME_ZONE_OPTIONS.appendChild(option)
 }
 
-let setTimeZone = 'UTC'
+// let setTimeZone = 'UTC'
+let setTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone ?? 'UTC'
 SETTINGS_INPUT_TIME_ZONE.value = setTimeZone
 BUTTON_SETTINGS.innerText = `Time Zone: ${setTimeZone}`
 
@@ -101,11 +104,26 @@ function updateProgress (timeStr) {
 
 function updateDateTime (timeStr, dateStr) {
   const [hours, minutes, seconds] = timeStr.split(':')
-  EL_THE_TIME.innerText = `${hours}:${minutes}`
-  // const secondsWithoutLeadingZero = Number(seconds)
-  // EL_SECONDS.innerText = `and ${secondsWithoutLeadingZero} seconds | ${TIME_ZONE}`
-  EL_SECONDS.innerText = `:${seconds}`
-  EL_THE_DATE.innerHTML = `&numsp;${dateStr}`
+  const newHHMM = `${hours}:${minutes}`
+  const newSS = `:${seconds}`
+  const newDate = dateStr.dateISO
+  if (EL_THE_TIME.innerText !== newHHMM) {
+    EL_THE_TIME.innerText = `${hours}:${minutes}`
+  }
+  if (EL_SECONDS.innerText !== newSS) {
+    EL_SECONDS.innerText = `:${seconds}`
+  }
+  // console.log('EL_THE_DATE.innerText:', EL_THE_DATE.innerText)
+  // console.log('EL_THE_DATE.innerHTML:', EL_THE_DATE.innerHTML)
+  // console.log('              newDate:', newDate)
+  // console.log(
+  //   'EL_THE_DATE.innerHTML !== newDate',
+  //   EL_THE_DATE.innerHTML !== newDate
+  // )
+  if (EL_THE_DATE.dataset.value !== newDate) {
+    EL_THE_DATE.innerHTML = `&numsp;${dateStr.html}`
+    EL_THE_DATE.dataset.value = `${dateStr.dateISO}`
+  }
 }
 
 function getTimeStr (dateObject) {
@@ -141,7 +159,12 @@ function getDateStr (dateObject) {
   const month = dateObject.toLocaleDateString('en-US', optionsMonth)
 
   // return `${dateISO} | ${weekday}, ${month}`
-  return `${dateISO}<br>&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;${month}, ${weekday}`
+  return {
+    dateISO,
+    month,
+    weekday,
+    html: `${dateISO}<br>&numsp;&numsp;&numsp;&numsp;&numsp;&numsp;${month}, ${weekday}`
+  }
 }
 
 function main () {
@@ -164,6 +187,7 @@ function closePopupSettings () {
   EL_SETTINGS_WINDOW.classList.toggle('close')
   setTimeout(() => {
     EL_SETTINGS_AREA.hidden = true
+    // SETTINGS_INPUT_TIME_ZONE.value = setTimeZone
     EL_SETTINGS_AREA.classList.toggle('close')
     EL_SETTINGS_WINDOW.classList.toggle('close')
   }, 250)
@@ -189,6 +213,7 @@ BUTTON_SETTINGS.addEventListener('click', () => {
 })
 
 BUTTON_SETTINGS_CANCEL.addEventListener('click', () => {
+  SETTINGS_INPUT_TIME_ZONE.value = setTimeZone
   closePopupSettings()
 })
 
@@ -203,6 +228,7 @@ SETTINGS_INPUT_TIME_ZONE.addEventListener('focus', () => {
 SETTINGS_INPUT_TIME_ZONE.addEventListener('keydown', e => {
   switch (e.key) {
     case 'Enter':
+      playTouchSound()
       submitSettings()
       break
   }

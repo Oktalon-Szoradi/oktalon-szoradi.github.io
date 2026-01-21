@@ -2,7 +2,6 @@
   "extends": ["stylelint-config-concentric-order", "stylelint-config-standard"],
   "plugins": [
     "stylelint-high-performance-animation",
-    "stylelint-media-use-custom-media",
     "stylelint-no-browser-hacks",
     "stylelint-no-unsupported-browser-features",
     "stylelint-plugin-logical-css",
@@ -11,7 +10,6 @@
     "stylelint-value-no-unknown-custom-properties"
   ],
   "rules": {
-    "csstools/media-use-custom-media": "always",
     "csstools/use-nesting": "always",
     "plugin/no-browser-hacks": [true],
     "plugin/no-low-performance-animation-properties": true,
