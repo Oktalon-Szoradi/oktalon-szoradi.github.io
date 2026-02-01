@@ -1,4 +1,4 @@
-.tab-bar {
+.tab-bar:not([hidden]) {
   display: flex;
   position: sticky;
   inset-block-start: 0;
@@ -86,6 +86,11 @@
           background: url("../assets/images/clock_tab_deskclock_press.svg") no-repeat center/cover;
           filter: drop-shadow(0 2px 2px black);
         }
+        
+        #tab-settings & {
+          background: url("../assets/images/tw_action_bar_icon_setting_holo_dark.svg") no-repeat center/cover;
+          filter: drop-shadow(0 2px 2px black);
+        }
       }
     }
 
@@ -104,6 +109,10 @@
 
       #tab-clock & {
         background: url("../assets/images/clock_tab_deskclock.svg") no-repeat center/cover;
+      }
+      
+      #tab-settings & {
+        background: url("../assets/images/clock_tab_settings.svg") no-repeat center/cover;
       }
     }
 
@@ -125,6 +134,11 @@
 
         #tab-clock & {
           background: url("../assets/images/clock_tab_deskclock_press.svg") no-repeat center/cover;
+          filter: drop-shadow(0 2px 2px black);
+        }
+        
+        #tab-settings & {
+          background: url("../assets/images/tw_action_bar_icon_setting_holo_dark.svg") no-repeat center/cover;
           filter: drop-shadow(0 2px 2px black);
         }
       }

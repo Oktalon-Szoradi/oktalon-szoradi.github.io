@@ -1,5 +1,7 @@
 /* eslint-env browser */
 
+import { endAnimation } from './util.js'
+
 export const POPUP_AREA = document.getElementById('popup-area')
 export const POPUP_WINDOW = document.querySelector('#popup-area .popup-window')
 export const POPUP_WINDOW_TITLE = document.querySelector(
@@ -19,11 +21,11 @@ export function showPopup () {
 export function hidePopup () {
   POPUP_AREA.classList.toggle('close')
   POPUP_WINDOW.classList.toggle('close')
-  setTimeout(() => {
+  endAnimation(POPUP_AREA, () => {
     POPUP_AREA.hidden = true
     POPUP_AREA.classList.toggle('close')
     POPUP_WINDOW.classList.toggle('close')
-  }, 250)
+  })
 }
 
 export function setPopupTitle (title) {

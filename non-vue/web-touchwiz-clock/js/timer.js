@@ -1,6 +1,12 @@
 /* eslint-env browser */
 
-import { APP_INFO, updateAppName, naturalJoin, formatTime } from './util.js'
+import {
+  APP_INFO,
+  updateAppName,
+  naturalJoin,
+  formatTime,
+  endAnimation
+} from './util.js'
 import {
   POPUP_WINDOW_BUTTONS,
   showPopup,
@@ -9,13 +15,40 @@ import {
   setPopupContent,
   newButton
 } from './popup.js'
+import { playTouchSound } from './sfx.js'
 
 const TIMER_HOURS = document.getElementById('timer-hours')
 const TIMER_MINUTES = document.getElementById('timer-minutes')
 const TIMER_SECONDS = document.getElementById('timer-seconds')
 
 const HELP_TEXT = document.getElementById('timer-help-text')
-const HELP_TEXT_ANIM_MS = 475
+
+const SETTINGS_BUTTON = document.getElementById('timer-settings')
+const SETTINGS_AREA = document.getElementById('timer-settings-popup')
+const SETTINGS_WINDOW = document.querySelector(
+  '#timer-settings-popup .popup-window'
+)
+const SETTINGS_DISMISS_DONE = document.getElementById(
+  'timer-settings-button-done'
+)
+const SETTINGS_DISMISS_CANCEL = document.getElementById(
+  'timer-settings-button-cancel'
+)
+const SETTINGS_SFX_DEFAULT = document.getElementById(
+  'timer-settings-radio-option-tone-default'
+)
+const SETTINGS_SFX_DEFAULT_RADIO = document.getElementById(
+  'timer-settings-tone-default'
+)
+const SETTINGS_SFX_CUSTOM = document.getElementById(
+  'timer-settings-radio-option-tone-custom'
+)
+const SETTINGS_SFX_CUSTOM_RADIO = document.getElementById(
+  'timer-settings-tone-custom'
+)
+const SETTINGS_SFX_CUSTOM_FILE_PICKER = document.getElementById(
+  'timer-settings-tone-custom-upload'
+)
 
 const BUTTON_START = document.getElementById('timer-start')
 const BUTTON_GROUP = document.getElementById('timer-button-group')
@@ -23,9 +56,12 @@ const BUTTON_STOP = document.getElementById('timer-stop')
 const BUTTON_RESUME = document.getElementById('timer-resume')
 const BUTTON_RESET = document.getElementById('timer-reset')
 
-const SFX_TIMER_END = new Audio('./assets/media/Ticktac.ogg')
-SFX_TIMER_END.preload = 'auto'
-SFX_TIMER_END.loop = true
+const DEFAULT_SFX_TIMER_END = './assets/media/Ticktac.ogg'
+
+let sfxTimerEnd = new Audio(DEFAULT_SFX_TIMER_END)
+let sfxTimerEndWhenSettingsOpened = 'default'
+sfxTimerEnd.preload = 'auto'
+sfxTimerEnd.loop = true
 
 let lastTimerMs = 60_000
 let remainingMs = lastTimerMs
@@ -64,10 +100,10 @@ function afterResetStuff () {
 
   HELP_TEXT.classList.toggle('reveal')
   HELP_TEXT.hidden = false
-  setTimeout(() => {
+  endAnimation(HELP_TEXT, () => {
     HELP_TEXT.classList.toggle('reveal')
     BUTTON_START.disabled = false
-  }, HELP_TEXT_ANIM_MS)
+  })
 
   remainingMs = lastTimerMs
   render()
@@ -87,8 +123,8 @@ function checkStartButtonEligibility () {
 }
 
 function dismissTimerAlarm () {
-  SFX_TIMER_END.pause()
-  SFX_TIMER_END.currentTime = 0
+  sfxTimerEnd.pause()
+  sfxTimerEnd.currentTime = 0
   hidePopup()
   afterResetStuff()
 }
@@ -98,7 +134,7 @@ function timerIsDoneStuff () {
   running = false
   cancelAnimationFrame(rafId)
   render()
-  SFX_TIMER_END.play()
+  sfxTimerEnd.play()
 
   BUTTON_START.disabled = true
   BUTTON_STOP.disabled = true
@@ -199,11 +235,11 @@ BUTTON_START.addEventListener('click', () => {
 
   BUTTON_RESET.disabled = true
   HELP_TEXT.classList.toggle('hide')
-  setTimeout(() => {
+  endAnimation(HELP_TEXT, () => {
     HELP_TEXT.hidden = true
     HELP_TEXT.classList.toggle('hide')
     BUTTON_RESET.disabled = false
-  }, HELP_TEXT_ANIM_MS)
+  })
 })
 
 BUTTON_STOP.addEventListener('click', () => {
@@ -236,6 +272,84 @@ BUTTON_RESET.addEventListener('click', () => {
   reset()
   afterResetStuff()
   enableInput()
+})
+
+SETTINGS_BUTTON.addEventListener('click', () => {
+  SETTINGS_AREA.hidden = false
+
+  if (SETTINGS_SFX_DEFAULT_RADIO.checked) {
+    sfxTimerEndWhenSettingsOpened = 'default'
+  }
+  if (SETTINGS_SFX_CUSTOM_RADIO.checked) {
+    sfxTimerEndWhenSettingsOpened = 'custom'
+  }
+})
+
+SETTINGS_DISMISS_CANCEL.addEventListener('click', () => {
+  switch (sfxTimerEndWhenSettingsOpened) {
+    case 'default':
+      setDefaultTimerEndSfx()
+      break
+    case 'custom':
+      SETTINGS_SFX_CUSTOM_RADIO.checked = true
+      SETTINGS_SFX_CUSTOM_FILE_PICKER.disabled = false
+      setCustomTimerEndSfx()
+      break
+  }
+  SETTINGS_AREA.classList.toggle('close')
+  SETTINGS_WINDOW.classList.toggle('close')
+  endAnimation(SETTINGS_AREA, () => {
+    SETTINGS_AREA.hidden = true
+    SETTINGS_AREA.classList.toggle('close')
+    SETTINGS_WINDOW.classList.toggle('close')
+  })
+})
+
+SETTINGS_DISMISS_DONE.addEventListener('click', () => {
+  SETTINGS_AREA.classList.toggle('close')
+  SETTINGS_WINDOW.classList.toggle('close')
+  endAnimation(SETTINGS_AREA, () => {
+    SETTINGS_AREA.hidden = true
+    SETTINGS_AREA.classList.toggle('close')
+    SETTINGS_WINDOW.classList.toggle('close')
+  })
+  setCustomTimerEndSfx()
+})
+
+function setDefaultTimerEndSfx () {
+  SETTINGS_SFX_DEFAULT_RADIO.checked = true
+  SETTINGS_SFX_CUSTOM_FILE_PICKER.disabled = true
+  sfxTimerEnd = new Audio(DEFAULT_SFX_TIMER_END)
+  sfxTimerEnd.preload = 'auto'
+  sfxTimerEnd.loop = true
+}
+
+SETTINGS_SFX_DEFAULT.addEventListener('click', () => {
+  playTouchSound()
+  setDefaultTimerEndSfx()
+})
+
+function setCustomTimerEndSfx (skipFileCheck) {
+  const file = SETTINGS_SFX_CUSTOM_FILE_PICKER.files[0]
+  if ((!file || SETTINGS_SFX_CUSTOM_FILE_PICKER.disabled) && !skipFileCheck) {
+    setDefaultTimerEndSfx()
+    return
+  }
+
+  sfxTimerEnd = new Audio(URL.createObjectURL(file))
+  sfxTimerEnd.preload = 'auto'
+  sfxTimerEnd.loop = true
+}
+
+SETTINGS_SFX_CUSTOM.addEventListener('click', () => {
+  playTouchSound()
+  SETTINGS_SFX_CUSTOM_RADIO.checked = true
+  SETTINGS_SFX_CUSTOM_FILE_PICKER.disabled = false
+  setCustomTimerEndSfx(true)
+})
+
+SETTINGS_SFX_CUSTOM_FILE_PICKER.addEventListener('change', () => {
+  setCustomTimerEndSfx()
 })
 
 // -----------------------------------------------------------------------------
@@ -376,4 +490,5 @@ document.addEventListener(
 
 // -----------------------------------------------------------------------------
 
+setCustomTimerEndSfx()
 render()

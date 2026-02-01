@@ -28,14 +28,26 @@
         <i class="tab-icon"></i>
         <span class="tab-label">Desk Clock</span>
       </button>
+      <span class="separator"></span>
+      <button class="tab" id="tab-settings" type="button">
+        <i class="tab-icon"></i>
+        <span class="tab-label">Settings</span>
+      </button>
     </div>
     <main>
       <section class="tab-content" id="content-stopwatch">
         <div class="top-panel">
-          <h1 id="stopwatch">
-            <span class="hhmmss">00:00:00</span><span
-              class="centiseconds">00</span>
-          </h1>
+          <div class="stopwatch-panel">
+            <h1 id="stopwatch">
+              <span class="hhmmss">00:00:00</span><span
+                class="centiseconds">00</span>
+            </h1>
+            <p class="stopwatch-subtitle help-text" hidden>0 days, 0 hours</p>
+            <h2 id="stopwatch-lap-stopwatch" hidden>
+              <span class="hhmmss">00:00:00</span><span
+                class="centiseconds">00</span>
+            </h2>
+          </div>
           <span class="separator"></span>
         </div>
         <div class="content-panel">
@@ -56,6 +68,8 @@
                 type="button">Stop</button>
               <button class="button immediate" id="stopwatch-lap"
                 type="button">Lap</button>
+              <!-- <button class="button" id="stopwatch-dev" type="button">Developer
+                Button</button> -->
             </div>
             <div class="button-area" id="stopwatch-buttons-stopped" hidden>
               <button class="button button-green immediate"
@@ -67,6 +81,11 @@
         </div>
       </section>
       <section class="tab-content" id="content-timer" hidden>
+        <div class="top-panel">
+          <button class="button-small" id="timer-settings" type="button">
+            <i class="icon icon-settings"></i>
+          </button>
+        </div>
         <div class="content-panel">
           <h2 hidden>Countdown Timer</h2>
           <div id="timer">
@@ -78,20 +97,23 @@
             <div class="timer">
               <div class="input-wrapper">
                 <span class="backdrop">88</span>
-                <input class="timer-input" id="timer-hours" type="text" value="00"
-                  inputmode="numeric" max="99" maxlength="2" min="00">
+                <input class="timer-input" id="timer-hours" type="text"
+                  value="00" inputmode="numeric" max="99" maxlength="2"
+                  min="00">
               </div>
               <span>:</span>
               <div class="input-wrapper">
                 <span class="backdrop">88</span>
-                <input class="timer-input" id="timer-minutes" type="text" value="00"
-                  inputmode="numeric" max="59" maxlength="2" min="00">
+                <input class="timer-input" id="timer-minutes" type="text"
+                  value="00" inputmode="numeric" max="59" maxlength="2"
+                  min="00">
               </div>
               <span>:</span>
               <div class="input-wrapper">
                 <span class="backdrop">88</span>
-                <input class="timer-input" id="timer-seconds" type="text" value="00"
-                  inputmode="numeric" max="59" maxlength="2" min="00">
+                <input class="timer-input" id="timer-seconds" type="text"
+                  value="00" inputmode="numeric" max="59" maxlength="2"
+                  min="00">
               </div>
             </div>
           </div>
@@ -115,8 +137,59 @@
             </div>
           </div>
         </div>
+        <div class="popup-area" id="timer-settings-popup" hidden>
+          <div class="popup-window">
+            <div class="popup-title">Timer Settings</div>
+            <div class="popup-content popup-radio-options">
+              <h3>Timer tone:</h3>
+              <p class="small underneath-heading">Select the tone you'll hear
+                when the timer finishes</p>
+              <div class="popup-radio-option"
+                id="timer-settings-radio-option-tone-default">
+                <label class="multi-line-label"
+                  for="timer-settings-tone-default">
+                  <span class="radio-option-title">Default</span>
+                  <span class="radio-option-subtitle">Ticktac</span>
+                </label>
+                <input id="timer-settings-tone-default"
+                  name="timer-settings-tone" type="radio" value="default"
+                  checked>
+              </div>
+              <div class="popup-radio-option"
+                id="timer-settings-radio-option-tone-custom">
+                <div class="multi-line-label">
+                  <label for="timer-settings-tone-custom">
+                    <span class="radio-option-title">Custom</span>
+                  </label>
+                  <label class="radio-option-subtitle"
+                    for="timer-settings-tone-custom-upload"> Choose an audio
+                    file on your device <!-- <br>Local-only -->
+                  </label>
+                </div>
+                <input id="timer-settings-tone-custom"
+                  name="timer-settings-tone" type="radio" value="custom">
+              </div>
+              <input id="timer-settings-tone-custom-upload"
+                name="timer-settings-tone" type="file" accept="audio/*"
+                disabled>
+              <p class="small">Custom audio files are handled offline by your
+                browser</p>
+            </div>
+            <div class="popup-buttons">
+              <button id="timer-settings-button-cancel"
+                type="button">Cancel</button>
+              <button id="timer-settings-button-done"
+                type="button">Done</button>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="tab-content" id="content-clock" hidden>
+        <div class="overlay-buttons">
+          <button class="button-small" id="clock-fullscreen" type="button">
+            <i class="icon icon-enter-fullscreen"></i>
+          </button>
+        </div>
         <div class="top-panel">
           <span id="clock-progress">You are ?% through the day</span>
           <div class="time-bar-area">
@@ -168,17 +241,60 @@
           <div class="popup-window">
             <div class="popup-title">Desk Clock Settings</div>
             <div class="popup-content">
-              <label for="clock-settings-timezone">Time Zone:</label>
-              <input id="clock-settings-timezone"
-                list="clock-settings-timezone-options">
+              <label for="clock-settings-timezone">Search:</label>
+              <input id="clock-settings-timezone" type="text"
+                list="clock-settings-timezone-options"
+                placeholder="IANA time zone identifier">
               <datalist id="clock-settings-timezone-options"></datalist>
               <span class="error-text" hidden>Invalid time zone</span>
+              <h3>Time Zone:</h3>
+              <h2 id="clock-settings-timezone-nav-loc" hidden>Earth</h2>
+              <div class="clock-settings-timezones-layer"
+                id="clock-settings-timezones-layer-1">
+                <button class="submenu" type="button">Africa</button>
+                <button class="submenu" type="button">America</button>
+                <button class="submenu" type="button">Antarctica</button>
+                <button class="submenu" type="button">Arctic</button>
+                <button class="submenu" type="button">Asia</button>
+                <button class="submenu" type="button">Atlantic</button>
+                <button class="submenu" type="button">Australia</button>
+                <button class="submenu" type="button">Etc</button>
+                <button class="submenu" type="button">Europe</button>
+                <button class="submenu" type="button">Indian</button>
+                <button class="submenu" type="button">Pacific</button>
+                <button class="submenu" id="timezone-utc" type="button">UTC</button>
+              </div>
+              <div class="clock-settings-timezones-layer"
+                id="clock-settings-timezones-layer-2"></div>
+              <div class="clock-settings-timezones-layer"
+                id="clock-settings-timezones-layer-3"></div>
             </div>
             <div class="popup-buttons">
               <button id="clock-settings-button-cancel"
                 type="button">Cancel</button>
               <button id="clock-settings-button-ok" type="button">OK</button>
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="tab-content" id="content-settings" hidden>
+        <img class="logo" src="assets/images/Logo_Web-TouchWiz-Clock.svg"
+          alt="Web TouchWiz Clock logo">
+        <span class="description">Version 2026-02-01</span>
+        <p class="description">A clock applet for the web inspired by the clock
+          app found in older Samsung devices using TouchWiz UI, especially the
+          Samsung Galaxy Rush (SPH-M830).</p>
+        <h2>By <a href="https://oktalon-szoradi.github.io">Talon</a></h2>
+        <div class="settings-area">
+          <h2>Settings</h2>
+          <hr>
+          <div class="setting">
+            <label class="setting-label" for="use-alt-touch-sfx">
+              <span class="setting-label-title">Use alternate touch sound</span>
+              <span class="setting-label-subtitle">Quieter, waterier</span>
+            </label>
+            <input class="setting-switch" id="use-alt-touch-sfx"
+              type="checkbox">
           </div>
         </div>
       </section>

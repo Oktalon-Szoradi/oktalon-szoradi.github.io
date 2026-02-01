@@ -1,9 +1,20 @@
 /* eslint-env browser */
 
 import { APP_INFO, updateAppName, formatTime } from './util.js'
+import { playTouchSound } from './sfx.js'
 
 const DISPLAY_HHMMSS = document.querySelector('#stopwatch .hhmmss')
 const DISPLAY_CENTISECONDS = document.querySelector('#stopwatch .centiseconds')
+const DISPLAY_DAY_COUNTER = document.querySelector(
+  '.stopwatch-panel .stopwatch-subtitle'
+)
+const DISPLAY_LAP_STOPWATCH = document.getElementById('stopwatch-lap-stopwatch')
+const DISPLAY_LAP_HHMMSS = document.querySelector(
+  '#stopwatch-lap-stopwatch .hhmmss'
+)
+const DISPLAY_LAP_CENTISECONDS = document.querySelector(
+  '#stopwatch-lap-stopwatch .centiseconds'
+)
 const HELP_AREA = document.getElementById('stopwatch-help')
 const HELP_TEXT = document.getElementById('stopwatch-help-text')
 const BUTTON_START = document.getElementById('stopwatch-start')
@@ -13,11 +24,12 @@ const BUTTON_LAP = document.getElementById('stopwatch-lap')
 const BUTTON_AREA_STOPPED = document.getElementById('stopwatch-buttons-stopped')
 const BUTTON_RESUME = document.getElementById('stopwatch-resume')
 const BUTTON_RESET = document.getElementById('stopwatch-reset')
+// const BUTTON_DEV = document.getElementById('stopwatch-dev')
 const LAP_LIST = document.getElementById('stopwatch-laps')
 
 let startTime = null
 let running = false
-let rafId = null
+let requestAnimationFrameID = null
 let elapsedBeforePause = 0
 let laps = []
 
@@ -38,8 +50,47 @@ function update (now) {
 
   const elapsed = elapsedBeforePause + (now - startTime)
   const theTime = formatTime(elapsed)
-  DISPLAY_HHMMSS.innerText = theTime.hhmmss
+  if (DISPLAY_HHMMSS.innerText !== theTime.hhmmss) {
+    DISPLAY_HHMMSS.innerText = theTime.hhmmss
+  }
   DISPLAY_CENTISECONDS.innerText = theTime.cs
+  const days = Math.floor(theTime.hours / 24)
+  const hours = theTime.hours % 24
+  const newDisplayDayCounterInnerText =
+    hours === 0
+      ? `${days} day${days !== 1 ? 's' : ''}`
+      : `${days} day${days !== 1 ? 's' : ''}, ${hours} hour${
+          hours !== 1 ? 's' : ''
+        }`
+  if (days >= 1) {
+    if (DISPLAY_DAY_COUNTER.hidden) {
+      DISPLAY_DAY_COUNTER.hidden = false
+    }
+    if (DISPLAY_DAY_COUNTER.innerText !== newDisplayDayCounterInnerText) {
+      DISPLAY_DAY_COUNTER.innerText = newDisplayDayCounterInnerText
+    }
+  }
+  if (!DISPLAY_LAP_STOPWATCH.hidden) {
+    const lapNumber = laps.length + 1
+    const lapTime =
+      lapNumber === 1 ? elapsed : elapsed - laps[laps.length - 1].total
+    const lapTimeFormatted = formatTime(lapTime)
+    if (
+      lapTimeFormatted.hours >= 0 ||
+      lapTimeFormatted.minutes >= 0 ||
+      lapTimeFormatted.seconds >= 0
+    ) {
+      if (DISPLAY_LAP_HHMMSS.innerText !== lapTimeFormatted.hhmmss) {
+        DISPLAY_LAP_HHMMSS.innerText = lapTimeFormatted.hhmmss
+      }
+      DISPLAY_LAP_CENTISECONDS.innerText = lapTimeFormatted.cs
+    } else {
+      if (DISPLAY_LAP_HHMMSS.innerText !== lapTimeFormatted.hhmmss) {
+        DISPLAY_LAP_HHMMSS.innerText = '00:00:00'
+      }
+      DISPLAY_LAP_CENTISECONDS.innerText = '00'
+    }
+  }
 
   const hhLength = theTime.hh.length
   const hhBackdrop = '8'.repeat(hhLength)
@@ -50,7 +101,7 @@ function update (now) {
     `"${backdrop}"`
   )
 
-  rafId = requestAnimationFrame(update)
+  requestAnimationFrameID = requestAnimationFrame(update)
 }
 
 function actionStart () {
@@ -58,7 +109,7 @@ function actionStart () {
 
   running = true
   startTime = performance.now()
-  rafId = requestAnimationFrame(update)
+  requestAnimationFrameID = requestAnimationFrame(update)
 
   APP_INFO.appNameParts.splice(2, 0, 'Stopwatch Running')
   updateAppName()
@@ -74,7 +125,7 @@ function actionStop () {
   if (!running) return
 
   running = false
-  cancelAnimationFrame(rafId)
+  cancelAnimationFrame(requestAnimationFrameID)
   elapsedBeforePause += performance.now() - startTime
 
   APP_INFO.appNameParts.splice(
@@ -92,6 +143,7 @@ function actionLap () {
   if (!running) return
 
   HELP_AREA.hidden = true
+  DISPLAY_LAP_STOPWATCH.hidden = false
 
   const now = performance.now()
   const totalElapsed = elapsedBeforePause + (now - startTime)
@@ -145,7 +197,7 @@ function actionResume () {
 
   running = true
   startTime = performance.now()
-  rafId = requestAnimationFrame(update)
+  requestAnimationFrameID = requestAnimationFrame(update)
 
   APP_INFO.appNameParts.splice(
     APP_INFO.appNameParts.indexOf('Stopwatch Paused'),
@@ -160,7 +212,7 @@ function actionResume () {
 
 function actionReset () {
   running = false
-  cancelAnimationFrame(rafId)
+  cancelAnimationFrame(requestAnimationFrameID)
   startTime = null
   elapsedBeforePause = 0
   laps = []
@@ -171,7 +223,12 @@ function actionReset () {
   updateAppName()
 
   DISPLAY_HHMMSS.innerText = '00:00:00'
+  DISPLAY_HHMMSS.style.setProperty('--stopwatch-digit-backdrop', '"88:88:88"')
   DISPLAY_CENTISECONDS.innerText = '00'
+  DISPLAY_DAY_COUNTER.hidden = true
+  DISPLAY_LAP_STOPWATCH.hidden = true
+  DISPLAY_LAP_HHMMSS.innerText = '00:00:00'
+  DISPLAY_LAP_CENTISECONDS.innerText = '00'
   LAP_LIST.innerHTML = ''
 
   BUTTON_AREA_STOPPED.hidden = true
@@ -182,20 +239,14 @@ function actionReset () {
 }
 
 function bindButton (button, action) {
-  let activated = false
-
   button.addEventListener('pointerdown', e => {
-    if (e.pointerType === 'mouse' || e.pointerType === 'touch') {
-      activated = true
-      action()
-    }
+    e.preventDefault()
+    playTouchSound()
+    action()
   })
 
-  button.addEventListener('click', () => {
-    if (!activated) {
-      action()
-    }
-    activated = false
+  button.addEventListener('click', e => {
+    e.preventDefault()
   })
 }
 
@@ -204,3 +255,10 @@ bindButton(BUTTON_STOP, actionStop)
 bindButton(BUTTON_LAP, actionLap)
 bindButton(BUTTON_RESUME, actionResume)
 bindButton(BUTTON_RESET, actionReset)
+// bindButton(BUTTON_DEV, () => {
+//   if (!running) return
+
+//   elapsedBeforePause += 50 * 60 * 60 * 1000
+
+//   update(performance.now())
+// })
