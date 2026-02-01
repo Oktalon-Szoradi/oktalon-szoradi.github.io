@@ -52,3 +52,20 @@ export function formatTime (ms) {
     hhmmsscs: `${hh}:${mm}:${ss}.${cs}`
   }
 }
+
+export function endAnimation (element, action) {
+  // const onAnimationEnd = e => {
+  //   if (e.target === element) {
+  //     action()
+  //     element.removeEventListener('animationend', onAnimationEnd)
+  //   }
+  // }
+  // element.addEventListener('animationend', onAnimationEnd)
+  element.addEventListener(
+    'animationend',
+    e => {
+      if (e.target === element) action()
+    },
+    { once: true }
+  )
+}

@@ -1,4 +1,5 @@
 import { playTouchSound } from './sfx.js'
+import { endAnimation } from './util.js'
 
 const EL_BACKGROUND = document.getElementById('content-clock')
 const EL_THE_TIME = document.getElementById('clock-time-hhmm')
@@ -26,6 +27,11 @@ const BUTTON_SETTINGS_CANCEL = document.getElementById(
   'clock-settings-button-cancel'
 )
 
+const TAB_BAR = document.querySelector('.tab-bar')
+const BUTTON_FULLSCREEN = document.getElementById('clock-fullscreen')
+const BUTTON_FULLSCREEN_ICON = document.querySelector('#clock-fullscreen i')
+const BOTTOM_PANNEL = document.querySelector('#content-clock .bottom-panel')
+
 const ERROR_TEXT = document.querySelector('#clock-settings-popup .error-text')
 const SETTINGS_INPUT_TIME_ZONE = document.getElementById(
   'clock-settings-timezone'
@@ -48,6 +54,18 @@ const TIME_ZONES = Intl.supportedValuesOf('timeZone').sort((a, b) => {
 
   return a.localeCompare(b)
 })
+const SETTINGS_TIMEZONE_NAVIGATION_LOCATION = document.getElementById(
+  'clock-settings-timezone-nav-loc'
+)
+const SETTINGS_TIMEZONE_LAYER1 = document.getElementById(
+  'clock-settings-timezones-layer-1'
+)
+const SETTINGS_TIMEZONE_LAYER2 = document.getElementById(
+  'clock-settings-timezones-layer-2'
+)
+const SETTINGS_TIMEZONE_LAYER3 = document.getElementById(
+  'clock-settings-timezones-layer-3'
+)
 
 for (const timeZone of TIME_ZONES) {
   const option = document.createElement('option')
@@ -168,6 +186,8 @@ function getDateStr (dateObject) {
 }
 
 function main () {
+  // if (EL_BACKGROUND.hidden) return
+
   const now = new Date()
   const time = getTimeStr(now)
   const date = getDateStr(now)
@@ -180,17 +200,16 @@ function main () {
 main()
 setInterval(() => {
   main()
-}, 1000)
+}, 100)
 
 function closePopupSettings () {
   EL_SETTINGS_AREA.classList.toggle('close')
   EL_SETTINGS_WINDOW.classList.toggle('close')
-  setTimeout(() => {
+  endAnimation(EL_SETTINGS_AREA, () => {
     EL_SETTINGS_AREA.hidden = true
-    // SETTINGS_INPUT_TIME_ZONE.value = setTimeZone
     EL_SETTINGS_AREA.classList.toggle('close')
     EL_SETTINGS_WINDOW.classList.toggle('close')
-  }, 250)
+  })
 }
 
 function submitSettings () {
@@ -208,12 +227,23 @@ function submitSettings () {
 }
 
 BUTTON_SETTINGS.addEventListener('click', () => {
+  SETTINGS_TIMEZONE_LAYER1.hidden = false
+  SETTINGS_TIMEZONE_LAYER2.hidden = true
+  SETTINGS_TIMEZONE_LAYER3.hidden = true
+
+  SETTINGS_TIMEZONE_LAYER2.innerHTML = ''
+  SETTINGS_TIMEZONE_LAYER3.innerHTML = ''
+
+  SETTINGS_TIMEZONE_NAVIGATION_LOCATION.hidden = true
+  SETTINGS_TIMEZONE_NAVIGATION_LOCATION.innerText = 'Earth'
+
   EL_SETTINGS_AREA.hidden = false
   SETTINGS_INPUT_TIME_ZONE.focus()
 })
 
 BUTTON_SETTINGS_CANCEL.addEventListener('click', () => {
   SETTINGS_INPUT_TIME_ZONE.value = setTimeZone
+  ERROR_TEXT.hidden = true
   closePopupSettings()
 })
 
@@ -232,4 +262,123 @@ SETTINGS_INPUT_TIME_ZONE.addEventListener('keydown', e => {
       submitSettings()
       break
   }
+})
+
+BUTTON_FULLSCREEN.addEventListener('click', () => {
+  TAB_BAR.hidden = !TAB_BAR.hidden
+  BOTTOM_PANNEL.hidden = !BOTTOM_PANNEL.hidden
+
+  BUTTON_FULLSCREEN_ICON.classList.toggle('icon-enter-fullscreen')
+  BUTTON_FULLSCREEN_ICON.classList.toggle('icon-exit-fullscreen')
+})
+
+// console.log([...SETTINGS_TIMEZONE_LAYER1.children])
+;[...SETTINGS_TIMEZONE_LAYER1.children].forEach(continent => {
+  continent.addEventListener('click', () => {
+    const selectedArea = continent.innerText
+
+    if (selectedArea === 'UTC') {
+      SETTINGS_INPUT_TIME_ZONE.value = 'UTC'
+      submitSettings()
+      return
+    }
+
+    // America ⟩ Argentina
+    // America ⟩ Indiana
+    // America ⟩ Kentucky
+    // America ⟩ North Dakota
+    const timeZonesInThisSection = TIME_ZONES.filter(t =>
+      t.includes(`${selectedArea}/`)
+    )
+    SETTINGS_TIMEZONE_NAVIGATION_LOCATION.innerText = selectedArea
+    SETTINGS_TIMEZONE_NAVIGATION_LOCATION.hidden = false
+
+    const backButton = document.createElement('button')
+    backButton.innerText = '← Back'
+    backButton.classList = 'submenu back'
+    backButton.type = 'button'
+    backButton.addEventListener('click', () => {
+      SETTINGS_TIMEZONE_LAYER1.hidden = false
+      SETTINGS_TIMEZONE_LAYER2.hidden = true
+      SETTINGS_TIMEZONE_LAYER3.hidden = true
+
+      SETTINGS_TIMEZONE_LAYER2.innerHTML = ''
+      SETTINGS_TIMEZONE_LAYER3.innerHTML = ''
+
+      SETTINGS_TIMEZONE_NAVIGATION_LOCATION.hidden = true
+      SETTINGS_TIMEZONE_NAVIGATION_LOCATION.innerText = 'Earth'
+    })
+    SETTINGS_TIMEZONE_LAYER2.appendChild(backButton)
+
+    const layer3america = [
+      'America/Argentina',
+      'America/Indiana',
+      'America/Kentucky',
+      'America/North_Dakota'
+    ]
+    if (selectedArea === 'America') {
+      layer3america.forEach(t => {
+        const timeZoneLayer2Option = document.createElement('button')
+        timeZoneLayer2Option.innerText = t
+        timeZoneLayer2Option.classList = 'submenu'
+        timeZoneLayer2Option.type = 'button'
+        // TODO: Refactor!
+        timeZoneLayer2Option.addEventListener('click', () => {
+          SETTINGS_TIMEZONE_LAYER2.hidden = true
+          SETTINGS_TIMEZONE_LAYER3.hidden = false
+          SETTINGS_TIMEZONE_NAVIGATION_LOCATION.innerText = t
+
+          const backButton = document.createElement('button')
+          backButton.innerText = '← Back'
+          backButton.classList = 'submenu back'
+          backButton.type = 'button'
+          backButton.addEventListener('click', () => {
+            SETTINGS_TIMEZONE_LAYER1.hidden = true
+            SETTINGS_TIMEZONE_LAYER2.hidden = false
+            SETTINGS_TIMEZONE_LAYER3.hidden = true
+
+            SETTINGS_TIMEZONE_LAYER3.innerHTML = ''
+
+            SETTINGS_TIMEZONE_NAVIGATION_LOCATION.innerText = selectedArea
+          })
+          SETTINGS_TIMEZONE_LAYER3.appendChild(backButton)
+
+          const timeZonesInThisSubSection = TIME_ZONES.filter(t3 =>
+            t3.includes(`${t}/`)
+          )
+
+          timeZonesInThisSubSection.forEach(t3 => {
+            const timeZoneLayer3Option = document.createElement('button')
+            timeZoneLayer3Option.innerText =
+              t3.split('/').slice(1).join('/')
+            timeZoneLayer3Option.classList = 'submenu option'
+            timeZoneLayer3Option.type = 'button'
+            timeZoneLayer3Option.addEventListener('click', () => {
+              SETTINGS_INPUT_TIME_ZONE.value = t3
+              submitSettings()
+            })
+            SETTINGS_TIMEZONE_LAYER3.appendChild(timeZoneLayer3Option)
+          })
+        })
+        SETTINGS_TIMEZONE_LAYER2.appendChild(timeZoneLayer2Option)
+      })
+    }
+
+    for (const t of timeZonesInThisSection) {
+      if (t.split('/').length > 2) continue
+
+      const timeZoneLayer2Option = document.createElement('button')
+      timeZoneLayer2Option.innerText = t
+      timeZoneLayer2Option.classList = 'submenu option'
+      timeZoneLayer2Option.type = 'button'
+      timeZoneLayer2Option.addEventListener('click', () => {
+        SETTINGS_INPUT_TIME_ZONE.value = t
+        submitSettings()
+      })
+      SETTINGS_TIMEZONE_LAYER2.appendChild(timeZoneLayer2Option)
+    }
+
+    SETTINGS_TIMEZONE_LAYER1.hidden = true
+    SETTINGS_TIMEZONE_LAYER2.hidden = false
+  })
 })
