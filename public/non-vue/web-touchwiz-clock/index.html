@@ -241,17 +241,19 @@
           <div class="popup-window">
             <div class="popup-title">Desk Clock Settings</div>
             <div class="popup-content">
-              <label for="clock-settings-timezone">Search:</label>
+              <label for="clock-settings-timezone">Enter an IANA time zone
+                identifier:</label>
               <input id="clock-settings-timezone" type="text"
                 list="clock-settings-timezone-options"
                 placeholder="IANA time zone identifier">
               <datalist id="clock-settings-timezone-options"></datalist>
-              <span class="error-text" hidden>Invalid time zone</span>
-              <h3>Time Zone:</h3>
+              <span class="error-text" hidden>Not a valid IANA time zone
+                identifier</span>
+              <h3>Or choose from the list:</h3>
               <h2 id="clock-settings-timezone-nav-loc" hidden>Earth</h2>
               <div class="clock-settings-timezones-layer"
                 id="clock-settings-timezones-layer-1">
-                <button class="submenu" type="button">Africa</button>
+                <!-- <button class="submenu" type="button">Africa</button>
                 <button class="submenu" type="button">America</button>
                 <button class="submenu" type="button">Antarctica</button>
                 <button class="submenu" type="button">Arctic</button>
@@ -262,8 +264,9 @@
                 <button class="submenu" type="button">Europe</button>
                 <button class="submenu" type="button">Indian</button>
                 <button class="submenu" type="button">Pacific</button>
-                <button class="submenu" id="timezone-utc" type="button">UTC</button>
-              </div>
+                <button class="submenu" id="timezone-utc"
+                  type="button">UTC</button> -->
+                </div>
               <div class="clock-settings-timezones-layer"
                 id="clock-settings-timezones-layer-2"></div>
               <div class="clock-settings-timezones-layer"
