@@ -105,7 +105,7 @@ const NAVIGATION: ScrollToObjects[] = [
     <NavigationSideBySide
       :scrollToHeadings="NAVIGATION"
       :navigationButtons_queryIndex="1"
-      :navigationButtons_queryParams="{ scrollTo: 'GraphicDesign' }"
+      :navigationButtons_queryParams="{ scrollTo: 'Misc' }"
       :onlyOneLevel="false"
       width="personal"
     >
