@@ -94,7 +94,7 @@ const NAVIGATION: ScrollToObjects[] = [
       {
         name: '4. Reboot',
         id: 'instructions-4'
-      },
+      }
     ]
   }
 ]
@@ -169,7 +169,7 @@ const NAVIGATION: ScrollToObjects[] = [
         </p>
         <p>
           Even in non-computer areas, I prefer the original language the media
-          is in. Like Super Mario Galaxy. I had a look at in in German, and
+          is in. Like Super Mario Galaxy. I had a look at it in German, and
           right before you begin the game, I find inconsistencies. In one place
           the button is labeled "O.K.!" and in another it's "Okay". Then when
           you start the game and are in the intro cutscene, Toads will tell you
@@ -208,11 +208,12 @@ const NAVIGATION: ScrollToObjects[] = [
         </p>
         <p>
           Some just use a space as a thousands separator. I don't like a full
-          normal space because this is already used for other things, like, well
-          separating words. It requires you to assume or have extra context that
-          yes this is one number, not multiple. Also, it would then count as
-          multiple words in a word processing program. If you really want some
-          form of whitespace, use some kind of thin space or hair space.
+          normal space because this is already used for other things, like,
+          well, separating words. It requires you to assume or have extra
+          context that "yes this is one number, not multiple". Also, it would
+          then count as multiple words in a word processing program. If you
+          really want some form of whitespace, use some kind of thin space or
+          hair space.
         </p>
         <p>
           But again, I'd rather a separator be clear rather than some
@@ -229,7 +230,7 @@ const NAVIGATION: ScrollToObjects[] = [
           most-significant to least-significant, as we already do with the time
           (everyone agrees on HH:mm:ss, nobody orders it ss:mm:HH) and even
           numbers. 1'000 is larger than 0001. It also plays nicely with
-          lexographical order.
+          lexographic order.
         </p>
         <p>
           <code>DD.MM.YYYY</code> may still be acceptable because it's still
@@ -253,7 +254,8 @@ const NAVIGATION: ScrollToObjects[] = [
         <h3 id="Currency">Currency</h3>
         <p>
           I live in the EU, so I work with the Euro (€). If you're using the
-          symbol, it should come before the amount, with no space in between.
+          symbol, it should come before the amount, with no space in between
+          (or, if you really want some whitespace, use a thin or hair space).
         </p>
         <p>&emsp; Example: €10.99</p>
         <p>
@@ -380,14 +382,14 @@ const NAVIGATION: ScrollToObjects[] = [
           But, we have a prefix for 1'000 k-something. It's 1 M-something.
           Y'know: kilo, Mega, Giga, Tera
         </p>
-        <p>Those align with thousands (3-digit long digit grouping)</p>
+        <p>Those align with thousands (3 digit long digit grouping)</p>
         <p>
           So why not say Mg? Megagram? Is it because people don't want to adhere
           to case-sensitivity? Milligrams are mg, with a lowercase m. Tons seem
           out of place when we have this system (SI).
         </p>
         <p>
-          Also, do you see how our digit grouping is 3-digits long? Separated by
+          Also, do you see how our digit grouping is 3 digits long? Separated by
           thousands? And those SI unit prefixes mainly do that too? So why is
           the long scale for large numbers still used? Sure I can see some sense
           in it, but it still feels off. Surely I'm not just biased, am I?
@@ -445,8 +447,8 @@ const NAVIGATION: ScrollToObjects[] = [
         </p>
         <p>
           Okay, well, looking on Wikipedia, apparently middle name is
-          "Zwischenname". Which I guess is a bit better. But I haven't seen that
-          on forms here.
+          "Zwischenname". Which I guess <i>is</i> a bit better. But I haven't
+          seen that on forms here.
         </p>
         <p>
           Middle names are kinda odd. I don't remember where or when I heard
@@ -502,9 +504,9 @@ const NAVIGATION: ScrollToObjects[] = [
           day". I mean, yeah in most cases, you can just look outside to see
           whether it's ante meridiem (AM, before noon) or post meridiem (PM,
           after noon). But imagine an edge case where that's not possible and
-          all you have is an analog clock. Yes, it tells you some time, but you
-          have no clue whether it's before or after noon. A 24-hour analog clock
-          or digital clock would be unambiguous.
+          all you have is an analog clock. Yes, it tells you <i>some</i> time,
+          but you have no clue whether it's before or after noon. A 24-hour
+          analog clock or digital clock would be unambiguous.
         </p>
         <p>
           Y'know, also, some people set their digital clocks like this. Really?
@@ -523,7 +525,7 @@ const NAVIGATION: ScrollToObjects[] = [
         <p>
           Also, this should be obvious: Do NOT say something like "17:32 PM".
           This is simply plain wrong. You could say it's just redundant, but no.
-          PM is always paired with AM, it's, like, binary. Saying "17:32 PM"
+          PM is always paired with AM; it's, like, binary. Saying "17:32 PM"
           implies there must also be a "17:32 AM". And there isn't. Our days are
           not 48 hours long.
         </p>
@@ -537,17 +539,17 @@ const NAVIGATION: ScrollToObjects[] = [
           noon". In German? You get no "past" nor "to". They don't say those for
           some reason. But they definitely could. But they don't. So instead you
           get "halb 9" and "drei viertel 1", I think. The latter I'm not even
-          sure of, since they always leave out what I'd say is the key word!!
-          So, when someone says "halb neun", which just means "half nine", they
-          actually mean "half to nine". They could say "halb zu neun", but
-          nobody does for some reason. Also, German seems to never use
-          half-past, it's always half-to. As for the quarters, I don't know, I
-          don't remember. I don't remember because it's unambiguous.
+          sure of, since they always leave out what I'd say is the
+          <i>key word</i>!! So, when someone says "halb neun", which just means
+          "half nine", they actually mean "half to nine". They could say "halb
+          zu neun", but nobody does for some reason. Also, German seems to never
+          use half-past, it's always half-to. As for the quarters, I don't know,
+          I don't remember. I don't remember because it's ambiguous.
         </p>
         <p>
           Also, is it not strange that German otherwise uses 24-hour time, but
           in casual time telling, or I guess even just day-to-day speech
-          sometimes in general, they use 12-hour. Why? And what about AM and PM?
+          sometimes in general, they use 12-hour? Why? And what about AM and PM?
         </p>
         <p>
           (Side rant again) Well you know German has a strange relationship with
@@ -560,10 +562,10 @@ const NAVIGATION: ScrollToObjects[] = [
           this, I just checked the Wikipedia page, and apparently
           "Mitvergangenheit" is an Austrian term. Hm maybe this is why they use
           Latin-like words here. But why not the other ones I mentioned? Or,
-          counter-question, why does English use it? This extends to grammar in
-          general too, I believe. Like, instead of "männlich, weiblich,
+          counter-question, why does English use them? This extends to grammar
+          in general too, I believe. Like, instead of "männlich, weiblich,
           sächlich", they prefer "maskulin, feminin, neutrum", if I remember
-          correctly. Then in law, they use "Paragraf", and it's what they say
+          correctly. Then, in law, they use "Paragraf", and it's what they say
           when reading the § symbol. Hm, I wonder, do they use this symbol so
           often? It's on the German keyboard layout and is easily accessible by
           pressing Shift+3. Paragraph also has a German word, though: it's
@@ -680,10 +682,7 @@ en_SE.UTF-8 UTF-8</code></pre>
         <p>3.ii. Generate locales</p>
         <CopyToClipboard width="wwwwide" string="sudo locale-gen" />
         <p>3.iii. Set the system locale variables (either that'll be</p>
-        <CopyToClipboard
-          width="wwwwide"
-          string="sudo nano /etc/locale.conf"
-        />
+        <CopyToClipboard width="wwwwide" string="sudo nano /etc/locale.conf" />
         <p>or</p>
         <CopyToClipboard
           width="wwwwide"
@@ -708,13 +707,8 @@ LC_IDENTIFICATION="en_150.UTF-8"</code></pre>
         </GlassCard>
         <h3 id="instructions-4">4. Reboot</h3>
         <p>4.i. Restart your system:</p>
-        <CopyToClipboard
-          width="wwwwide"
-          string="sudo reboot now"
-        />
-        <p class="final-p">
-          You should be able to see it working in SDDM too.
-        </p>
+        <CopyToClipboard width="wwwwide" string="sudo reboot now" />
+        <p class="final-p">You should be able to see it working in SDDM too.</p>
       </GlassCard>
     </NavigationSideBySide>
   </div>
