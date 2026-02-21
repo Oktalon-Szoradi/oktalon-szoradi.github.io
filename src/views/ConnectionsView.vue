@@ -299,9 +299,9 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
     <div class="card-group-two">
       <ContactCard title="Trevor&shy;Space" src="/icons/TheTrevorProject.svg">
         <p>
-          Ooo, a forum! I… don't really use forums. I made an account and
-          filled out my profile, but didn't post in any topic/category. Maybe
-          I'll use this in the future?
+          Ooo, a forum! I… don't really use forums. I made an account and filled
+          out my profile, but didn't post in any topic/category. Maybe I'll use
+          this in the future?
         </p>
         <img class="inline-icon" src="/icons/dialog-warning.svg" />
         You'll need to already have a TrevorSpace account to view my profile.
