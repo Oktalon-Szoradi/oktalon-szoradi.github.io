@@ -60,7 +60,7 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
             personal and school.
           </p>
           I don't use it anymore. It's more of just a "note-to-self" account
-          now. I log into it rarely. So... not gonna share it here lol.
+          now. I log into it rarely. So… not gonna share it here lol.
         </div>
       </ContactCard>
       <ContactCard title="E-Mail" src="/icons/internet-mail.svg">
@@ -81,7 +81,7 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
       hosting this very page! What was pretty cool back then when GitHub Copilot
       was new, I could get it for free by scanning in my edu card. Well first
       you had to be on a waitlist, then it changed to have you need GitHub
-      Education, and nowadays it's... free.
+      Education, and nowadays it's… free.
       <div class="flex github-container">
         <div class="flex-item text-center github">
           <img class="resize" src="/icons/GitHub_Personal.svg" />
@@ -243,7 +243,7 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
           then. As well as not needing an account at all). One day we were at
           Panera Bread, and my parents needed the laptop I played on, so I had
           to use our other one. I don't remember what I did, but a new account
-          was made... (<b>Talonblue5</b>). So I somehow lost my old account. I
+          was made… (<b>Talonblue5</b>). So I somehow lost my old account. I
           wasn't happy and wrote in the About Me "THIS IS NOT ME" lol.
         </p>
         <p>
@@ -255,7 +255,7 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
           using my dad's Facebook. Probably because by now I had my own email
           address. I can't quite remember, but I think I accidentally made a few
           accounts and forgot the password. But I ended up on
-          <b>XxAwesomeGamerDudexX</b>. Yeah... 9-year-old me thought that was a
+          <b>XxAwesomeGamerDudexX</b>. Yeah… 9-year-old me thought that was a
           cool username. Since I saw other people also put Xs around their
           usernames.
         </p>
@@ -288,7 +288,7 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
       </ContactCard>
       <ContactCard title="Virus&shy;Total" src="/icons/VirusTotal.svg">
         I also only kinda used this just once. To leave comments and ratings on
-        some scam websites. Because... I felt like it at the time, I guess.
+        some scam websites. Because… I felt like it at the time, I guess.
         <div class="text-center">
           <PushButton href="https://www.virustotal.com/gui/user/TalonS125">
             TalonS125
@@ -299,7 +299,7 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
     <div class="card-group-two">
       <ContactCard title="Trevor&shy;Space" src="/icons/TheTrevorProject.svg">
         <p>
-          Ooo, a forum! I... don't really use forums. I made an account and
+          Ooo, a forum! I… don't really use forums. I made an account and
           filled out my profile, but didn't post in any topic/category. Maybe
           I'll use this in the future?
         </p>

@@ -213,7 +213,7 @@ watch(
           We started learning a bit of JavaScript and were tasked with
           programming a match-the-pairs memory game and a
           <i>Cookie Clicker</i>-like game. My JavaScript and overall web
-          development skills at the time were quite... not good. Nevertheless,
+          development skills at the time were quite… not good. Nevertheless,
           I'll keep them here as an exhibit.
         </p>
         <p>
