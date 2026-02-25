@@ -62,8 +62,8 @@ const NAVIGATION: ScrollToObjects[] = [
     id: 'ExtraOpinions',
     children: [
       {
-        name: 'Measurement and Numbers',
-        id: 'MeasurementAndNumbers'
+        name: 'Measurements and Numbers',
+        id: 'MeasurementsAndNumbers'
       },
       {
         name: 'Name Style',
