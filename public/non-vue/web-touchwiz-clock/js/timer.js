@@ -63,6 +63,11 @@ let sfxTimerEndWhenSettingsOpened = 'default'
 sfxTimerEnd.preload = 'auto'
 sfxTimerEnd.loop = true
 
+let doneStartedAt = null
+let doneSinceMs = 0
+let doneRafId = null
+let doneRunning = false
+
 let lastTimerMs = 60_000
 let remainingMs = lastTimerMs
 let endTime = null
@@ -106,6 +111,7 @@ function afterResetStuff () {
   })
 
   remainingMs = lastTimerMs
+  doneSinceMs = 0
   render()
 }
 
@@ -125,6 +131,8 @@ function checkStartButtonEligibility () {
 function dismissTimerAlarm () {
   sfxTimerEnd.pause()
   sfxTimerEnd.currentTime = 0
+  doneRunning = false
+  cancelAnimationFrame(doneRafId)
   hidePopup()
   afterResetStuff()
 }
@@ -132,6 +140,8 @@ function dismissTimerAlarm () {
 function timerIsDoneStuff () {
   remainingMs = 0
   running = false
+  doneStartedAt = performance.now()
+  doneRunning = true
   cancelAnimationFrame(rafId)
   render()
   sfxTimerEnd.play()
@@ -156,7 +166,8 @@ function timerIsDoneStuff () {
 
   // eslint-disable-next-line no-irregular-whitespace
   setPopupTitle(`Time is up – ${formattedTime.hhmmss}`)
-  setPopupContent(`Your ${naturalJoin(timer)} timer is up`)
+  // setPopupContent(`Your ${naturalJoin(timer)} timer is up`)
+  doneRender()
   const buttonOK = newButton('OK')
   requestAnimationFrame(() => buttonOK.focus())
   buttonOK.addEventListener('click', () => {
@@ -166,6 +177,7 @@ function timerIsDoneStuff () {
   showPopup()
 
   enableInput()
+  doneTick()
 }
 
 function render () {
@@ -173,6 +185,24 @@ function render () {
   TIMER_HOURS.value = formattedTime.hh
   TIMER_MINUTES.value = formattedTime.mm
   TIMER_SECONDS.value = formattedTime.ss
+}
+
+function doneRender () {
+  const formattedTimerTime = formatTime(lastTimerMs)
+  const timer = []
+  if (formattedTimerTime.hours > 0) {
+    timer.push(`${formattedTimerTime.hours} hour`)
+  }
+  if (formattedTimerTime.minutes > 0) {
+    timer.push(`${formattedTimerTime.minutes} minute`)
+  }
+  if (formattedTimerTime.seconds > 0) {
+    timer.push(`${formattedTimerTime.seconds} second `)
+  }
+  const formattedDoneTime = formatTime(doneSinceMs)
+  setPopupContent(
+    `Your ${naturalJoin(timer)} timer is up\n−${formattedDoneTime.hhmmss}`
+  )
 }
 
 function tick () {
@@ -188,6 +218,16 @@ function tick () {
 
   render()
   rafId = requestAnimationFrame(tick)
+}
+
+function doneTick () {
+  if (!doneRunning) return
+
+  const now = performance.now()
+  doneSinceMs = now - doneStartedAt
+
+  doneRender()
+  doneRafId = requestAnimationFrame(doneTick)
 }
 
 function start () {
