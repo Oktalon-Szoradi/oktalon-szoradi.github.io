@@ -1,0 +1,62 @@
+Screenshot showcasing some of MOCHBOT's, a TETR.IO bot, commands; specifically:
+- version/v
+- sinfo/si
+- donate/support
+- patchnotes/patches/changelog/pn
+- faq
+
+Partial transcript: -----------------------------------------------------------
+
+>version
+MochBot V3.3.1, 3661191. Running in production mode.
+
+>sinfo
+Current Worker: proton
+
+Current CPU: Intel
+
+Current Spool: na-east-kurisu
+
+>donate
+if you're 100% sure and are able to do so, you can support me here:
+- GitHub Sponsors (github account required):
+https://github.com/sponsors/EncryptLuke
+- Buy Me a Coffee (no account required i think):
+https://buymeacoffee.com/encryptluke
+
+>patchnotes
+No patch notes found for version:
+3.3.1
+
+>faq
+Frequently asked questions:
+
+Lang
+Gravity
+Workers
+
+>faq Lang
+I was made in TypeScript, C++ and Rust. MochEngine1 is written in Rust and MochEngine2 is primarily written in C++ with bindings to Rust for the TETR.IO compatible engine library. TypeScript is used for the main client.
+
+>faq Gravity
+Gravity is currently officially unsupported, and causes misdrops and desync issues, especially in this release. It CAN be enabled in a room using administrative overrides, but it is not recommended.
+
+>faq Workers
+A worker is an equivalent to a thread of MochBot, and helps with load balancing, especially under high use.
+
+Workers are setup on nodes, which are entire machines/servers dedicated to MochBot!
+
+For example, you are currently on proton running in High performance mode.
+
+End of partial transcript.
+
+CC BY-NC-SA 4.0
+
+-------------------------------------------------------------------------------
+
+Referenced:
+
+- In the description of my
+  "20 minutes of TETR.IO bot MochBot at 10 PPS"
+  YouTube video
+  https://www.youtube.com/watch?v=94IzZxw4Q2k 
