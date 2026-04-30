@@ -1,0 +1,37 @@
+Screenshot of the future of MochBot, shared via its creator, Luke, in the MochBot Discord server.
+
+Transcript:
+https://discord.com/channels/1204103631226535966/1257146177019711518/1490731247989686312
+@everyone please read the following message
+
+been thinking about it for a bit, and i've been heavily on the fence about sunsetting mochbot.
+
+as it stands now, i don't really enjoy tetrio/tetris, and haven't for a little while now. i've tried to find various excuses to work on mochbot/mochengine2, but can't will myself to sit down and put a meaningful effort in, and the time between each update got longer and longer. sitting down and playing the game or doing anything related to it kinda makes me feel numb and feels more like a poor time killer.
+
+theres also minimal "simple" improvements i can make to mochengine2 compared to mochengine, as i was very ambitious during the design of mochengine2. this can be seen as both a good and bad thing, because it means that less of me is required, but because less of my focus was needed, i didn't feel a need to show the project as much love as i would've given it in the past, which may have led to this passion loss.
+
+mochbot is fully funded by me, and i was 100% ok with this, but when the passion behind a project is gone, it's very hard to find the justification to keep it running as what's essentially just a complete financial loss. previously i gained a lot of joy working with the project, and it got me out of a very rough emotional place, so the cost was well worth the reward, and some part of me feels that i haven't put *enough* into the project yet to justify all the benefits i got from it, so i really am in this conflicted state.
+
+-- can't english but to clarify money isn't the problem
+
+originally, my intentions were to leave mochbot offline while i made this decision, but i understand that most users are not in this server and have not been informed about the current status of mochbot and it's potential future, and i also took down mochbot without warning.
+following this announcement, mochbot will have been restored with a notice referring to this message, and the final decision will be made sometime before the end of this month or before the halfway point of next month.
+
+thank you, ill update you all soon
+
+https://discord.com/channels/1204103631226535966/1257146177019711518/1499097379482374195
+<t:1777608000:R>
+
+play against mochbot and save all your replays while you still can
+End of transcript.
+
+CC BY-NC-SA 4.0
+
+---
+
+Referenced:
+
+- In the description of my
+  "20 minutes of TETR.IO bot MochBot at 10 PPS"
+  YouTube video
+  https://www.youtube.com/watch?v=94IzZxw4Q2k 

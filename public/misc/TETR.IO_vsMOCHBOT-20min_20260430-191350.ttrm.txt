@@ -1,0 +1,15 @@
+A replay of a multiplayer game I played in TETR.IO.
+This one is of MOCHBOT playing at 10 PPS for 20 minutes. I don't make any inputs until the very end.
+
+Drag and drop the ttrm file into TETR.IO to view it.
+
+CC BY-NC-SA 4.0
+
+---
+
+Referenced:
+
+- In the description of my
+  "20 minutes of TETR.IO bot MochBot at 10 PPS"
+  YouTube video
+  https://www.youtube.com/watch?v=94IzZxw4Q2k 
