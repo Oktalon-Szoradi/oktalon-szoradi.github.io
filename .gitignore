@@ -32,3 +32,4 @@ coverage
 # Custom
 /public/videos/RSI-OAS_Fruit.webm
 /videos/RSI-OAS_Fruit.webm
+.vite
