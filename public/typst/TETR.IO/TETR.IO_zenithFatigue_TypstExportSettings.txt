@@ -1,0 +1,13 @@
+/home/talon/Documents/CodePlayground/Typst/TETR.IO_zenithFatigue.typ
+/home/talon/Documents/CodePlayground/Typst/TETR.IO_zenithFatigueRev.typ
+/home/talon/Documents/CodePlayground/Typst/TETR.IO_zenithFatigueRevDuo.typ
+
+/home/talon/Documents/GitHubPersonal/talon-typst-projects/TETR.IO/TETR.IO_zenithFatigue.typ
+/home/talon/Documents/GitHubPersonal/talon-typst-projects/TETR.IO/TETR.IO_zenithFatigueRev.typ
+/home/talon/Documents/GitHubPersonal/talon-typst-projects/TETR.IO/TETR.IO_zenithFatigueRevDuo.typ
+
+PNG
+
+PPI: 300
+
+Background Fill: (R: 17, G: 17, B: 17)

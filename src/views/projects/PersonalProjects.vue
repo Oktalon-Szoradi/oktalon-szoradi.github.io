@@ -182,6 +182,22 @@ const NAVIGATION: ScrollToObjects[] = [
               </PushButton>
             </div>
           </ProjectLink>
+          <ProjectLink
+            title="Infographics"
+            icon_src="/images/thumbnails/Thumbnail_PersonalProjects-GraphicDesign-Infographics.png"
+          >
+            <p class="text-justify">
+              Useful graphs, charts, tables, and other stuff.
+            </p>
+            <div class="text-center">
+              <PushButton
+                :stayHere="true"
+                :to="`${$route.path}/graphic-design_infographics`"
+              >
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
         </div>
       </GlassCard>
       <GlassCard id="Misc" title="Mis&shy;cel&shy;la&shy;ne&shy;ous">

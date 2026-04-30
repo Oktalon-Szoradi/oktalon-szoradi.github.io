@@ -116,6 +116,12 @@ const routes = [
     component: () => import('../views/projects/Personal/GraphicDesignTetr.vue')
   },
   {
+    path: '/projects/personal/graphic-design_infographics',
+    name: 'Infographics - Graphic Design',
+    component: () =>
+      import('../views/projects/Personal/GraphicDesignInfographics.vue')
+  },
+  {
     path: '/projects/personal/github_eu-linux-locale',
     name: 'EU English Linux Locale',
     component: () =>
