@@ -324,6 +324,19 @@ watch(
           <!-- {{ meow.lastUpdated?.split('T')[1] }} -->
         </code>
       </div>
+      <div v-if="!meow.lastUpdated">
+        <p>
+          idk, I couldn't check. Check the browser console for why I couldn't
+          check.
+        </p>
+        Otherwise… check yourself:
+        <a
+          href="https://github.com/Oktalon-Szoradi/oktalon-szoradi.github.io/commits/gh-pages/"
+          ><code
+            >https://github.com/Oktalon-Szoradi/oktalon-szoradi.github.io/commits/gh-pages/</code
+          ></a
+        >
+      </div>
     </GlassCard>
   </main>
 </template>
