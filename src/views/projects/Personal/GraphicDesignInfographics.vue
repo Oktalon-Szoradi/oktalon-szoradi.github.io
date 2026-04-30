@@ -41,7 +41,8 @@ const IMAGES = {
       :onlyOneLevel="true"
       width="personal"
     >
-      <GlassCard title="Infographics - Graphic Design">
+      <GlassCard title="Infographics" :noCenter="true">
+        <p class="category-marker">Graphic Design</p>
         <p>Here are some infographics I've made!</p>
       </GlassCard>
       <GlassCard id="TETR.IO">

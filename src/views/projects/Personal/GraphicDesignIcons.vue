@@ -322,7 +322,8 @@ const IMAGES = {
       :onlyOneLevel="true"
       width="personal"
     >
-      <GlassCard title="Icons - Graphic Design">
+      <GlassCard title="Icons" :noCenter="true">
+        <p class="category-marker">Graphic Design</p>
         <p>Here are some icons I made!</p>
       </GlassCard>
       <GlassCard id="Resume">

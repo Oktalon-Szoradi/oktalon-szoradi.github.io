@@ -187,7 +187,8 @@ const NAVIGATION: ScrollToObjects[] = [
             icon_src="/images/thumbnails/Thumbnail_PersonalProjects-GraphicDesign-Infographics.png"
           >
             <p class="text-justify">
-              Useful graphs, charts, tables, and other stuff.
+              Useful graphs, charts, tables, and other stuff you may consider to
+              be infographics.
             </p>
             <div class="text-center">
               <PushButton
