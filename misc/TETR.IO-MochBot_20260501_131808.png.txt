@@ -1,0 +1,23 @@
+Screenshot of the future of MochBot, after it shut down, shared via its creator, Luke, in the MochBot Discord server.
+
+Transcript:
+https://discord.com/channels/1204103631226535966/1257146177019711518/1499621627284164648
+@everyone as of this message, mochbot has been shut down indefinitely.
+
+i don't want to say this is the end of mochbot forever, a lot of work has been put into mochbot to throw it all away, but there's nothing i can do about the production version for now; it had to go. i was looking for ways to leave production fully unattended with minimal monthly costs, but nothing within reasonable upfront costs would sustain mochbot this way. i may still run dev rooms from time to time, as i find myself actually being able to work on mochengine2 a bit now, which originally gave me some intention to reverse my original decision, but as you can see, this did not happen.
+
+originally i was going to list my full reasoning here as well but i'm tired and its a wall of text, you can ask me personally if you know me reasonably well. there was also more to write here but i didn't have time.
+
+thank you to everyone who has used mochbot up to this point, i appreciate your support up to this point, and hope to somehow bring this project back in the future in a much more sustainable way, because this was really hard for me to do.
+End of transcript.
+
+CC BY-NC-SA 4.0
+
+---
+
+Referenced:
+
+- In the description of my
+  "20 minutes of TETR.IO bot MochBot at 10 PPS"
+  YouTube video
+  https://www.youtube.com/watch?v=94IzZxw4Q2k
